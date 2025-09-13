@@ -3,25 +3,170 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: #0d64ab;
+  --secondary-color: #05ccca;
+  --accent-color: #17a2b8;
+  --background-light: #f8f9fa;
+  --background-dark: #343a40;
+  --text-light: #f8f9fa;
+  --text-dark: #343a40;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* RTL support */
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Reverse Tailwind's space utilities for RTL */
+.space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+}
+
+.space-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Custom styles for Arabic text */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, div, li, ul, ol, label, select, option {
+  font-family: var(--font-the-year), sans-serif;
+}
+
+/* Improve readability for Arabic text */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6;
+}
+
+p, li {
+  line-height: 1.8;
+}
+
+/* Enhance contrast for better readability */
+.text-gray-600 {
+  color: #4a5568;
+}
+
+/* Improve form element styling for Arabic */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Adjust button padding for Arabic text */
+button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Ensure proper alignment of icons in RTL layout */
+.icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Improve spacing for list items in Arabic */
+ul, ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* Enhance quote styling for Arabic */
+blockquote {
+  border-right: 4px solid #e2e8f0;
+  border-left: none;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* Adjust table styling for RTL */
+table {
+  text-align: right;
+}
+
+th, td {
+  text-align: right;
+}
+
+/* Improve navigation for RTL */
+.nav-item {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+/* Enhance footer styling for Arabic */
+.footer-link {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+/* Improve mobile responsiveness for Arabic layout */
+@media (max-width: 768px) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
+
+/* Add these new styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full transition duration-300;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-center mb-12 relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-20 h-1 bg-blue-600 transform -translate-x-1/2;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg;
+}
+
+/* Add a smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhance form styling */
+input, textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300;
+}
+
+/* Add animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.5s ease-out;
+}
+
