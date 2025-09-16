@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { JsonLd } from 'react-schemaorg'
 import { Organization } from 'schema-dts'
+// import { Analytics } from '../lib/analytics'
+import Script from 'next/script'
 
 // تعريف الخط الجديد
 const theYearFont = localFont({
@@ -13,9 +15,12 @@ const theYearFont = localFont({
 
 
 export const metadata: Metadata = {
-  title: 'خدمات النظافة والتعقيم في الرياض | شركة نظافة الرياض - أفضل شركة تنظيف',
+  title: {
+    default: 'خدمات النظافة والتعقيم في الرياض | شركة لمسة للنظافة - أفضل شركة تنظيف',
+    template: '%s | شركة لمسة للنظافة'
+  },
   description: 'نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم في الرياض باستخدام أحدث التقنيات ومواد صديقة للبيئة. مكافحة الحشرات، تنظيف الخزانات، تنظيف الموكيت. خدمة 24/7 مع ضمان الجودة.',
-  keywords: 'نظافة الرياض, تنظيف منازل الرياض, مكافحة حشرات الرياض, تنظيف مكاتب الرياض, تنظيف سجاد الرياض, تنظيف خزانات الرياض, تعقيم الرياض, شركة نظافة الرياض, أفضل شركة تنظيف الرياض, خدمات النظافة الرياض, تنظيف في الرياض, شركة تعقيم الرياض',
+  keywords: ['نظافة الرياض', 'تنظيف منازل الرياض', 'مكافحة حشرات الرياض', 'تنظيف مكاتب الرياض', 'تنظيف سجاد الرياض', 'تنظيف خزانات الرياض', 'تعقيم الرياض', 'شركة نظافة الرياض', 'أفضل شركة تنظيف الرياض', 'خدمات النظافة الرياض', 'تنظيف في الرياض', 'شركة تعقيم الرياض', 'تنظيف فلل الرياض', 'تنظيف شقق الرياض', 'تنظيف نوافذ الرياض', 'تنظيف كنب الرياض', 'غسيل موكيت', 'شفط مجاري'],
   authors: [{ name: 'شركة نظافة الرياض' }],
   creator: 'شركة نظافة الرياض',
   publisher: 'شركة نظافة الرياض',
@@ -57,17 +62,32 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
 
+
   category: 'خدمات النظافة والتعقيم',
   classification: 'شركة نظافة',
+  referrer: 'origin-when-cross-origin',
+  appleWebApp: {
+    title: 'لمسة للنظافة',
+    statusBarStyle: 'default',
+    capable: true,
+  },
+  applicationName: 'لمسة للنظافة',
+  generator: 'Next.js',
+  abstract: 'شركة متخصصة في خدمات النظافة والتعقيم في الرياض مع فريق مهني مدرب وأدوات حديثة',
+  archives: ['http://lamsa-clean.com/blog'],
+  assets: ['http://lamsa-clean.com/images'],
+  bookmarks: ['http://lamsa-clean.com/services'],
   other: {
     'geo.region': 'SA-01',
     'geo.placename': 'الرياض',
@@ -87,6 +107,13 @@ export const metadata: Metadata = {
     'DC.coverage': 'الرياض، المملكة العربية السعودية',
     'DC.rights': 'جميع الحقوق محفوظة لشركة نظافة الرياض',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 }
 
 export default function RootLayout({
@@ -119,15 +146,120 @@ export default function RootLayout({
         <meta name="theme-color" content="#0d64ab" />
         <meta name="color-scheme" content="light dark" />
         
+        {/* Performance and Loading Hints */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="format-detection" content="telephone=yes, date=no, email=no, address=no" />
+        
+        {/* Security Headers */}
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="author" content="شركة لمسة للنظافة" />
+        <meta name="copyright" content="© 2025 شركة لمسة للنظافة. جميع الحقوق محفوظة" />
+        <meta name="web_author" content="شركة لمسة للنظافة" />
+        <meta name="reply-to" content="info@lamsa-clean.com" />
+        <meta name="owner" content="شركة لمسة للنظافة" />
+        <meta name="url" content="http://lamsa-clean.com" />
+        <meta name="identifier-URL" content="http://lamsa-clean.com" />
+        <meta name="directory" content="submission" />
+        <meta name="pagename" content="شركة لمسة للنظافة" />
+        <meta name="category" content="خدمات النظافة" />
+        <meta name="coverage" content="الرياض، المملكة العربية السعودية" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="revisit-after" content="3 days" />
+        <meta name="expires" content="never" />
+        
+        {/* Cache Control */}
+        <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
+        <meta httpEquiv="Pragma" content="cache" />
+        
+        {/* Favicon and Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Alternative Language Pages */}
+        <link rel="alternate" hrefLang="ar" href="http://lamsa-clean.com" />
+        <link rel="alternate" hrefLang="ar-SA" href="http://lamsa-clean.com" />
+        <link rel="alternate" hrefLang="x-default" href="http://lamsa-clean.com" />
+        
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* DNS Prefetch */}
+        {/* DNS Prefetch and Resource Hints */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//www.facebook.com" />
+        <link rel="dns-prefetch" href="//www.instagram.com" />
+        <link rel="dns-prefetch" href="//twitter.com" />
+        <link rel="preconnect" href="https://api.whatsapp.com" crossOrigin="anonymous" />
         
-        {/* Structured Data */}
+        {/* Preload Critical Resources */}
+        <link rel="preload" href="/fonts/TheYearofHandicrafts-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
+              page_path: window.location.pathname,
+              custom_map: {
+                'dimension1': 'service_type',
+                'dimension2': 'user_location'
+              }
+            });
+            
+            // Enhanced e-commerce setup
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
+              custom_map: {
+                'custom_parameter_1': 'cleaning_service'
+              },
+              send_page_view: false
+            });
+          `}
+        </Script>
+        
+        {/* Google Tag Manager (optional) */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'}');
+          `}
+        </Script>
+        
+        {/* Facebook Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || 'XXXXXXXXXXXXXXX'}');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        
+        {/* Schema.org Structured Data - Enhanced LocalBusiness */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -140,7 +272,8 @@ export default function RootLayout({
               "url": "http://lamsa-clean.com",
               "logo": "http://lamsa-clean.com/lamsa.png",
               "image": "http://lamsa-clean.com/cleaning-services.png",
-              "telephone": "0592425077",
+              "telephone": "+966547910859",
+              "faxNumber": "+966547910859",
               "email": "info@lamsa-clean.com",
               "address": {
                 "@type": "PostalAddress",
@@ -167,6 +300,17 @@ export default function RootLayout({
                 "@type": "City",
                 "name": "الرياض"
               },
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "name": "خدمات النظافة الشاملة",
+                  "description": "جميع خدمات النظافة والتعقيم",
+                  "priceCurrency": "SAR",
+                  "availability": "https://schema.org/InStock",
+                  "validFrom": "2024-01-01",
+                  "areaServed": "الرياض"
+                }
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "خدمات النظافة",
@@ -236,6 +380,22 @@ export default function RootLayout({
                 "bestRating": "5",
                 "worstRating": "1"
               },
+              "foundingDate": "2020",
+              "numberOfEmployees": "50-100",
+              "slogan": "نظافة مثالية، خدمة استثنائية",
+              "knowsAbout": [
+                "تنظيف المنازل",
+                "مكافحة الحشرات",
+                "تنظيف السجاد",
+                "تعقيم المباني",
+                "تنظيف الخزانات",
+                "تنظيف المكاتب"
+              ],
+              "memberOf": {
+                "@type": "Organization",
+                "name": "غرفة تجارة الرياض"
+              },
+              "award": "أفضل شركة نظافة في الرياض 2024",
               "review": [
                 {
                   "@type": "Review",
@@ -261,6 +421,126 @@ export default function RootLayout({
         />
       </head>
       <body className={`${theYearFont.variable} font-sans`}>
+        {/* Additional Structured Data for Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "شركة لمسة للنظافة",
+              "alternateName": "لمسة للنظافة",
+              "url": "http://lamsa-clean.com",
+              "description": "موقع شركة لمسة للنظافة - أفضل خدمات النظافة في الرياض",
+              "inLanguage": "ar",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "http://lamsa-clean.com/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "شركة لمسة للنظافة",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "http://lamsa-clean.com/logo.png"
+                }
+              }
+            })
+          }}
+        />
+        
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "خدمات تنظيف المنازل في الرياض",
+                "description": "خدمات تنظيف شاملة للمنازل مع فريق محترف",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "شركة لمسة للنظافة"
+                },
+                "areaServed": "الرياض",
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "خدمات تنظيف المنازل",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "تنظيف الشقق"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "تنظيف الفلل"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "تنظيف الكنب"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "مكافحة الحشرات في الرياض",
+                "description": "خدمات مكافحة جميع أنواع الحشرات بطرق آمنة",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "شركة لمسة للنظافة"
+                },
+                "areaServed": "الرياض"
+              }
+            ])
+          }}
+        />
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "الرئيسية",
+                  "item": "http://lamsa-clean.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "خدمات النظافة",
+                  "item": "http://lamsa-clean.com/#services"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "اتصل بنا",
+                  "item": "http://lamsa-clean.com/#contact"
+                }
+              ]
+            })
+          }}
+        />
+        
         <JsonLd<Organization>
           item={{
             "@context": "https://schema.org",
@@ -271,9 +551,9 @@ export default function RootLayout({
             description: "نقدم خدمات نظافة وتعقيم شاملة ومتخصصة في الرياض",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+966-50-123-4567",
+              telephone: "+966547910859",
               contactType: "customer service",
-              availableLanguage: "Arabic",
+              availableLanguage: ["Arabic", "English"],
               areaServed: "SA",
               hoursAvailable: {
                 "@type": "OpeningHoursSpecification",
@@ -284,13 +564,21 @@ export default function RootLayout({
             },
             address: {
               "@type": "PostalAddress",
+              streetAddress: "حي النرجس",
               addressLocality: "الرياض",
               addressRegion: "الرياض",
+              postalCode: "11564",
               addressCountry: "SA"
             },
             serviceArea: {
-              "@type": "City",
-              name: "الرياض"
+              "@type": "Place",
+              "@id": "https://www.wikidata.org/wiki/Q3692",
+              name: "الرياض",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 24.7136,
+                longitude: 46.6753
+              }
             },
             hasOfferCatalog: {
               "@type": "OfferCatalog",
@@ -346,9 +634,25 @@ export default function RootLayout({
                   }
                 }
               ]
+            },
+            "potentialAction": {
+              "@type": "ReserveAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "tel:+966547910859",
+                "actionPlatform": [
+                  "http://schema.org/DesktopWebPlatform",
+                  "http://schema.org/MobileWebPlatform"
+                ]
+              },
+              "result": {
+                "@type": "Reservation",
+                "name": "حجز خدمة نظافة"
+              }
             }
           }}
         />
+        {/* <Analytics /> */}
         {children}
       </body>
     </html>

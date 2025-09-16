@@ -63,7 +63,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link
-              href="tel:0592425077"
+              href="tel:0547910859"
               className="bg-[#0d64ab] hover:bg-[#0a5a9a] text-white px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               احصل على عرض مجاني
@@ -131,7 +131,7 @@ export default function Header() {
 
               <div className="pt-4 border-t border-gray-200 mt-6">
                 <Link
-                  href="tel:0592425077"
+                  href="tel:0547910859"
                   className="block w-full bg-[#0d64ab] text-white py-4 px-6 rounded-xl hover:bg-[#0a5a9a] transition-colors font-semibold text-lg text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >

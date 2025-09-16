@@ -247,7 +247,7 @@ export default function ServicesDetail() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="tel:0592425077"
+                href="tel:0547910859"
                 className="bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 اتصل بنا الآن

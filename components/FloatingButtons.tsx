@@ -23,7 +23,7 @@ export default function FloatingButtons() {
   const buttons = [
     {
       id: 'whatsapp',
-      href: 'https://wa.me/966592425077',
+      href: 'https://wa.me/966547910859',
       icon: ChatBubbleLeftRightIcon,
       label: 'واتساب',
       ariaLabel: 'تواصل معنا عبر واتساب',
@@ -33,7 +33,7 @@ export default function FloatingButtons() {
     },
     {
       id: 'phone',
-      href: 'tel:0592425077',
+      href: 'tel:0547910859',
       icon: PhoneIcon,
       label: 'اتصل الآن',
       ariaLabel: 'اتصل بنا',

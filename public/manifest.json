@@ -1,0 +1,72 @@
+{
+  "name": "شركة لمسة للنظافة",
+  "short_name": "لمسة للنظافة",
+  "description": "أفضل خدمات النظافة والتعقيم في الرياض",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d64ab",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity"],
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "640x1136",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "اتصل الآن",
+      "short_name": "اتصل",
+      "description": "اتصل للحصول على عرض سعر مجاني",
+      "url": "tel:+966547910859",
+      "icons": [
+        {
+          "src": "/icon-phone.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "واتساب",
+      "short_name": "واتساب",
+      "description": "تواصل عبر الواتساب",
+      "url": "https://wa.me/966547910859",
+      "icons": [
+        {
+          "src": "/icon-whatsapp.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

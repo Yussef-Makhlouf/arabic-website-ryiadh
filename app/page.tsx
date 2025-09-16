@@ -11,6 +11,7 @@ import ServicesDetail from "@/components/ServicesDetail";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FAQ from "@/components/FAQ";
 import FloatingButtons from "@/components/FloatingButtons";
+import RiyadhLocations from "@/components/RiyadhLocations";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
      
       <WhyChooseUs />
       <Services />
+      <RiyadhLocations />
  
       {/* <Testimonials /> */}
       {/* <Stats /> */}

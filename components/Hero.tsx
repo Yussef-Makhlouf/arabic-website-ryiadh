@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
 
               <Link
-                href="tel:0592425077"
+                href="tel:0547910859"
                 className="group bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-[16px] transition-all duration-300 border-2 border-gray-200 hover:border-gray-300 font-semibold flex items-center justify-center space-x-2 space-x-reverse shadow-sm hover:shadow-md"
               >
                 <PhoneIcon className="w-5 h-5 mx-2" />

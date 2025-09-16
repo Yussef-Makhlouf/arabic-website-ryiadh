@@ -18,8 +18,8 @@ export default function ContactForm() {
     {
       icon: PhoneIcon,
       title: 'اتصل بنا',
-      value: '0592425077',
-      link: 'tel:0592425077',
+      value: '0547910859',
+      link: 'tel:0547910859',
       description: 'متاح على مدار الساعة'
     },
     {
@@ -227,13 +227,13 @@ export default function ContactForm() {
               <p className="text-white/80 mb-4">تواصل معنا عبر:</p>
               <div className="flex space-x-4 space-x-reverse">
                 <a
-                  href="https://wa.me/966592425077"
+                  href="https://wa.me/966547910859"
                   className="bg-[#0d64ab]/20 text-white px-4 py-2 rounded-lg hover:bg-[#0d64ab]/30 transition-all duration-300 flex items-center space-x-2 space-x-reverse shadow-sm"
                 >
                   <span>واتساب</span>
                 </a>
                 <a
-                  href="tel:0592425077"
+                  href="tel:0547910859"
                   className="bg-[#0d64ab]/20 text-white px-4 py-2 rounded-lg hover:bg-[#0d64ab]/30 transition-all duration-300 flex items-center space-x-2 space-x-reverse shadow-sm"
                 >
                   <span>اتصال مباشر</span>
