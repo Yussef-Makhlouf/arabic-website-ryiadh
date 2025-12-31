@@ -1,68 +1,37 @@
 'use client'
 
 import { useState } from 'react'
-import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, ChatBubbleLeftRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
+    email: '',
     service: '',
     message: ''
   })
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const contactInfo = [
-    {
-      icon: PhoneIcon,
-      title: 'اتصل بنا',
-      value: '0547910859',
-      link: 'tel:0547910859',
-      description: 'متاح على مدار الساعة'
-    },
-    {
-      icon: EnvelopeIcon,
-      title: 'راسلنا عبر البريد الإلكتروني',
-      value: 'info@lamsa-cleaning.com',
-      link: 'mailto:info@lamsa-cleaning.com',
-      description: 'رد سريع خلال 24 ساعة'
-    },
-    {
-      icon: MapPinIcon,
-      title: 'موقعنا',
-      value: 'الرياض، المملكة العربية السعودية',
-      link: '#',
-      description: 'خدمات في جميع أنحاء الرياض'
-    },
-    {
-      icon: ClockIcon,
-      title: 'ساعات العمل',
-      value: '24/7',
-      link: '#',
-      description: 'خدمة متاحة على مدار الساعة'
-    }
-  ]
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(formData)
+    setIsSubmitting(true)
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    setIsSubmitting(false)
     setIsSubmitted(true)
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      })
+      setFormData({ name: '', phone: '', email: '', service: '', message: '' })
     }, 3000)
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -70,13 +39,13 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section id="contact" className="relative py-24 bg-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
-      
+
       {/* Animated Shapes */}
-      <div className="absolute left-0 top-0 w-96 h-96 bg-[#0d64ab]/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute right-20 bottom-20 w-64 h-64 bg-[#05ccca]/5 rounded-full blur-2xl animate-float-delayed" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#05ccca]/5 rounded-full blur-2xl animate-float-delayed" />
 
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
@@ -84,162 +53,153 @@ export default function ContactForm() {
             تواصل معنا
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            نحن هنا لمساعدتك في الحصول على أفضل خدمات النظافة والتعقيم. تواصل معنا الآن للحصول على عرض سعر مجاني.
+            نحن هنا لمساعدتك في الحصول على أفضل خدمات عزل الأسطح والمباني. تواصل معنا الآن للحصول على عرض سعر مجاني.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">
-                معلومات التواصل
-              </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                فريقنا متاح على مدار الساعة لمساعدتك في الحصول على أفضل خدمات النظافة والتعقيم. 
-                لا تتردد في التواصل معنا بأي وسيلة تفضلها.
+            <div className="bg-[#0d64ab] rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">معلومات التواصل</h3>
+              <p className="text-white/80 mb-8">
+                فريقنا متاح على مدار الساعة لمساعدتك في الحصول على أفضل خدمات عزل الأسطح.
+                لا تتردد في التواصل معنا عبر أي من الطرق التالية.
               </p>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <PhoneIcon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-white/70 text-sm">اتصل بنا</p>
+                    <a href="tel:0500000000" className="text-lg font-semibold hover:text-[#05ccca] transition-colors">
+                      0500000000
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <EnvelopeIcon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-white/70 text-sm">البريد الإلكتروني</p>
+                    <a href="mailto:info@lamsa-clean.com" className="text-lg font-semibold hover:text-[#05ccca] transition-colors">
+                      info@lamsa-clean.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <MapPinIcon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-white/70 text-sm">العنوان</p>
+                    <p className="text-lg font-semibold">الرياض والخرج، المملكة العربية السعودية</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                    <ClockIcon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-white/70 text-sm">ساعات العمل</p>
+                    <p className="text-lg font-semibold">24/7 على مدار الساعة</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="grid gap-6">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.link}
-                  className="group flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <div className="w-12 h-12 bg-[#0d64ab]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#0d64ab] transition-all duration-300">
-                    <info.icon className="w-6 h-6 text-[#0d64ab] group-hover:text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-800 mb-1">{info.title}</h4>
-                    <p className="text-[#0d64ab] hover:text-[#0a5a9a] font-semibold mt-2 inline-block">
-                      {info.value}
-                    </p>
-                    <p className="text-gray-500 text-sm mt-1">{info.description}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
+            {/* WhatsApp CTA */}
+            <a
+              href="https://wa.me/966500000000"
+              className="flex items-center justify-center space-x-3 space-x-reverse bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <ChatBubbleLeftRightIcon className="w-6 h-6" />
+              <span className="text-lg font-semibold">تواصل عبر واتساب</span>
+            </a>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#0d64ab] rounded-2xl p-8 text-white shadow-xl">
-            <h3 className="text-2xl font-bold mb-6">
-              احصل على عرض سعر مجاني
-            </h3>
-            <p className="text-white/90 mb-8">
-              املأ النموذج التالي وسنقوم بالتواصل معك في أقرب وقت ممكن لتقديم عرض سعر مخصص لاحتياجاتك.
-            </p>
-
-            {isSubmitted && (
-              <div className="mb-6 p-4 bg-white/20 border border-white/30 rounded-lg">
-                <p className="text-white font-semibold">
-                  تم إرسال رسالتكم بنجاح! سنتواصل معكم قريباً.
-                </p>
+          <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            {isSubmitted ? (
+              <div className="flex flex-col items-center justify-center h-full py-12">
+                <CheckCircleIcon className="w-16 h-16 text-green-500 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">تم الإرسال بنجاح!</h3>
+                <p className="text-gray-600 text-center">سنتواصل معك في أقرب وقت</p>
               </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">الاسم الكامل</label>
+                  <label className="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0d64ab] focus:ring-2 focus:ring-[#0d64ab]/20 transition-all duration-300"
-                    placeholder="أدخل اسمك الكامل"
+                    onChange={handleChange}
                     required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent transition-all"
+                    placeholder="أدخل اسمك الكامل"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-sm font-medium mb-2">رقم الهاتف</label>
+                  <label className="block text-gray-700 font-medium mb-2">رقم الجوال</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0d64ab] focus:ring-2 focus:ring-[#0d64ab]/20 transition-all duration-300"
-                    placeholder="05xxxxxxxx"
+                    onChange={handleChange}
                     required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent transition-all"
+                    placeholder="05xxxxxxxx"
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">البريد الإلكتروني</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0d64ab] focus:ring-2 focus:ring-[#0d64ab]/20 transition-all duration-300"
-                  placeholder="example@email.com"
-                  required
-                />
-              </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">الخدمة المطلوبة</label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent transition-all"
+                  >
+                    <option value="">اختر الخدمة</option>
+                    <option value="عزل فوم للأسطح">عزل فوم للأسطح</option>
+                    <option value="عزل مائي للأسطح">عزل مائي للأسطح</option>
+                    <option value="عازل أسمنتي">عازل أسمنتي</option>
+                    <option value="كشف تسربات المياه">كشف تسربات المياه</option>
+                    <option value="عزل خزانات المياه">عزل خزانات المياه</option>
+                    <option value="أخرى">أخرى</option>
+                  </select>
+                </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">نوع الخدمة المطلوبة</label>
-                <select 
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0d64ab] focus:ring-2 focus:ring-[#0d64ab]/20 transition-all duration-300"
-                  required
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">رسالتك</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent transition-all resize-none"
+                    placeholder="اكتب رسالتك هنا..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#0d64ab] hover:bg-[#0a5a9a] text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <option value="">اختر نوع الخدمة</option>
-                  <option value="تنظيف المنازل">تنظيف المنازل</option>
-                  <option value="تنظيف المكاتب">تنظيف المكاتب</option>
-                  <option value="تنظيف السجاد">تنظيف السجاد</option>
-                  <option value="مكافحة الحشرات">مكافحة الحشرات</option>
-                  <option value="التعقيم الشامل">التعقيم الشامل</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">الرسالة</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0d64ab] focus:ring-2 focus:ring-[#0d64ab]/20 transition-all duration-300"
-                  placeholder="اكتب تفاصيل طلبك هنا..."
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-white text-[#0d64ab] py-4 px-6 rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 space-x-reverse font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isSubmitted}
-              >
-                <span>{isSubmitted ? 'تم الإرسال' : 'إرسال الطلب'}</span>
-                <PaperAirplaneIcon className="w-5 h-5" />
-              </button>
-            </form>
-
-            {/* Social Links */}
-            <div className="mt-8 pt-8 border-t border-white/20">
-              <p className="text-white/80 mb-4">تواصل معنا عبر:</p>
-              <div className="flex space-x-4 space-x-reverse">
-                <a
-                  href="https://wa.me/966547910859"
-                  className="bg-[#0d64ab]/20 text-white px-4 py-2 rounded-lg hover:bg-[#0d64ab]/30 transition-all duration-300 flex items-center space-x-2 space-x-reverse shadow-sm"
-                >
-                  <span>واتساب</span>
-                </a>
-                <a
-                  href="tel:0547910859"
-                  className="bg-[#0d64ab]/20 text-white px-4 py-2 rounded-lg hover:bg-[#0d64ab]/30 transition-all duration-300 flex items-center space-x-2 space-x-reverse shadow-sm"
-                >
-                  <span>اتصال مباشر</span>
-                </a>
-              </div>
-            </div>
+                  {isSubmitting ? 'جاري الإرسال...' : 'إرسال الطلب'}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

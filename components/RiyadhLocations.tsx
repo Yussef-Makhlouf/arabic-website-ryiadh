@@ -1,88 +1,69 @@
 'use client'
 
 import React, { useState } from 'react'
-import { MapPinIcon, TruckIcon, HomeIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon, ShieldCheckIcon, HomeIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
 
 interface Location {
   id: string
   name: string
   nameEn: string
   type: 'district' | 'street' | 'compound'
-  zone: 'north' | 'south' | 'east' | 'west' | 'center'
+  zone: 'north' | 'south' | 'east' | 'west' | 'center' | 'kharj'
   popular: boolean
   description?: string
+  commonProblems?: string
+  recommendedSolution?: string
 }
 
 const RIYADH_LOCATIONS: Location[] = [
   // Northern Districts
-  { id: '1', name: 'حي النرجس', nameEn: 'Al Narjis', type: 'district', zone: 'north', popular: true, description: 'منطقة راقية مع فلل وشقق فاخرة' },
-  { id: '2', name: 'حي النخيل', nameEn: 'Al Nakheel', type: 'district', zone: 'north', popular: true, description: 'حي سكني متميز' },
-  { id: '3', name: 'حي الياسمين', nameEn: 'Al Yasmin', type: 'district', zone: 'north', popular: true, description: 'منطقة سكنية حديثة' },
-  { id: '4', name: 'حي الروضة', nameEn: 'Al Rawda', type: 'district', zone: 'north', popular: true, description: 'حي راقي مع مرافق متكاملة' },
-  { id: '5', name: 'حي الملقا', nameEn: 'Al Malqa', type: 'district', zone: 'north', popular: true, description: 'منطقة تجارية وسكنية' },
-  
+  { id: '1', name: 'حي النرجس', nameEn: 'Al Narjis', type: 'district', zone: 'north', popular: true, description: 'فلل وقصور فاخرة', commonProblems: 'ارتفاع حرارة الأسطح صيفاً', recommendedSolution: 'عزل فوم بولي يوريثان' },
+  { id: '2', name: 'حي النخيل', nameEn: 'Al Nakheel', type: 'district', zone: 'north', popular: true, description: 'مباني سكنية حديثة', commonProblems: 'تسربات مياه الأمطار', recommendedSolution: 'عزل مائي + فوم' },
+  { id: '3', name: 'حي الياسمين', nameEn: 'Al Yasmin', type: 'district', zone: 'north', popular: true, description: 'منطقة سكنية راقية', commonProblems: 'ارتفاع فواتير الكهرباء', recommendedSolution: 'عزل حراري فوم' },
+  { id: '4', name: 'حي الروضة', nameEn: 'Al Rawda', type: 'district', zone: 'north', popular: true, description: 'فلل ومجمعات سكنية', commonProblems: 'رطوبة في الأسقف', recommendedSolution: 'عزل مائي أسمنتي' },
+  { id: '5', name: 'حي الملقا', nameEn: 'Al Malqa', type: 'district', zone: 'north', popular: true, description: 'منطقة تجارية وسكنية', commonProblems: 'تسربات خزانات المياه', recommendedSolution: 'عزل خزانات إيبوكسي' },
+
   // Southern Districts
-  { id: '6', name: 'حي الحمراء', nameEn: 'Al Hamra', type: 'district', zone: 'south', popular: true, description: 'حي سكني مميز' },
-  { id: '7', name: 'حي العقيق', nameEn: 'Al Aqiq', type: 'district', zone: 'south', popular: true, description: 'منطقة سكنية متطورة' },
-  { id: '8', name: 'حي الدرعية', nameEn: 'Al Diriyah', type: 'district', zone: 'south', popular: true, description: 'منطقة تاريخية مع مشاريع حديثة' },
-  { id: '9', name: 'حي الخليج', nameEn: 'Al Khaleej', type: 'district', zone: 'south', popular: false, description: 'حي سكني هادئ' },
-  
+  { id: '6', name: 'حي الحمراء', nameEn: 'Al Hamra', type: 'district', zone: 'south', popular: true, description: 'مباني سكنية متنوعة', commonProblems: 'تآكل العزل القديم', recommendedSolution: 'تجديد عزل الفوم' },
+  { id: '7', name: 'حي العزيزية', nameEn: 'Al Aziziyah', type: 'district', zone: 'south', popular: true, description: 'حي سكني كبير', commonProblems: 'حرارة عالية صيفاً', recommendedSolution: 'عزل فوم عاكس' },
+  { id: '8', name: 'حي الدار البيضاء', nameEn: 'Al Dar Al Baida', type: 'district', zone: 'south', popular: true, description: 'منطقة صناعية وسكنية', commonProblems: 'تسربات صناعية', recommendedSolution: 'عزل مائي مقاوم للكيماويات' },
+
   // Eastern Districts
-  { id: '10', name: 'حي الربوة', nameEn: 'Al Rabwa', type: 'district', zone: 'east', popular: true, description: 'منطقة سكنية راقية' },
-  { id: '11', name: 'حي النهضة', nameEn: 'Al Nahda', type: 'district', zone: 'east', popular: true, description: 'حي متطور مع مراكز تجارية' },
-  { id: '12', name: 'حي الورود', nameEn: 'Al Wurud', type: 'district', zone: 'east', popular: true, description: 'منطقة سكنية جميلة' },
-  { id: '13', name: 'حي الفيصلية', nameEn: 'Al Faisaliyyah', type: 'district', zone: 'east', popular: false, description: 'حي سكني مريح' },
-  
+  { id: '10', name: 'حي الروابي', nameEn: 'Al Rawabi', type: 'district', zone: 'east', popular: true, description: 'منطقة سكنية حديثة', commonProblems: 'عزل ضعيف للمباني الجديدة', recommendedSolution: 'عزل فوم شامل' },
+  { id: '11', name: 'حي النهضة', nameEn: 'Al Nahda', type: 'district', zone: 'east', popular: true, description: 'حي تجاري وسكني', commonProblems: 'تسربات في المباني التجارية', recommendedSolution: 'عزل مائي احترافي' },
+  { id: '12', name: 'حي الخليج', nameEn: 'Al Khaleej', type: 'district', zone: 'east', popular: true, description: 'مجمعات سكنية', commonProblems: 'مشاكل رطوبة', recommendedSolution: 'عزل مائي + حراري' },
+
   // Western Districts
-  { id: '14', name: 'حي الشفا', nameEn: 'Al Shifa', type: 'district', zone: 'west', popular: true, description: 'منطقة طبية وسكنية' },
-  { id: '15', name: 'حي المرسلات', nameEn: 'Al Mursalat', type: 'district', zone: 'west', popular: false, description: 'حي سكني هادئ' },
-  { id: '16', name: 'حي الخزامى', nameEn: 'Al Khuzama', type: 'district', zone: 'west', popular: true, description: 'منطقة سكنية متطورة' },
-  
+  { id: '14', name: 'حي الشفا', nameEn: 'Al Shifa', type: 'district', zone: 'west', popular: true, description: 'منطقة طبية وسكنية', commonProblems: 'تسربات مياه', recommendedSolution: 'كشف تسربات + عزل' },
+  { id: '15', name: 'حي عرقة', nameEn: 'Irqah', type: 'district', zone: 'west', popular: true, description: 'فلل وقصور', commonProblems: 'أسطح كبيرة تحتاج عزل', recommendedSolution: 'عزل فوم + مائي' },
+  { id: '16', name: 'حي الخزامى', nameEn: 'Al Khuzama', type: 'district', zone: 'west', popular: true, description: 'منطقة سكنية متطورة', commonProblems: 'حرارة الأسطح', recommendedSolution: 'عزل حراري متقدم' },
+
   // Central Districts
-  { id: '17', name: 'حي الصفا', nameEn: 'Al Safa', type: 'district', zone: 'center', popular: true, description: 'وسط المدينة مع مكاتب وشركات' },
-  { id: '18', name: 'حي المروج', nameEn: 'Al Murooj', type: 'district', zone: 'center', popular: true, description: 'منطقة تجارية وسكنية' },
-  { id: '19', name: 'حي الملز', nameEn: 'Al Malaz', type: 'district', zone: 'center', popular: true, description: 'حي تجاري مميز' },
-  { id: '20', name: 'حي العليا', nameEn: 'Al Olaya', type: 'district', zone: 'center', popular: true, description: 'المنطقة التجارية الرئيسية' },
-  
-  // Major Streets
-  { id: '21', name: 'شارع الملك فهد', nameEn: 'King Fahd Road', type: 'street', zone: 'center', popular: true, description: 'الشارع الرئيسي في الرياض' },
-  { id: '22', name: 'طريق الملك عبدالعزيز', nameEn: 'King Abdulaziz Road', type: 'street', zone: 'center', popular: true, description: 'طريق مهم يربط أجزاء المدينة' },
-  { id: '23', name: 'شارع التحلية', nameEn: 'Tahlia Street', type: 'street', zone: 'center', popular: true, description: 'شارع تجاري مميز' },
-  { id: '24', name: 'طريق الدائري الشمالي', nameEn: 'Northern Ring Road', type: 'street', zone: 'north', popular: true, description: 'الطريق الدائري الشمالي' },
-  { id: '25', name: 'طريق الدائري الشرقي', nameEn: 'Eastern Ring Road', type: 'street', zone: 'east', popular: true, description: 'الطريق الدائري الشرقي' },
-  
-  // Residential Compounds
-  { id: '26', name: 'مجمع الياسمين السكني', nameEn: 'Al Yasmin Residential Compound', type: 'compound', zone: 'north', popular: true, description: 'مجمع سكني متكامل' },
-  { id: '27', name: 'مجمع النخيل السكني', nameEn: 'Al Nakheel Residential Compound', type: 'compound', zone: 'north', popular: true, description: 'مجمع سكني راقي' },
-  { id: '28', name: 'فلل الروضة', nameEn: 'Al Rawda Villas', type: 'compound', zone: 'north', popular: true, description: 'مجمع فلل فاخرة' },
+  { id: '17', name: 'حي العليا', nameEn: 'Al Olaya', type: 'district', zone: 'center', popular: true, description: 'المنطقة التجارية الرئيسية', commonProblems: 'عزل المباني التجارية', recommendedSolution: 'عزل فوم تجاري' },
+  { id: '18', name: 'حي المروج', nameEn: 'Al Murooj', type: 'district', zone: 'center', popular: true, description: 'منطقة تجارية وسكنية', commonProblems: 'تسربات أسطح المحلات', recommendedSolution: 'عزل مائي سريع' },
+  { id: '19', name: 'حي الملز', nameEn: 'Al Malaz', type: 'district', zone: 'center', popular: true, description: 'حي تجاري قديم', commonProblems: 'تجديد العزل القديم', recommendedSolution: 'إزالة + عزل جديد' },
+
+  // Al-Kharj
+  { id: '30', name: 'وسط الخرج', nameEn: 'Kharj Center', type: 'district', zone: 'kharj', popular: true, description: 'مركز مدينة الخرج', commonProblems: 'حرارة شديدة صيفاً', recommendedSolution: 'عزل فوم عالي الكثافة' },
+  { id: '31', name: 'حي الخالدية', nameEn: 'Al Khalidiyah - Kharj', type: 'district', zone: 'kharj', popular: true, description: 'حي سكني بالخرج', commonProblems: 'تسربات المياه', recommendedSolution: 'عزل مائي شامل' },
+  { id: '32', name: 'حي اليرموك', nameEn: 'Al Yarmouk - Kharj', type: 'district', zone: 'kharj', popular: true, description: 'منطقة سكنية', commonProblems: 'عزل خزانات', recommendedSolution: 'عزل خزانات صحي' },
 ]
 
-const FURNITURE_SERVICES = [
-  { id: '1', name: 'نقل الأثاث السكني', icon: HomeIcon, description: 'نقل أثاث المنازل والشقق' },
-  { id: '2', name: 'نقل أثاث المكاتب', icon: BuildingOfficeIcon, description: 'نقل أثاث الشركات والمكاتب' },
-  { id: '3', name: 'فك وتركيب الأثاث', icon: TruckIcon, description: 'فك وتركيب جميع أنواع الأثاث' },
+const INSULATION_SERVICES = [
+  { id: '1', name: 'عزل فوم للأسطح', icon: ShieldCheckIcon, description: 'عزل حراري ومائي شامل' },
+  { id: '2', name: 'عزل مائي للأسطح', icon: ShieldCheckIcon, description: 'حماية من التسربات والرطوبة' },
+  { id: '3', name: 'كشف تسربات المياه', icon: HomeIcon, description: 'كشف إلكتروني دقيق' },
 ]
 
 export default function RiyadhLocations() {
   const [selectedZone, setSelectedZone] = useState<string>('all')
-  const [selectedType, setSelectedType] = useState<string>('all')
   const [showPopularOnly, setShowPopularOnly] = useState(false)
 
   const filteredLocations = RIYADH_LOCATIONS.filter(location => {
     if (selectedZone !== 'all' && location.zone !== selectedZone) return false
-    if (selectedType !== 'all' && location.type !== selectedType) return false
     if (showPopularOnly && !location.popular) return false
     return true
   })
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'district': return '🏘️'
-      case 'street': return '🛣️'
-      case 'compound': return '🏢'
-      default: return '📍'
-    }
-  }
 
   const getZoneColor = (zone: string) => {
     switch (zone) {
@@ -91,30 +72,43 @@ export default function RiyadhLocations() {
       case 'east': return 'bg-orange-50 text-orange-700 border-orange-200'
       case 'west': return 'bg-purple-50 text-purple-700 border-purple-200'
       case 'center': return 'bg-red-50 text-red-700 border-red-200'
+      case 'kharj': return 'bg-teal-50 text-teal-700 border-teal-200'
       default: return 'bg-white-50 text-gray-700 border-gray-200'
     }
   }
 
+  const getZoneName = (zone: string) => {
+    switch (zone) {
+      case 'north': return 'شمال الرياض'
+      case 'south': return 'جنوب الرياض'
+      case 'east': return 'شرق الرياض'
+      case 'west': return 'غرب الرياض'
+      case 'center': return 'وسط الرياض'
+      case 'kharj': return 'الخرج'
+      default: return ''
+    }
+  }
+
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white" id="locations">
+    <section className="py-16 bg-gray-50" id="locations">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            خدمات نقل الأثاث في جميع أنحاء الرياض
+            خدمات عزل الأسطح في الرياض والخرج
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            نقدم خدمات نقل الأثاث المتخصصة في جميع أحياء وشوارع الرياض مع فريق محترف ومعدات حديثة
+            نقدم خدمات عزل الأسطح المتخصصة في جميع أحياء الرياض والخرج مع فريق محترف ومواد عالية الجودة
           </p>
-          
+
           {/* Service Types */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {FURNITURE_SERVICES.map((service) => {
+            {INSULATION_SERVICES.map((service) => {
               const IconComponent = service.icon
               return (
                 <div key={service.id} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-blue-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-[#0d64ab]/10 rounded-lg mx-auto mb-4">
+                    <IconComponent className="w-6 h-6 text-[#0d64ab]" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
@@ -130,10 +124,10 @@ export default function RiyadhLocations() {
             {/* Zone Filter */}
             <div className="flex items-center gap-2">
               <label className="text-sm font-medium text-gray-700">المنطقة:</label>
-              <select 
-                value={selectedZone} 
+              <select
+                value={selectedZone}
                 onChange={(e) => setSelectedZone(e.target.value)}
-                className="px-3 py-2 bg-white border border-white-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#0d64ab] focus:border-[#0d64ab]"
               >
                 <option value="all">جميع المناطق</option>
                 <option value="north">شمال الرياض</option>
@@ -141,21 +135,7 @@ export default function RiyadhLocations() {
                 <option value="east">شرق الرياض</option>
                 <option value="west">غرب الرياض</option>
                 <option value="center">وسط الرياض</option>
-              </select>
-            </div>
-
-            {/* Type Filter */}
-            <div className="flex items-center gap-2">
-              <label className="text-sm font-medium text-gray-700">النوع:</label>
-              <select 
-                value={selectedType} 
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="px-3 py-2 bg-white border border-white-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="all">جميع الأنواع</option>
-                <option value="district">الأحياء</option>
-                <option value="street">الشوارع</option>
-                <option value="compound">المجمعات السكنية</option>
+                <option value="kharj">الخرج</option>
               </select>
             </div>
 
@@ -166,7 +146,7 @@ export default function RiyadhLocations() {
                 id="popular"
                 checked={showPopularOnly}
                 onChange={(e) => setShowPopularOnly(e.target.checked)}
-                className="w-4 h-4 text-blue-600 bg-white border-white-300 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-[#0d64ab] bg-white border-gray-300 rounded focus:ring-[#0d64ab]"
               />
               <label htmlFor="popular" className="text-sm font-medium text-gray-700">
                 المناطق الأكثر طلباً فقط
@@ -178,26 +158,29 @@ export default function RiyadhLocations() {
         {/* Locations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredLocations.map((location) => (
-            <div 
-              key={location.id} 
-              className={`p-4 rounded-xl border-2 hover:shadow-lg transition-all duration-200 cursor-pointer ${getZoneColor(location.zone)}`}
+            <div
+              key={location.id}
+              className={`p-4 rounded-xl border-2 hover:shadow-lg transition-all duration-200 cursor-pointer bg-white ${getZoneColor(location.zone)}`}
             >
               <div className="flex items-start gap-3">
-                <span className="text-2xl">{getTypeIcon(location.type)}</span>
+                <span className="text-2xl">🏠</span>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-lg mb-1 truncate">{location.name}</h3>
-                  <p className="text-sm opacity-75 mb-2">{location.nameEn}</p>
-                  {location.description && (
-                    <p className="text-xs opacity-70 leading-relaxed">{location.description}</p>
+                  <p className="text-sm opacity-75 mb-2">{location.description}</p>
+                  {location.commonProblems && (
+                    <p className="text-xs opacity-70 mb-1">
+                      <strong>المشكلة الشائعة:</strong> {location.commonProblems}
+                    </p>
+                  )}
+                  {location.recommendedSolution && (
+                    <p className="text-xs opacity-70">
+                      <strong>الحل المقترح:</strong> {location.recommendedSolution}
+                    </p>
                   )}
                   <div className="flex items-center gap-2 mt-3">
                     <MapPinIcon className="w-4 h-4 opacity-60" />
-                    <span className="text-xs opacity-75 capitalize">
-                      {location.zone === 'north' && 'شمال الرياض'}
-                      {location.zone === 'south' && 'جنوب الرياض'}
-                      {location.zone === 'east' && 'شرق الرياض'}
-                      {location.zone === 'west' && 'غرب الرياض'}
-                      {location.zone === 'center' && 'وسط الرياض'}
+                    <span className="text-xs opacity-75">
+                      {getZoneName(location.zone)}
                     </span>
                     {location.popular && (
                       <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">
@@ -218,24 +201,24 @@ export default function RiyadhLocations() {
         )}
 
         {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-[#0d64ab] rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            هل تحتاج لنقل أثاث في منطقتك؟
+            هل تحتاج لخدمة عزل في منطقتك؟
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            نصل إلى جميع أنحاء الرياض مع فريق متخصص ومعدات حديثة
+            نصل إلى جميع أنحاء الرياض والخرج مع فريق متخصص ومواد عالية الجودة
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="tel:+966547910859" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
+            <a
+              href="tel:+966500000000"
+              className="bg-white text-[#0d64ab] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
             >
               <span>📞</span>
-              اتصل الآن: 0547910859
+              اتصل الآن: 0500000000
             </a>
-            <a 
-              href="https://wa.me/966547910859" 
-              target="_blank" 
+            <a
+              href="https://wa.me/966500000000"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors flex items-center gap-2"
             >
@@ -246,25 +229,25 @@ export default function RiyadhLocations() {
         </div>
 
         {/* SEO Text */}
-        <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <div className="mt-12 bg-white p-8 rounded-xl">
           <h4 className="text-xl font-bold text-gray-900 mb-4">
-            خدمات نقل الأثاث في الرياض - تغطية شاملة لجميع الأحياء
+            خدمات عزل الأسطح في الرياض والخرج - تغطية شاملة لجميع الأحياء
           </h4>
           <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed">
             <p className="mb-4">
-              تقدم شركة لمسة للنظافة خدمات نقل الأثاث المتخصصة في جميع أنحاء مدينة الرياض، بما في ذلك الأحياء الشمالية مثل 
-              <strong> النرجس والنخيل والياسمين والروضة والملقا</strong>، والأحياء الجنوبية مثل 
-              <strong> الحمراء والعقيق والدرعية</strong>، والأحياء الشرقية مثل 
-              <strong> الربوة والنهضة والورود</strong>، والأحياء الغربية مثل 
-              <strong> الشفا والخزامى</strong>، ووسط المدينة مثل 
-              <strong> العليا والملز والمروج والصفا</strong>.
+              تقدم شركة عزل اسطح الرياض خدمات عزل الأسطح المتخصصة في جميع أنحاء مدينة الرياض والخرج، بما في ذلك الأحياء الشمالية مثل
+              <strong> النرجس والنخيل والياسمين والروضة والملقا</strong>، والأحياء الجنوبية مثل
+              <strong> الحمراء والعزيزية والدار البيضاء</strong>، والأحياء الشرقية مثل
+              <strong> الروابي والنهضة والخليج</strong>، والأحياء الغربية مثل
+              <strong> الشفا وعرقة والخزامى</strong>، ووسط المدينة مثل
+              <strong> العليا والملز والمروج</strong>.
             </p>
             <p className="mb-4">
-              نقدم خدمات نقل الأثاث على الشوارع الرئيسية مثل <strong>شارع الملك فهد وطريق الملك عبدالعزيز وشارع التحلية</strong> 
-              والطرق الدائرية، مع تغطية المجمعات السكنية والفلل والشقق في جميع أنحاء الرياض.
+              كما نقدم خدماتنا في مدينة <strong>الخرج</strong> وجميع أحيائها بما في ذلك وسط الخرج وحي الخالدية وحي اليرموك.
+              نتخصص في عزل الفوم بولي يوريثان، العزل المائي، العازل الأسمنتي، كشف تسربات المياه، وعزل خزانات المياه.
             </p>
             <p>
-              فريقنا المدرب يستخدم أحدث المعدات والتقنيات لضمان نقل آمن وسريع لأثاثكم، مع خدمة فك وتركيب محترفة وضمان شامل على جميع الخدمات.
+              فريقنا المدرب يستخدم أحدث المواد والتقنيات لضمان عزل فعال وطويل الأمد لأسطحكم، مع ضمان شامل يصل إلى 10 سنوات واعتماد من الهيئة السعودية للمهندسين.
             </p>
           </div>
         </div>

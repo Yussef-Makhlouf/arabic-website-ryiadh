@@ -1,147 +1,121 @@
-import Image from 'next/image'
-import { ExclamationTriangleIcon, SparklesIcon, ShieldCheckIcon, CloudIcon, HomeIcon, BuildingOfficeIcon, ClockIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, BeakerIcon, EyeIcon, CubeIcon, WrenchScrewdriverIcon, ClockIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 
 export default function ServicesDetail() {
   const services = [
     {
-      id: 'pest-control',
-      icon: ExclamationTriangleIcon,
-      title: 'مكافحة الحشرات في الرياض',
-      subtitle: 'حماية شاملة من الحشرات الضارة',
-      description: 'نقدم خدمات مكافحة الحشرات المتخصصة في الرياض باستخدام أحدث التقنيات والمواد الآمنة. نضمن لكم بيئة خالية من الحشرات الضارة مع الحفاظ على سلامة أسرتكم.',
+      id: 'foam-insulation',
+      icon: CubeIcon,
+      title: 'عزل فوم للأسطح بالرياض',
+      subtitle: 'عزل حراري ومائي بتقنية الفوم بولي يوريثان',
+      description: 'نقدم خدمات عزل الفوم بولي يوريثان للأسطح في الرياض والخرج. يعتبر عزل الفوم من أفضل أنواع العزل لأنه يوفر عزل حراري ومائي في آن واحد، مع مقاومة عالية للعوامل الجوية وعمر افتراضي طويل.',
       features: [
-        'مكافحة الصراصير والنمل الأبيض',
-        'مكافحة الفئران والقوارض',
-        'مكافحة البعوض والذباب',
-        'استخدام مواد آمنة ومصرح بها',
-        'ضمان النتائج لمدة 6 أشهر',
-        'خدمة ما بعد المكافحة'
+        'عزل حراري ومائي معاً',
+        'مقاومة لدرجات الحرارة العالية',
+        'خفة الوزن على الأسطح',
+        'مقاومة للحريق',
+        'ضمان يصل إلى 10 سنوات',
+        'توفير فاتورة الكهرباء حتى 50%'
       ],
       process: [
-        'فحص شامل للمكان',
-        'تحديد نوع الحشرات',
-        'وضع خطة مكافحة مخصصة',
-        'تطبيق العلاج المناسب',
-        'متابعة النتائج'
+        'معاينة السطح وتحديد حالته',
+        'تنظيف وتجهيز السطح',
+        'رش الفوم بالسماكة المطلوبة',
+        'التغطية بطبقة حماية',
+        'فحص الجودة والتسليم'
       ],
-      image: '/home-cleaning-riyadh-guide.png'
+      image: '/foam-insulation.jpg'
     },
     {
-      id: 'carpet-cleaning',
-      icon: SparklesIcon,
-      title: 'تنظيف الموكيت في الرياض',
-      subtitle: 'تنظيف احترافي للسجاد والموكيت',
-      description: 'خدمات تنظيف الموكيت والسجاد المتخصصة في الرياض باستخدام معدات متقدمة ومواد تنظيف عالية الجودة. نزيل البقع الصعبة والروائح مع الحفاظ على جودة الألياف.',
-      features: [
-        'تنظيف بالبخار العميق',
-        'إزالة البقع الصعبة',
-        'معالجة الروائح الكريهة',
-        'حماية الألوان والألياف',
-        'تجفيف سريع',
-        'ضمان عدم التلف'
-      ],
-      process: [
-        'فحص حالة السجاد',
-        'إزالة الأتربة السطحية',
-        'معالجة البقع الخاصة',
-        'تنظيف بالبخار العميق',
-        'تجفيف وتلميع'
-      ],
-      image: '/carpet-cleaning-guide.avif'
-    },
-    {
-      id: 'disinfection',
+      id: 'waterproof-insulation',
       icon: ShieldCheckIcon,
-      title: 'التعقيم الشامل في الرياض',
-      subtitle: 'تعقيم متقدم لضمان الصحة والسلامة',
-      description: 'خدمات التعقيم الشامل في الرياض باستخدام تقنيات متقدمة مثل الأشعة فوق البنفسجية والمواد المعقمة عالية الفعالية. نضمن بيئة صحية وآمنة لكم ولعائلاتكم.',
+      title: 'عزل مائي للأسطح بالرياض',
+      subtitle: 'حماية شاملة من تسربات المياه والرطوبة',
+      description: 'خدمات العزل المائي الاحترافي للأسطح في الرياض باستخدام أجود مواد العزل المائي. نضمن حماية كاملة من تسربات مياه الأمطار والرطوبة لحماية المبنى من التلف.',
       features: [
-        'تعقيم بالأشعة فوق البنفسجية',
-        'معقمات عالية التركيز',
-        'تعقيم جميع الأسطح',
-        'تقارير مفصلة للتعقيم',
-        'شهادات صحية',
-        'حماية من الفيروسات والبكتيريا'
+        'حماية من تسربات المياه',
+        'مقاومة للأملاح والتآكل',
+        'مرونة عالية تتحمل التمدد',
+        'مواد صديقة للبيئة',
+        'ضمان شامل على الخدمة',
+        'مناسب لجميع أنواع الأسطح'
       ],
       process: [
-        'تقييم احتياجات التعقيم',
-        'تحضير المواد والمعدات',
-        'تعقيم شامل للمكان',
-        'تركيز على النقاط الحساسة',
-        'إصدار تقرير التعقيم'
+        'فحص وتقييم السطح',
+        'معالجة الشروخ والتصدعات',
+        'تطبيق طبقة البرايمر',
+        'تطبيق العزل المائي',
+        'فحص واختبار العزل'
       ],
-      image: '/cleaning-services.png'
+      image: '/waterproof-insulation.jpg'
     },
     {
-      id: 'tank-cleaning',
-      icon: CloudIcon,
-      title: 'تنظيف الخزانات في الرياض',
-      subtitle: 'تنظيف وتعقيم خزانات المياه',
-      description: 'خدمات تنظيف وتعقيم خزانات المياه في الرياض باستخدام مواد آمنة ومطابقة للمواصفات الصحية السعودية. نضمن مياه نظيفة وآمنة للاستهلاك.',
+      id: 'cement-insulation',
+      icon: BeakerIcon,
+      title: 'عازل أسمنتي بالرياض',
+      subtitle: 'عزل متين وقوي للأسطح الخرسانية',
+      description: 'خدمات العزل الأسمنتي للأسطح والخزانات في الرياض. يتميز العازل الأسمنتي بمتانته العالية ومقاومته للعوامل الجوية، وهو مثالي للأسطح الخرسانية والخزانات.',
       features: [
-        'تنظيف شامل للخزانات',
-        'تعقيم بمواد مصرح بها',
-        'إزالة الرواسب والطحالب',
-        'فحص جودة المياه',
-        'تقارير صحية مفصلة',
-        'ضمان جودة المياه'
+        'متانة وقوة عالية',
+        'مقاومة للعوامل الجوية',
+        'عمر افتراضي طويل',
+        'سهولة الصيانة',
+        'مناسب للخزانات',
+        'معتمد صحياً'
       ],
       process: [
-        'إفراغ الخزان',
-        'تنظيف الجدران والأرضية',
-        'إزالة الرواسب',
-        'تعقيم شامل',
-        'إعادة ملء المياه',
-        'فحص الجودة'
+        'تنظيف السطح',
+        'معالجة الشروخ',
+        'تطبيق طبقة أساس',
+        'رش العازل الأسمنتي',
+        'تشطيب وحماية'
       ],
-      image: '/carpet-cleaning-guide.avif'
+      image: '/cement-insulation.jpg'
     },
     {
-      id: 'office-cleaning',
-      icon: BuildingOfficeIcon,
-      title: 'تنظيف المكاتب في الرياض',
-      subtitle: 'تنظيف احترافي للمكاتب والشركات',
-      description: 'خدمات تنظيف المكاتب والشركات في الرياض مع جدولة مرنة تناسب ساعات العمل. نعمل في المساء أو العطلات لتجنب إزعاج الموظفين.',
+      id: 'leak-detection',
+      icon: EyeIcon,
+      title: 'كشف تسربات المياه بالرياض',
+      subtitle: 'كشف إلكتروني دقيق بأحدث الأجهزة',
+      description: 'خدمات كشف تسربات المياه في الرياض باستخدام أحدث الأجهزة الإلكترونية والحرارية. نحدد مكان التسرب بدقة متناهية دون الحاجة للتكسير، مما يوفر الوقت والتكاليف.',
       features: [
-        'تنظيف يومي وأسبوعي',
-        'تنظيف المكاتب والكراسي',
-        'تنظيف المطبخ والحمامات',
-        'إزالة الأتربة والغبار',
-        'تنظيف النوافذ والزجاج',
-        'خدمة 24/7 متاحة'
+        'كشف بدون تكسير',
+        'أجهزة إلكترونية متقدمة',
+        'دقة عالية في التحديد',
+        'تقرير مفصل بالنتائج',
+        'خدمة على مدار الساعة',
+        'أسعار تنافسية'
       ],
       process: [
-        'تقييم احتياجات المكتب',
-        'وضع جدول تنظيف مناسب',
-        'تنظيف شامل للمكان',
-        'تركيز على المناطق العامة',
-        'متابعة الجودة'
+        'فحص أولي للمكان',
+        'استخدام أجهزة الكشف',
+        'تحديد مكان التسرب',
+        'إصدار تقرير مفصل',
+        'تقديم حلول الإصلاح'
       ],
-      image: '/cleaning-services.png'
+      image: '/leak-detection.jpg'
     },
     {
-      id: 'home-cleaning',
-      icon: HomeIcon,
-      title: 'تنظيف المنازل في الرياض',
-      subtitle: 'تنظيف شامل للمنازل والفيلات',
-      description: 'خدمات تنظيف المنازل الشاملة في الرياض تشمل تنظيف المطبخ والحمامات والغرف وجميع مرافق المنزل. نضمن منزل نظيف ومريح لكم ولعائلاتكم.',
+      id: 'tank-insulation',
+      icon: WrenchScrewdriverIcon,
+      title: 'عزل خزانات المياه بالرياض',
+      subtitle: 'عزل آمن صحياً للخزانات الأرضية والعلوية',
+      description: 'خدمات عزل خزانات المياه في الرياض بمواد آمنة صحياً ومعتمدة. نضمن لكم مياه نظيفة وخالية من التلوث مع حماية الخزان من التسربات والتآكل.',
       features: [
-        'تنظيف شامل للمنزل',
-        'تنظيف المطبخ والحمامات',
-        'تنظيف الغرف والغرف النوم',
-        'تنظيف النوافذ والمرايا',
-        'تنظيف الأرضيات والجدران',
-        'خدمة تنظيف دورية'
+        'مواد آمنة صحياً',
+        'معتمد من وزارة الصحة',
+        'خزانات أرضية وعلوية',
+        'حماية من التسربات',
+        'مقاومة البكتيريا',
+        'ضمان شامل'
       ],
       process: [
-        'تقييم حجم المنزل',
-        'تنظيف الغرف الرئيسية',
-        'تنظيف المطبخ والحمامات',
-        'تنظيف النوافذ والمرايا',
-        'تنظيف الأرضيات',
-        'فحص نهائي للجودة'
+        'تفريغ وتنظيف الخزان',
+        'معاينة وتحديد المشاكل',
+        'معالجة الشروخ',
+        'تطبيق العزل الإيبوكسي',
+        'فحص وتسليم الخزان'
       ],
-      image: '/carpet-cleaning-guide.avif'
+      image: '/tank-insulation.jpg'
     }
   ]
 
@@ -150,11 +124,11 @@ export default function ServicesDetail() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            خدمات النظافة المتخصصة في الرياض
+            خدمات عزل الأسطح المتخصصة في الرياض
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            نقدم مجموعة شاملة من خدمات النظافة المتخصصة في الرياض باستخدام أحدث التقنيات ومواد صديقة للبيئة. 
-            اكتشف خدماتنا التفصيلية التي تضمن بيئة صحية وآمنة لكم ولعائلاتكم.
+            نقدم مجموعة شاملة من خدمات عزل الأسطح والمباني في الرياض والخرج باستخدام أحدث التقنيات ومواد عالية الجودة.
+            اكتشف خدماتنا التفصيلية التي تضمن حماية شاملة لمبناك.
           </p>
         </div>
 
@@ -166,15 +140,15 @@ export default function ServicesDetail() {
                   <div className="w-16 h-16 bg-[#0d64ab] rounded-xl flex items-center justify-center mb-6 shadow-lg">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
                     {service.title}
                   </h3>
-                  
+
                   <h4 className="text-xl font-semibold text-[#0d64ab] mb-6">
                     {service.subtitle}
                   </h4>
-                  
+
                   <p className="text-gray-600 text-lg leading-relaxed mb-8">
                     {service.description}
                   </p>
@@ -217,16 +191,14 @@ export default function ServicesDetail() {
 
               <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div className="relative">
-                  <div className="aspect-video rounded-[16px] overflow-hidden shadow-2xl border border-gray-100">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-700 hover:scale-105 rounded-[16px]"
-                    />
+                  <div className="aspect-video rounded-[16px] overflow-hidden shadow-2xl border border-gray-100 bg-[#0d64ab]/10">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-24 h-24 bg-[#0d64ab]/20 rounded-full flex items-center justify-center">
+                        <service.icon className="w-12 h-12 text-[#0d64ab]" />
+                      </div>
+                    </div>
                   </div>
-                  
+
                   {/* Decorative Elements */}
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#0d64ab]/10 rounded-full blur-xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#05ccca]/10 rounded-full blur-xl"></div>
@@ -246,13 +218,18 @@ export default function ServicesDetail() {
               تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتكم. فريقنا متاح على مدار الساعة لخدمتكم.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="tel:0547910859"
+              <a
+                href="tel:0500000000"
                 className="bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 اتصل بنا الآن
               </a>
-     
+              <a
+                href="https://wa.me/966500000000"
+                className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                واتساب
+              </a>
             </div>
           </div>
         </div>

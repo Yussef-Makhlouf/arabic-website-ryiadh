@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { JsonLd } from 'react-schemaorg'
 import { Organization } from 'schema-dts'
-// import { Analytics } from '../lib/analytics'
 import Script from 'next/script'
 
 // تعريف الخط الجديد
@@ -16,14 +15,14 @@ const theYearFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'خدمات النظافة والتعقيم في الرياض | شركة لمسة للنظافة - أفضل شركة تنظيف',
-    template: '%s | شركة لمسة للنظافة'
+    default: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات | ضمان 15 سنة',
+    template: '%s | شركة عزل اسطح الرياض'
   },
-  description: 'نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم في الرياض باستخدام أحدث التقنيات ومواد صديقة للبيئة. مكافحة الحشرات، تنظيف الخزانات، تنظيف الموكيت. خدمة 24/7 مع ضمان الجودة.',
-  keywords: ['نظافة الرياض', 'تنظيف منازل الرياض', 'مكافحة حشرات الرياض', 'تنظيف مكاتب الرياض', 'تنظيف سجاد الرياض', 'تنظيف خزانات الرياض', 'تعقيم الرياض', 'شركة نظافة الرياض', 'أفضل شركة تنظيف الرياض', 'خدمات النظافة الرياض', 'تنظيف في الرياض', 'شركة تعقيم الرياض', 'تنظيف فلل الرياض', 'تنظيف شقق الرياض', 'تنظيف نوافذ الرياض', 'تنظيف كنب الرياض', 'غسيل موكيت', 'شفط مجاري'],
-  authors: [{ name: 'شركة نظافة الرياض' }],
-  creator: 'شركة نظافة الرياض',
-  publisher: 'شركة نظافة الرياض',
+  description: 'أفضل شركة عزل اسطح بالرياض والخرج. نقدم خدمات عزل فوم بولي يوريثان، عزل مائي، وكشف تسربات المياه بأحدث التقنيات. معتمدون من الهيئة السعودية للمهندسين. خبرة 15 عاماً وضمان شامل يصل إلى 15 سنة. اتصل الآن للمعاينة المجانية.',
+  keywords: ['شركة عزل اسطح بالرياض', 'عزل فوم بالرياض', 'عزل مائي بالرياض', 'شركة عزل خزانات بالرياض', 'كشف تسربات المياه', 'عزل اسطح بالخرج', 'عزل فوم بولي يوريثان', 'عزل شينكو', 'أفضل شركة عزل', 'عزل حراري', 'عزل اسطح شمال الرياض', 'سعر متر العزل', 'عزل مائي وحراري', 'شركة عزل معتمدة'],
+  authors: [{ name: 'شركة عزل اسطح الرياض' }],
+  creator: 'شركة عزل اسطح الرياض',
+  publisher: 'شركة عزل اسطح الرياض',
   formatDetection: {
     email: false,
     address: false,
@@ -38,26 +37,26 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ar_SA',
     url: 'http://lamsa-clean.com',
-    siteName: 'شركة نظافة الرياض',
-    title: 'خدمات النظافة والتعقيم في الرياض | أفضل شركة تنظيف',
-    description: 'نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم في الرياض باستخدام أحدث التقنيات ومواد صديقة للبيئة.',
+    siteName: 'شركة عزل اسطح الرياض',
+    title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات',
+    description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. عازل مائي، عازل أسمنتي، عزل فوم، كشف تسربات. خبرة 15 عامًا وضمان شامل.',
     images: [
       {
         url: 'http://lamsa-clean.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'شركة نظافة الرياض - خدمات النظافة والتعقيم',
+        alt: 'شركة عزل اسطح بالرياض - عزل فوم وعزل مائي',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'خدمات النظافة والتعقيم في الرياض | أفضل شركة تنظيف',
-    description: 'نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم في الرياض',
+    title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي',
+    description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني',
     images: ['http://lamsa-clean.com/twitter-image.jpg'],
-    creator: '@RiyadhCleaning',
-    site: '@RiyadhCleaning',
+    creator: '@RiyadhInsulation',
+    site: '@RiyadhInsulation',
   },
   robots: {
     index: true,
@@ -74,17 +73,17 @@ export const metadata: Metadata = {
   },
 
 
-  category: 'خدمات النظافة والتعقيم',
-  classification: 'شركة نظافة',
+  category: 'خدمات عزل الأسطح والمباني',
+  classification: 'شركة عزل',
   referrer: 'origin-when-cross-origin',
   appleWebApp: {
-    title: 'لمسة للنظافة',
+    title: 'عزل اسطح الرياض',
     statusBarStyle: 'default',
     capable: true,
   },
-  applicationName: 'لمسة للنظافة',
+  applicationName: 'عزل اسطح الرياض',
   generator: 'Next.js',
-  abstract: 'شركة متخصصة في خدمات النظافة والتعقيم في الرياض مع فريق مهني مدرب وأدوات حديثة',
+  abstract: 'شركة متخصصة في خدمات عزل الأسطح والمباني في الرياض والخرج مع فريق مهني مدرب ومعدات حديثة',
   archives: ['http://lamsa-clean.com/blog'],
   assets: ['http://lamsa-clean.com/images'],
   bookmarks: ['http://lamsa-clean.com/services'],
@@ -93,19 +92,19 @@ export const metadata: Metadata = {
     'geo.placename': 'الرياض',
     'geo.position': '24.7136;46.6753',
     'ICBM': '24.7136, 46.6753',
-    'DC.title': 'شركة نظافة الرياض',
-    'DC.creator': 'شركة نظافة الرياض',
-    'DC.subject': 'خدمات النظافة والتعقيم',
-    'DC.description': 'أفضل خدمات النظافة في الرياض',
-    'DC.publisher': 'شركة نظافة الرياض',
-    'DC.contributor': 'فريق نظافة الرياض',
+    'DC.title': 'شركة عزل اسطح الرياض',
+    'DC.creator': 'شركة عزل اسطح الرياض',
+    'DC.subject': 'خدمات عزل الأسطح والمباني',
+    'DC.description': 'أفضل خدمات عزل الأسطح في الرياض والخرج',
+    'DC.publisher': 'شركة عزل اسطح الرياض',
+    'DC.contributor': 'فريق عزل اسطح الرياض',
     'DC.date': '2024',
     'DC.type': 'خدمة',
     'DC.format': 'موقع إلكتروني',
     'DC.identifier': 'http://lamsa-clean.com',
     'DC.language': 'ar',
-    'DC.coverage': 'الرياض، المملكة العربية السعودية',
-    'DC.rights': 'جميع الحقوق محفوظة لشركة نظافة الرياض',
+    'DC.coverage': 'الرياض، الخرج، المملكة العربية السعودية',
+    'DC.rights': 'جميع الحقوق محفوظة لشركة عزل اسطح الرياض',
   },
 }
 
@@ -124,6 +123,16 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-58DM78X4');`}
+        </Script>
+        {/* End Google Tag Manager */}
+
         <link rel="canonical" href="http://lamsa-clean.com" />
         <meta name="geo.region" content="SA-01" />
         <meta name="geo.placename" content="الرياض" />
@@ -139,58 +148,58 @@ export default function RootLayout({
         <meta name="MobileOptimized" content="width" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="نظافة الرياض" />
-        <meta name="application-name" content="نظافة الرياض" />
+        <meta name="apple-mobile-web-app-title" content="عزل اسطح الرياض" />
+        <meta name="application-name" content="عزل اسطح الرياض" />
         <meta name="msapplication-TileColor" content="#0d64ab" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#0d64ab" />
-        <meta name="color-scheme" content="light dark" />
-        
+        <meta name="color-scheme" content="light" />
+
         {/* Performance and Loading Hints */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="format-detection" content="telephone=yes, date=no, email=no, address=no" />
-        
+
         {/* Security Headers */}
         <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <meta name="referrer" content="origin-when-cross-origin" />
-        
+
         {/* Additional SEO Meta Tags */}
-        <meta name="author" content="شركة لمسة للنظافة" />
-        <meta name="copyright" content="© 2025 شركة لمسة للنظافة. جميع الحقوق محفوظة" />
-        <meta name="web_author" content="شركة لمسة للنظافة" />
+        <meta name="author" content="شركة عزل اسطح الرياض" />
+        <meta name="copyright" content="© 2025 شركة عزل اسطح الرياض. جميع الحقوق محفوظة" />
+        <meta name="web_author" content="شركة عزل اسطح الرياض" />
         <meta name="reply-to" content="info@lamsa-clean.com" />
-        <meta name="owner" content="شركة لمسة للنظافة" />
+        <meta name="owner" content="شركة عزل اسطح الرياض" />
         <meta name="url" content="http://lamsa-clean.com" />
         <meta name="identifier-URL" content="http://lamsa-clean.com" />
         <meta name="directory" content="submission" />
-        <meta name="pagename" content="شركة لمسة للنظافة" />
-        <meta name="category" content="خدمات النظافة" />
-        <meta name="coverage" content="الرياض، المملكة العربية السعودية" />
+        <meta name="pagename" content="شركة عزل اسطح الرياض" />
+        <meta name="category" content="خدمات عزل الأسطح" />
+        <meta name="coverage" content="الرياض، الخرج، المملكة العربية السعودية" />
         <meta name="distribution" content="Global" />
         <meta name="rating" content="General" />
         <meta name="revisit-after" content="3 days" />
         <meta name="expires" content="never" />
-        
+
         {/* Cache Control */}
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
         <meta httpEquiv="Pragma" content="cache" />
-        
+
         {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        
+
         {/* Alternative Language Pages */}
         <link rel="alternate" hrefLang="ar" href="http://lamsa-clean.com" />
         <link rel="alternate" hrefLang="ar-SA" href="http://lamsa-clean.com" />
         <link rel="alternate" hrefLang="x-default" href="http://lamsa-clean.com" />
-        
+
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* DNS Prefetch and Resource Hints */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -200,10 +209,24 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.instagram.com" />
         <link rel="dns-prefetch" href="//twitter.com" />
         <link rel="preconnect" href="https://api.whatsapp.com" crossOrigin="anonymous" />
-        
+
         {/* Preload Critical Resources */}
         <link rel="preload" href="/fonts/TheYearofHandicrafts-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
-        
+
+        {/* Google tag (gtag.js) - Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17470272866"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17470272866');
+          `}
+        </Script>
+
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`}
@@ -225,13 +248,13 @@ export default function RootLayout({
             // Enhanced e-commerce setup
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
               custom_map: {
-                'custom_parameter_1': 'cleaning_service'
+                'custom_parameter_1': 'insulation_service'
               },
               send_page_view: false
             });
           `}
         </Script>
-        
+
         {/* Google Tag Manager (optional) */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
@@ -242,7 +265,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'}');
           `}
         </Script>
-        
+
         {/* Facebook Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -258,7 +281,7 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        
+
         {/* Schema.org Structured Data - Enhanced LocalBusiness */}
         <script
           type="application/ld+json"
@@ -266,14 +289,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "شركة لــمـســة للــنــظــافــة",
-              "alternateName": "لــمـســة للــنــظــافــة",
-              "description": "أفضل شركة نظافة وتعقيم في الرياض",
+              "name": "شركة عزل اسطح الرياض",
+              "alternateName": "عزل اسطح الرياض",
+              "description": "شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. نقدم عازل مائي للأسطح، عزل فوم للأسطح، وكشف تسربات المياه.",
               "url": "http://lamsa-clean.com",
               "logo": "http://lamsa-clean.com/lamsa.png",
-              "image": "http://lamsa-clean.com/cleaning-services.png",
-              "telephone": "+966547910859",
-              "faxNumber": "+966547910859",
+              "image": "http://lamsa-clean.com/insulation-services.png",
+              "telephone": "+966500000000",
+              "faxNumber": "+966500000000",
               "email": "info@lamsa-clean.com",
               "address": {
                 "@type": "PostalAddress",
@@ -292,83 +315,72 @@ export default function RootLayout({
               "priceRange": "$$",
               "paymentAccepted": "Cash, Credit Card",
               "currenciesAccepted": "SAR",
-              "areaServed": {
-                "@type": "City",
-                "name": "الرياض"
-              },
-              "serviceArea": {
-                "@type": "City",
-                "name": "الرياض"
-              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "الرياض"
+                },
+                {
+                  "@type": "City",
+                  "name": "الخرج"
+                }
+              ],
+              "serviceArea": [
+                {
+                  "@type": "City",
+                  "name": "الرياض"
+                },
+                {
+                  "@type": "City",
+                  "name": "الخرج"
+                }
+              ],
               "makesOffer": [
                 {
                   "@type": "Offer",
-                  "name": "خدمات النظافة الشاملة",
-                  "description": "جميع خدمات النظافة والتعقيم",
+                  "name": "خدمات عزل الأسطح",
+                  "description": "جميع خدمات عزل الأسطح والمباني",
                   "priceCurrency": "SAR",
                   "availability": "https://schema.org/InStock",
                   "validFrom": "2024-01-01",
-                  "areaServed": "الرياض"
+                  "areaServed": "الرياض والخرج"
                 }
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "خدمات النظافة",
+                "name": "خدمات العزل",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "مكافحة الحشرات في الرياض",
-                      "description": "خدمات مكافحة الحشرات المتخصصة"
+                      "name": "عزل فوم للأسطح بالرياض",
+                      "description": "عزل فوم بولي يوريثان للأسطح"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "تنظيف الموكيت في الرياض",
-                      "description": "تنظيف الموكيت والسجاد"
+                      "name": "عزل مائي للأسطح بالرياض",
+                      "description": "عزل مائي لحماية الأسطح من التسربات"
+                    }
+                  },
+
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "كشف تسربات المياه بالرياض",
+                      "description": "خدمات كشف تسربات المياه بأحدث الأجهزة"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "التعقيم الشامل في الرياض",
-                      "description": "خدمات التعقيم الشامل"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "تنظيف الخزانات في الرياض",
-                      "description": "تنظيف وتعقيم خزانات المياه"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "تنظيف السجاد في الرياض",
-                      "description": "تنظيف السجاد والموكيت"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "تنظيف المكاتب في الرياض",
-                      "description": "خدمات تنظيف المكاتب والشركات"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "تنظيف المنازل في الرياض",
-                      "description": "تنظيف المنازل الشامل"
+                      "name": "عزل خزانات المياه بالرياض",
+                      "description": "عزل خزانات المياه الأرضية والعلوية"
                     }
                   }
                 ]
@@ -380,22 +392,22 @@ export default function RootLayout({
                 "bestRating": "5",
                 "worstRating": "1"
               },
-              "foundingDate": "2020",
+              "foundingDate": "2009",
               "numberOfEmployees": "50-100",
-              "slogan": "نظافة مثالية، خدمة استثنائية",
+              "slogan": "عزل احترافي، حماية شاملة",
               "knowsAbout": [
-                "تنظيف المنازل",
-                "مكافحة الحشرات",
-                "تنظيف السجاد",
-                "تعقيم المباني",
-                "تنظيف الخزانات",
-                "تنظيف المكاتب"
+                "عزل الأسطح",
+                "عزل فوم",
+                "عزل مائي",
+                "كشف تسربات المياه",
+                "عزل الخزانات",
+
               ],
               "memberOf": {
                 "@type": "Organization",
-                "name": "غرفة تجارة الرياض"
+                "name": "الهيئة السعودية للمهندسين"
               },
-              "award": "أفضل شركة نظافة في الرياض 2024",
+              "award": "شركة عزل معتمدة 2024",
               "review": [
                 {
                   "@type": "Review",
@@ -408,19 +420,29 @@ export default function RootLayout({
                     "ratingValue": "5",
                     "bestRating": "5"
                   },
-                  "reviewBody": "خدمة تنظيف ممتازة! فريق العمل محترف جداً واستخدموا مواد آمنة."
+                  "reviewBody": "خدمة عزل ممتازة! فريق العمل محترف جداً واستخدموا مواد عالية الجودة مع ضمان شامل."
                 }
               ],
               "sameAs": [
-                "https://www.facebook.com/riyadhcleaning",
-                "https://www.instagram.com/riyadhcleaning",
-                "https://twitter.com/RiyadhCleaning"
+                "https://www.facebook.com/riyadhinsulation",
+                "https://www.instagram.com/riyadhinsulation",
+                "https://twitter.com/RiyadhInsulation"
               ]
             })
           }}
         />
       </head>
       <body className={`${theYearFont.variable} font-sans`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-58DM78X4"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {/* Additional Structured Data for Website */}
         <script
           type="application/ld+json"
@@ -428,10 +450,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "شركة لمسة للنظافة",
-              "alternateName": "لمسة للنظافة",
+              "name": "شركة عزل اسطح الرياض",
+              "alternateName": "عزل اسطح الرياض",
               "url": "http://lamsa-clean.com",
-              "description": "موقع شركة لمسة للنظافة - أفضل خدمات النظافة في الرياض",
+              "description": "موقع شركة عزل اسطح الرياض - أفضل خدمات عزل الأسطح في الرياض والخرج",
               "inLanguage": "ar",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -443,7 +465,7 @@ export default function RootLayout({
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "شركة لمسة للنظافة",
+                "name": "شركة عزل اسطح الرياض",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "http://lamsa-clean.com/logo.png"
@@ -452,7 +474,7 @@ export default function RootLayout({
             })
           }}
         />
-        
+
         {/* Service Schema */}
         <script
           type="application/ld+json"
@@ -461,51 +483,45 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "خدمات تنظيف المنازل في الرياض",
-                "description": "خدمات تنظيف شاملة للمنازل مع فريق محترف",
+                "name": "خدمات عزل الأسطح في الرياض",
+                "description": "خدمات عزل أسطح شاملة مع فريق محترف ومواد عالية الجودة",
                 "provider": {
                   "@type": "LocalBusiness",
-                  "name": "شركة لمسة للنظافة"
+                  "name": "شركة عزل اسطح الرياض"
                 },
-                "areaServed": "الرياض",
+                "areaServed": ["الرياض", "الخرج"],
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
-                  "name": "خدمات تنظيف المنازل",
+                  "name": "خدمات عزل الأسطح",
                   "itemListElement": [
                     {
                       "@type": "Offer",
                       "itemOffered": {
                         "@type": "Service",
-                        "name": "تنظيف الشقق"
+                        "name": "عزل فوم للأسطح"
                       }
                     },
                     {
                       "@type": "Offer",
                       "itemOffered": {
                         "@type": "Service",
-                        "name": "تنظيف الفلل"
+                        "name": "عزل مائي للأسطح"
                       }
                     },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "تنظيف الكنب"
-                      }
-                    }
+
                   ]
                 }
               },
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "مكافحة الحشرات في الرياض",
-                "description": "خدمات مكافحة جميع أنواع الحشرات بطرق آمنة",
+                "name": "كشف تسربات المياه في الرياض",
+                "description": "خدمات كشف تسربات المياه بأحدث الأجهزة الإلكترونية",
                 "provider": {
                   "@type": "LocalBusiness",
-                  "name": "شركة لمسة للنظافة"
+                  "name": "شركة عزل اسطح الرياض"
                 },
-                "areaServed": "الرياض"
+                "areaServed": ["الرياض", "الخرج"]
               }
             ])
           }}
@@ -527,7 +543,7 @@ export default function RootLayout({
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "خدمات النظافة",
+                  "name": "خدمات العزل",
                   "item": "http://lamsa-clean.com/#services"
                 },
                 {
@@ -540,18 +556,18 @@ export default function RootLayout({
             })
           }}
         />
-        
+
         <JsonLd<Organization>
           item={{
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "شركة نظافة الرياض",
+            name: "شركة عزل اسطح الرياض",
             url: "http://lamsa-clean.com",
             logo: "http://lamsa-clean.com/logo.png",
-            description: "نقدم خدمات نظافة وتعقيم شاملة ومتخصصة في الرياض",
+            description: "نقدم خدمات عزل أسطح شاملة ومتخصصة في الرياض والخرج",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+966547910859",
+              telephone: "+966500000000",
               contactType: "customer service",
               availableLanguage: ["Arabic", "English"],
               areaServed: "SA",
@@ -582,55 +598,35 @@ export default function RootLayout({
             },
             hasOfferCatalog: {
               "@type": "OfferCatalog",
-              name: "خدمات النظافة",
+              name: "خدمات العزل",
               itemListElement: [
                 {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "مكافحة الحشرات في الرياض"
+                    name: "عزل فوم للأسطح بالرياض"
                   }
                 },
                 {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "تنظيف الموكيت في الرياض"
+                    name: "عزل مائي للأسطح بالرياض"
+                  }
+                },
+
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "كشف تسربات المياه بالرياض"
                   }
                 },
                 {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "التعقيم الشامل في الرياض"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "تنظيف الخزانات في الرياض"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "تنظيف السجاد في الرياض"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "تنظيف المكاتب في الرياض"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "تنظيف المنازل في الرياض"
+                    name: "عزل خزانات المياه بالرياض"
                   }
                 }
               ]
@@ -639,7 +635,7 @@ export default function RootLayout({
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "tel:+966547910859",
+                "urlTemplate": "tel:+966500000000",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",
                   "http://schema.org/MobileWebPlatform"
@@ -647,12 +643,11 @@ export default function RootLayout({
               },
               "result": {
                 "@type": "Reservation",
-                "name": "حجز خدمة نظافة"
+                "name": "حجز خدمة عزل"
               }
             }
           }}
         />
-        {/* <Analytics /> */}
         {children}
       </body>
     </html>

@@ -28,9 +28,9 @@ export const SEO_CONFIG = {
     instagram: 'https://www.instagram.com/riyadhcleaning',
   },
   contact: {
-    phone: '+966547910859',
+    phone: '+966500000000',
     email: 'info@lamsa-clean.com',
-    whatsapp: 'https://wa.me/966547910859'
+    whatsapp: 'https://wa.me/966500000000'
   },
   business: {
     name: 'شركة لمسة للنظافة',
@@ -196,7 +196,7 @@ export const PERFORMANCE_HINTS = {
     'https://www.google-analytics.com',
     'https://www.googletagmanager.com'
   ],
-  
+
   // DNS prefetch domains
   dnsPrefetchDomains: [
     '//www.facebook.com',
@@ -204,7 +204,7 @@ export const PERFORMANCE_HINTS = {
     '//twitter.com',
     '//api.whatsapp.com'
   ],
-  
+
   // Preload critical resources
   preloadResources: [
     {
