@@ -44,7 +44,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="about"
+              href="/about"
               className="text-gray-700 hover:text-[#0d64ab] transition-colors font-medium text-base relative group"
             >
               من نحن
