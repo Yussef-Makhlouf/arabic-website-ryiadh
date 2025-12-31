@@ -72,7 +72,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className={`font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0d64ab] to-[#0a4d8c] ${scrolled ? 'text-lg' : 'text-lg md:text-2xl'}`}>
-                لمسة إبداع
+                شركة أيقونة العزل    
               </span>
               <span className="text-[10px] md:text-xs text-gray-500 hidden sm:block">عزل وكشف تسربات بالرياض</span>
             </div>

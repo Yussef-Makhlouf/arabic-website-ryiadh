@@ -57,11 +57,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${post.title} | مدونة عزل اسطح الرياض`,
-        description: post.excerpt,
-        keywords: post.tags,
+        title: `${post.title} | شركة عزل الرياض | 0574666444`,
+        description: `${post.excerpt} للاستشارة المجانية اتصل 0574666444`,
+        keywords: [...post.tags, 'عزل الرياض', 'شركة عزل'],
         openGraph: {
-            title: post.title,
+            title: `${post.title} | 0574666444`,
             description: post.excerpt,
             type: 'article',
             publishedTime: post.date,

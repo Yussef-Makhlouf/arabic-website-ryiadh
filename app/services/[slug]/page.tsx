@@ -224,11 +224,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${service.title} | شركة عزل اسطح الرياض`,
-        description: service.metaDescription,
-        keywords: [service.title, service.shortTitle, 'عزل الرياض', 'شركة عزل', 'عزل أسطح بالرياض'],
+        title: `${service.title} | أفضل شركة عزل بالرياض | 0574666444`,
+        description: `${service.metaDescription} اتصل الآن 0574666444 للحصول على عرض سعر مجاني.`,
+        keywords: [service.title, service.shortTitle, 'عزل الرياض', 'شركة عزل', 'عزل أسطح بالرياض', 'ضمان 15 سنة'],
         openGraph: {
-            title: service.title,
+            title: `${service.title} | 0574666444`,
             description: service.metaDescription,
             type: 'website',
         },
