@@ -186,9 +186,9 @@ export default function RootLayout({
         <meta httpEquiv="Pragma" content="cache" />
 
         {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/logo.jpg" sizes="any" />
+        <link rel="icon" href="/logo.jpg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo.jpg" />
         <link rel="manifest" href="/manifest.json" />
 
         {/* Alternative Language Pages */}

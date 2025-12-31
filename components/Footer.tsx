@@ -71,7 +71,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 space-x-reverse mb-6">
-              {/* <Image src="/lamsa.png" alt="شركة عزل اسطح الرياض" width={50} height={50} /> */}
+              <Image src="/logo.jpg" alt="شركة عزل اسطح الرياض" width={50} height={50} />
               <div>
                 <h3 className="text-xl font-bold">شركة عــزل اسطــح الريــاض</h3>
                 <p className="text-gray-400 text-sm">خدمـات عـزل احترافيــة</p>

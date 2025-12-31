@@ -1,149 +1,144 @@
 import Link from 'next/link'
-import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, StarIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, StarIcon, PhoneIcon, MapPinIcon, BoltIcon, FingerPrintIcon } from '@heroicons/react/24/outline'
 
 export default function Hero() {
-  const services = [
-    {
-      icon: ShieldCheckIcon,
-      title: 'عـزل فـوم للأسطـح',
-      description: 'عـزل فـوم بولي يوريثـان عالي الكثافـة للأسطـح',
-      color: 'bg-[#0d64ab]'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'عـزل مـائي للأسطـح',
-      description: 'حمايـة شاملـة من تسربـات الميـاه والرطوبـة',
-      color: 'bg-[#05ccca]'
-    },
-    {
-      icon: ClockIcon,
-      title: 'كشـف تسربـات الميـاه',
-      description: 'كشـف إلكترونـي دقيـق بأحـدث الأجهـزة',
-      color: 'bg-[#0d64ab]'
-    },
+  const benefits = [
+    'ضمان شامل يصل إلى 15 عاماً',
+    'فريق هندسي معتمد ومحترف',
+    'أحدث تقنيات العزل العالمية',
+    'أسعار تنافسية مع جودة عالية'
   ]
 
-  const benefits = [
-    'خبـرة تزيـد عـن 15 عامـاً',
-    'ضمـان شامـل على جميـع الخدمـات',
-    'معتمـدون مـن الهيئـة السعوديـة للمهندسيـن',
-    'فريـق فنـي متخصـص ومـدرب'
+  const trustIndicators = [
+    { number: '+15', label: 'عاماً من الخبرة' },
+    { number: '+2000', label: 'مشروع ناجح' },
+    { number: '100%', label: 'رضا العملاء' },
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center bg-white overflow-hidden pt-24">
+    <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-28 pb-16 lg:pt-32">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[#0d64ab]/10"></div>
+      <div className="absolute inset-0 bg-gray-50/50">
+        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-[#0d64ab]/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#05ccca]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#0d64ab]/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#05ccca]/5 rounded-full blur-3xl animate-pulse delay-700"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content Section */}
-          <div className="text-gray-900 space-y-8">
-            {/* Location Badge */}
-            <div className="inline-flex items-center space-x-2 space-x-reverse bg-[#0d64ab]/10 px-4 py-2 rounded-full border border-[#0d64ab]/20 shadow-sm">
-              <MapPinIcon className="w-4 h-4 text-[#0d64ab]" />
-              <span className="text-sm font-medium text-[#0d64ab]">خدمـات عـزل اسطـح فـي الريـاض والخـرج</span>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          {/* Text Content */}
+          <div className="text-right space-y-8 animate-slideInFromRight">
+            {/* Badge */}
+            <div className="inline-flex items-center space-x-2 space-x-reverse bg-white border border-gray-200 shadow-sm px-4 py-1.5 rounded-full">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              <span className="text-sm font-semibold text-gray-700">الشركة الرائدة في مجال العوازل</span>
             </div>
 
-            {/* Main Heading */}
-            <div className="space-y-4 mb-10">
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight">
-                <span className="text-gray-900">شركـة عـزل اسطـح </span>
-                <span className="text-[#0d64ab]"> بالريــاض و الخــرج </span>
+            {/* Heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                الحل الأمثل لحماية مبناك مع
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#0d64ab] to-[#05ccca]">
+                  أيقونة العزل بالرياض
+                </span>
               </h1>
-
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
-                شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني.
-                نقدم عازل مائي للأسطح، عازل أسمنتي، عزل فوم للأسطح، وكشف تسربات المياه.
+                نقدم خدمات <strong>عزل الأسطح والمباني</strong> بأعلى معايير الجودة العالمية. متخصصون في <strong>عزل الفوم البولي يوريثان</strong>، <strong>العزل المائي والحراري</strong>، و<strong>كشف تسربات المياه</strong> بدون تكسير. حماية تدوم لسنوات مع ضمان حقيقي معتمد.
               </p>
             </div>
 
-            {/* Benefits List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Specialized Services Tags */}
+            <div className="flex flex-wrap gap-3">
+              {['عزل فوم', 'عزل مائي', 'عزل خزانات', 'كشف تسربات', 'عزل شينكو', 'عزل اسطح'].map((tag, i) => (
+                <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 text-sm font-medium rounded-lg border border-gray-200">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-2 space-x-reverse">
-                  <CheckCircleIcon className="w-5 h-5 text-[#0d64ab] flex-shrink-0 mx-3" />
-                  <span className="text-gray-700">{benefit}</span>
+                <div key={index} className="flex items-center space-x-2 space-x-reverse bg-white/60 p-3 rounded-lg border border-gray-100 shadow-sm">
+                  <CheckCircleIcon className="w-5 h-5 text-[#0d64ab] flex-shrink-0 ml-2" />
+                  <span className="text-sm font-medium text-gray-800">{benefit}</span>
                 </div>
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="tel:0507961706"
-                className="group bg-[#0d64ab] hover:bg-[#0a5a9a] text-white px-8 py-4 rounded-[16px] transition-all duration-300 font-semibold flex items-center justify-center space-x-2 space-x-reverse shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center gap-2 bg-[#0d64ab] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#0a4d8c] transition-all duration-300 shadow-lg shadow-[#0d64ab]/30 hover:-translate-y-1"
               >
-                <PhoneIcon className="w-5 h-5 mx-2" />
-                <span>اتصل الآن</span>
+                <PhoneIcon className="w-5 h-5" />
+                <span>اتصل الآن للمعاينة</span>
               </Link>
               <Link
                 href="https://wa.me/966507961706"
-                className="group bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-[16px] transition-all duration-300 font-semibold flex items-center justify-center space-x-2 space-x-reverse shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center gap-2 bg-white text-[#0d64ab] border-2 border-[#0d64ab]/10 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1"
               >
-                <svg className="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
-                </svg>
-                <span>واتساب</span>
+                <ShieldCheckIcon className="w-5 h-5" />
+                <span>طلب عرض سعر واتساب</span>
               </Link>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-              <div className="flex items-center space-x-2 space-x-reverse">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-[#0d64ab] rounded-full border-2 border-white flex items-center justify-center shadow-sm">
-                      <span className="text-xs font-bold text-white">👤</span>
-                    </div>
-                  ))}
+            {/* Trust Stats */}
+            <div className="flex items-center gap-8 pt-6 border-t border-gray-100">
+              {trustIndicators.map((stat, i) => (
+                <div key={i}>
+                  <div className="text-2xl font-bold text-[#0d64ab]">{stat.number}</div>
+                  <div className="text-xs text-gray-500">{stat.label}</div>
                 </div>
-                <span className="text-sm text-gray-600">+2000 عميل راضٍ</span>
-              </div>
-
-              <div className="flex items-center space-x-2 space-x-reverse">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <StarIcon key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600">4.9/5 تقييم</span>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Services Cards */}
-          <div className="space-y-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white p-6 rounded-[16px] border border-gray-200 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-gray-300"
-              >
-                <div className="flex items-center space-x-4 space-x-reverse">
-                  <div className={`w-14 h-14 ${service.color} rounded-[16px] flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 mx-3 group-hover:scale-110`}>
-                    <service.icon className="w-7 h-7 text-white" />
+          {/* Image/Visual Content */}
+          <div className="relative hidden lg:block h-full min-h-[600px]">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#0d64ab]/20 to-[#05ccca]/20 rounded-full blur-3xl animate-pulse"></div>
+
+            {/* Main Image Container */}
+            <div className="relative z-10 grid grid-cols-2 gap-6 p-4">
+              <div className="space-y-6 mt-12">
+                <div className="bg-white p-6 rounded-2xl shadow-xl animate-float">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-[#0d64ab]">
+                    <BoltIcon className="w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-gray-900 font-semibold text-lg mb-1">{service.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  <h3 className="font-bold text-gray-900 mb-2">عزل فوم</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">أحدث تقنيات العزل الحراري والمائي المزدوج للأسطح.</p>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-xl animate-float-delayed">
+                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 text-[#05ccca]">
+                    <FingerPrintIcon className="w-6 h-6" />
                   </div>
+                  <h3 className="font-bold text-gray-900 mb-2">كشف تسربات</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">تحديد مكان التسرب بدقة عالية بدون تكسير.</p>
                 </div>
               </div>
-            ))}
+              <div className="space-y-6">
+                <div className="bg-[#0d64ab] p-6 rounded-2xl shadow-xl text-white transform translate-y-8">
+                  <StarIcon className="w-12 h-12 mb-4 text-yellow-400" />
+                  <h3 className="font-bold text-2xl mb-2">15+</h3>
+                  <p className="text-sm text-white/90">سنة من الخبرة والتميز في مجال العوازل بالرياض</p>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-xl">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 text-orange-600">
+                    <ShieldCheckIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">ضمان حقيقي</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">نقدم شهادة ضمان معتمدة على جميع أعمال العزل.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-600 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

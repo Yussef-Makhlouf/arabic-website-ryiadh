@@ -12,80 +12,13 @@ export const metadata: Metadata = {
     keywords: ['مدونة عزل', 'نصائح عزل الأسطح', 'مقالات عزل', 'عزل فوم', 'عزل مائي'],
 }
 
-const blogPosts = [
-    {
-        id: 1,
-        slug: 'best-roof-insulation-types',
-        title: 'أفضل أنواع عزل الأسطح في الرياض',
-        excerpt: 'دليل شامل لأنواع عزل الأسطح المتاحة في السوق السعودي ومميزات كل نوع. تعرف على الفرق بين عزل الفوم والعزل المائي والعازل الأسمنتي.',
-        image: '/best-practices-spray-foam-installation-on-roof.webp',
-        category: 'عزل الأسطح',
-        author: 'فريق عزل اسطح الرياض',
-        date: '2024-01-15',
-        readTime: '8 دقائق',
-        featured: true
-    },
-    {
-        id: 2,
-        slug: 'foam-vs-waterproof-insulation',
-        title: 'الفرق بين عزل الفوم والعزل المائي: أيهما أفضل؟',
-        excerpt: 'مقارنة تفصيلية بين عزل الفوم بولي يوريثان والعزل المائي التقليدي. متى تختار كل نوع وما هي المميزات والعيوب لكل منهما.',
-        image: '/thermcoat_termal_acoustic_insulation_pu_spray_foam_3.webp',
-        category: 'مقارنات',
-        author: 'م. أحمد السعيد',
-        date: '2024-01-10',
-        readTime: '10 دقائق',
-        featured: true
-    },
-    {
-        id: 3,
-        slug: 'protect-home-from-leaks',
-        title: 'كيف تحمي منزلك من تسربات المياه؟',
-        excerpt: 'نصائح عملية لحماية منزلك من تسربات المياه والرطوبة. أهمية الكشف المبكر وطرق الوقاية والعلاج الفعال للتسربات.',
-        image: '/water-leak.avif',
-        category: 'كشف التسربات',
-        author: 'فريق عزل اسطح الرياض',
-        date: '2024-01-05',
-        readTime: '6 دقائق',
-        featured: false
-    },
-    {
-        id: 4,
-        slug: 'insulation-reduces-electricity-bill',
-        title: 'كيف يوفر العزل الحراري في فاتورة الكهرباء؟',
-        excerpt: 'اكتشف كيف يمكن لعزل السطح توفير حتى 50% من فاتورة الكهرباء. حسابات فعلية ونماذج من مشاريعنا توضح الفارق.',
-        image: '/thermal-acoustic-foam-insulation-on-roof.webp',
-        category: 'توفير الطاقة',
-        author: 'م. خالد العتيبي',
-        date: '2024-01-02',
-        readTime: '7 دقائق',
-        featured: false
-    },
-    {
-        id: 5,
-        slug: 'tank-insulation-guide',
-        title: 'دليل عزل خزانات المياه: أنواعه وأهميته',
-        excerpt: 'كل ما تحتاج معرفته عن عزل خزانات المياه. أنواع العزل المناسبة للخزانات وأهمية استخدام مواد آمنة صحياً.',
-        image: '/rooftop-water-tank-before-foam-insulation.webp',
-        category: 'عزل الخزانات',
-        author: 'فريق عزل اسطح الرياض',
-        date: '2023-12-28',
-        readTime: '5 دقائق',
-        featured: false
-    },
-    {
-        id: 6,
-        slug: 'insulation-warranty-importance',
-        title: 'لماذا الضمان مهم عند اختيار شركة عزل؟',
-        excerpt: 'تعرف على أهمية الضمان في خدمات العزل وما يجب أن يتضمنه. كيف تحمي نفسك وتختار شركة عزل موثوقة.',
-        image: '/spray-foam-insulation-installation-best-practices-contractor-selection-and-property-owners-faqs-1.webp',
-        category: 'نصائح',
-        author: 'فريق عزل اسطح الرياض',
-        date: '2023-12-20',
-        readTime: '4 دقائق',
-        featured: false
-    },
-]
+import { blogPosts as blogPostsData } from '@/lib/blog-data'
+
+const blogPosts = Object.values(blogPostsData).map((post, index) => ({
+    ...post,
+    id: index + 1,
+    featured: index < 2 // First 2 posts are featured
+}))
 
 const categories = ['الكل', 'عزل الأسطح', 'مقارنات', 'كشف التسربات', 'توفير الطاقة', 'عزل الخزانات', 'نصائح']
 

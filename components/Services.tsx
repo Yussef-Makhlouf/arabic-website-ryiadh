@@ -54,7 +54,7 @@ export default function Services() {
   return (
     <section id="services" className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Decorative Patterns */}
-      <div className="absolute inset-0 bg-[url('/wave-lines.svg')] opacity-5" />
+      <div className="absolute inset-0 opacity-5" />
 
       {/* Animated Shapes */}
       <div className="absolute -left-32 top-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl animate-float" />
@@ -165,17 +165,17 @@ export default function Services() {
               <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                 تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتكم. فريقنا متاح على مدار الساعة لخدمتكم.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="tel:0507961706"
-                  className="group bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 space-x-reverse"
+                  className="group w-full sm:w-auto bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
                 >
                   <span>اتصل بنا الآن</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="https://wa.me/966507961706"
-                  className="group bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 space-x-reverse"
+                  className="group w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
                 >
                   <span>احصل على عرض سعر</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -17,6 +17,8 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--background-color);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* RTL support */
