@@ -209,7 +209,7 @@ export default async function BlogPostPage({ params }: Props) {
                             <div className="bg-gradient-to-br from-[#0d64ab] to-[#05ccca] rounded-2xl p-6 text-white">
                                 <h3 className="text-xl font-bold mb-3">هل تحتاج خدمة عزل؟</h3>
                                 <p className="text-white/90 text-sm mb-4">تواصل معنا للحصول على استشارة مجانية وعرض سعر</p>
-                                <a href="tel:0507961706" className="block w-full bg-white text-[#0d64ab] text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
+                                <a href="tel:0574666444" className="block w-full bg-white text-[#0d64ab] text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                                     اتصل الآن
                                 </a>
                             </div>
@@ -257,10 +257,10 @@ export default async function BlogPostPage({ params }: Props) {
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">هل لديك أسئلة عن العزل؟</h2>
                         <p className="text-white/90 mb-8">تواصل معنا للحصول على استشارة مجانية من خبرائنا</p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0574666444" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 اتصل الآن
                             </a>
-                            <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
+                            <a href="https://wa.me/966574666444" className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
                                 واتساب
                             </a>
                         </div>

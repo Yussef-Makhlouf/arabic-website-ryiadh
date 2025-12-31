@@ -67,7 +67,7 @@ export default function Stats() {
               خبرة واسعة، مواد عالية الجودة، ضمان شامل، وفريق فني متخصص لخدمتكم
             </p>
             <a
-              href="tel:0507961706"
+              href="tel:0574666444"
               className="inline-block bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
               اتصل بنا الآن

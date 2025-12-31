@@ -295,8 +295,8 @@ export default function RootLayout({
               "url": "http://lamsa-clean.com",
               "logo": "http://lamsa-clean.com/lamsa.png",
               "image": "http://lamsa-clean.com/insulation-services.png",
-              "telephone": "+966507961706",
-              "faxNumber": "+966507961706",
+              "telephone": "+966574666444",
+              "faxNumber": "+966574666444",
               "email": "info@lamsa-clean.com",
               "address": {
                 "@type": "PostalAddress",
@@ -567,7 +567,7 @@ export default function RootLayout({
             description: "نقدم خدمات عزل أسطح شاملة ومتخصصة في الرياض والخرج",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+966507961706",
+              telephone: "+966574666444",
               contactType: "customer service",
               availableLanguage: ["Arabic", "English"],
               areaServed: "SA",
@@ -635,7 +635,7 @@ export default function RootLayout({
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "tel:+966507961706",
+                "urlTemplate": "tel:+966574666444",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",
                   "http://schema.org/MobileWebPlatform"

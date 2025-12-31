@@ -52,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white/70 text-sm">اتصل بنا</p>
-                  <a href="tel:0507961706" className="text-lg font-semibold">0507961706</a>
+                  <a href="tel:0574666444" className="text-lg font-semibold">0574666444</a>
                 </div>
               </div>
 

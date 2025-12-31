@@ -136,7 +136,7 @@ export default function Services() {
 
                 {/* CTA Button */}
                 <Link
-                  href='https://wa.me/966507961706'
+                  href='https://wa.me/966574666444'
                   className="group/btn inline-flex items-center space-x-2 space-x-reverse text-[#0d64ab] hover:text-[#0a5a9a] font-semibold text-sm transition-colors hover:scale-105"
                 >
                   <span>اطلب الخدمة واتساب</span>
@@ -167,14 +167,14 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
-                  href="tel:0507961706"
+                  href="tel:0574666444"
                   className="group w-full sm:w-auto bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
                 >
                   <span>اتصل بنا الآن</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href="https://wa.me/966507961706"
+                  href="https://wa.me/966574666444"
                   className="group w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
                 >
                   <span>احصل على عرض سعر</span>

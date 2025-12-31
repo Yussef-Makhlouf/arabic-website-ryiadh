@@ -216,10 +216,10 @@ export default function MarketChallenges() {
                         نستخدم مواد عزل أصلية معتمدة من SASO، ولدينا فريق فني مدرب ومؤهل. نقدم ضمان حقيقي مكتوب على جميع أعمالنا.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a href="tel:0507961706" className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                        <a href="tel:0574666444" className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                             اتصل للاستشارة المجانية
                         </a>
-                        <a href="https://wa.me/966507961706" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
+                        <a href="https://wa.me/966574666444" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
                             واتساب
                         </a>
                     </div>

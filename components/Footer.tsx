@@ -144,8 +144,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">الهاتف</p>
-                  <a href="tel:0507961706" className="text-white hover:text-[#0d64ab] transition-colors duration-300">
-                    0507961706
+                  <a href="tel:0574666444" className="text-white hover:text-[#0d64ab] transition-colors duration-300">
+                    0574666444
                   </a>
                 </div>
               </div>
@@ -192,7 +192,15 @@ export default function Footer() {
               © {new Date().getFullYear()} شركة عزل اسطح الرياض. جميع الحقوق محفوظة.
             </p>
             <p className="text-gray-400 text-sm">
-              تصميم و تطوير <span className="text-white font-medium">AHMED ADHAM</span>
+              تصميم و تطوير{' '}
+              <a
+                href="https://wa.me/966507961706"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-medium hover:text-[#0d64ab] transition-colors duration-300"
+              >
+                AHMED ADHAM
+              </a>
             </p>
           </div>
         </div>

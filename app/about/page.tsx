@@ -471,11 +471,11 @@ export default function AboutPage() {
                             تواصل معنا الآن للحصول على معاينة مجانية وعرض سعر تفصيلي. فريقنا جاهز للإجابة على جميع استفساراتك.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0507961706" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0574666444" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 <PhoneIcon className="w-5 h-5" />
-                                اتصل الآن: 0507961706
+                                اتصل الآن: 0574666444
                             </a>
-                            <a href="https://wa.me/966507961706" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
+                            <a href="https://wa.me/966574666444" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
                                 واتساب
                             </a>
                         </div>

@@ -255,7 +255,7 @@ export default function ServiceComparison({ currentService }: ServiceComparisonP
                 <div className="mt-8 text-center">
                     <p className="text-gray-500 text-sm">
                         لست متأكداً أي نوع تختار؟
-                        <a href="tel:0507961706" className="text-[#0d64ab] font-medium hover:underline mr-1">
+                        <a href="tel:0574666444" className="text-[#0d64ab] font-medium hover:underline mr-1">
                             اتصل بنا للاستشارة المجانية
                         </a>
                     </p>

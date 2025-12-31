@@ -85,13 +85,13 @@ export default function ShippingTimeline() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:0507961706"
+                href="tel:0574666444"
                 className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 اتصل الآن
               </a>
               <a
-                href="https://wa.me/966507961706"
+                href="https://wa.me/966574666444"
                 className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg"
               >
                 واتساب

@@ -28,9 +28,9 @@ export const SEO_CONFIG = {
     instagram: 'https://www.instagram.com/riyadhcleaning',
   },
   contact: {
-    phone: '+966507961706',
+    phone: '+966574666444',
     email: 'info@lamsa-clean.com',
-    whatsapp: 'https://wa.me/966507961706'
+    whatsapp: 'https://wa.me/966574666444'
   },
   business: {
     name: 'شركة لمسة للنظافة',
