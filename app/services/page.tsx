@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import { ShieldCheckIcon, BeakerIcon, EyeIcon, CubeIcon, WrenchScrewdriverIcon, CheckCircleIcon, ArrowRightIcon, StarIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
@@ -57,10 +58,13 @@ export const metadata = {
 
 export default function ServicesPage() {
     return (
+        <>
+                <Header />
         <main className="pt-24">
+    
             {/* Hero Section */}
             <section className="relative py-16 bg-[#0d64ab] text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                <div className="absolute inset-0   opacity-10" />
                 <div className="container mx-auto px-6 relative">
                     <div className="text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -141,15 +145,16 @@ export default function ServicesPage() {
                         تواصل معنا الآن للحصول على عرض سعر مخصص لاحتياجاتكم مع ضمان شامل
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a href="tel:0500000000" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                        <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
                             اتصل الآن
                         </a>
-                        <a href="https://wa.me/966500000000" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
+                        <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
                             واتساب
                         </a>
                     </div>
                 </div>
             </section>
         </main>
+        </>
     )
 }

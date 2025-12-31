@@ -43,7 +43,7 @@ export default function ShippingTimeline() {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
+      <div className="absolute inset-0   opacity-5" />
 
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
@@ -85,13 +85,13 @@ export default function ShippingTimeline() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:0500000000"
+                href="tel:0507961706"
                 className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 اتصل الآن
               </a>
               <a
-                href="https://wa.me/966500000000"
+                href="https://wa.me/966507961706"
                 className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300 shadow-lg"
               >
                 واتساب

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon, PhotoIcon } from '@heroicons/react/24/outline'
 
 interface GalleryImage {
@@ -61,10 +62,14 @@ export default function ServiceGallery({ images, title = 'معرض الصور' }
                         onClick={() => openLightbox(index)}
                         className="group relative aspect-square rounded-2xl overflow-hidden bg-gray-100 hover:shadow-xl transition-all duration-300"
                     >
-                        {/* Placeholder with gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#0d64ab]/20 to-[#05ccca]/20 flex items-center justify-center">
-                            <PhotoIcon className="w-12 h-12 text-[#0d64ab]/40" />
-                        </div>
+                        {/* Actual Image */}
+                        <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
 
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
@@ -113,16 +118,22 @@ export default function ServiceGallery({ images, title = 'معرض الصور' }
 
                     {/* Image Container */}
                     <div
-                        className="max-w-4xl max-h-[80vh] w-full aspect-video bg-gray-800 rounded-2xl overflow-hidden flex items-center justify-center"
+                        className="relative max-w-4xl max-h-[80vh] w-full aspect-video rounded-2xl overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="text-center p-8">
-                            <PhotoIcon className="w-24 h-24 text-gray-600 mx-auto mb-4" />
-                            <p className="text-gray-400 text-lg">{images[selectedImage].alt}</p>
-                            {images[selectedImage].title && (
-                                <p className="text-white text-xl font-bold mt-2">{images[selectedImage].title}</p>
-                            )}
-                        </div>
+                        <Image
+                            src={images[selectedImage].src}
+                            alt={images[selectedImage].alt}
+                            fill
+                            className="object-contain"
+                            sizes="100vw"
+                            priority
+                        />
+                        {images[selectedImage].title && (
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-center">
+                                <p className="text-white text-xl font-bold">{images[selectedImage].title}</p>
+                            </div>
+                        )}
                     </div>
 
                     {/* Image Counter */}
@@ -136,3 +147,4 @@ export default function ServiceGallery({ images, title = 'معرض الصور' }
         </section>
     )
 }
+

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CalendarIcon, ClockIcon, ArrowRightIcon, TagIcon } from '@heroicons/react/24/outline'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -17,7 +18,7 @@ const blogPosts = [
         slug: 'best-roof-insulation-types',
         title: 'أفضل أنواع عزل الأسطح في الرياض',
         excerpt: 'دليل شامل لأنواع عزل الأسطح المتاحة في السوق السعودي ومميزات كل نوع. تعرف على الفرق بين عزل الفوم والعزل المائي والعازل الأسمنتي.',
-        image: '/blog/roof-insulation-types.jpg',
+        image: '/best-practices-spray-foam-installation-on-roof.webp',
         category: 'عزل الأسطح',
         author: 'فريق عزل اسطح الرياض',
         date: '2024-01-15',
@@ -29,7 +30,7 @@ const blogPosts = [
         slug: 'foam-vs-waterproof-insulation',
         title: 'الفرق بين عزل الفوم والعزل المائي: أيهما أفضل؟',
         excerpt: 'مقارنة تفصيلية بين عزل الفوم بولي يوريثان والعزل المائي التقليدي. متى تختار كل نوع وما هي المميزات والعيوب لكل منهما.',
-        image: '/blog/foam-vs-waterproof.jpg',
+        image: '/thermcoat_termal_acoustic_insulation_pu_spray_foam_3.webp',
         category: 'مقارنات',
         author: 'م. أحمد السعيد',
         date: '2024-01-10',
@@ -41,7 +42,7 @@ const blogPosts = [
         slug: 'protect-home-from-leaks',
         title: 'كيف تحمي منزلك من تسربات المياه؟',
         excerpt: 'نصائح عملية لحماية منزلك من تسربات المياه والرطوبة. أهمية الكشف المبكر وطرق الوقاية والعلاج الفعال للتسربات.',
-        image: '/blog/water-leaks-protection.jpg',
+        image: '/water-leak.avif',
         category: 'كشف التسربات',
         author: 'فريق عزل اسطح الرياض',
         date: '2024-01-05',
@@ -53,7 +54,7 @@ const blogPosts = [
         slug: 'insulation-reduces-electricity-bill',
         title: 'كيف يوفر العزل الحراري في فاتورة الكهرباء؟',
         excerpt: 'اكتشف كيف يمكن لعزل السطح توفير حتى 50% من فاتورة الكهرباء. حسابات فعلية ونماذج من مشاريعنا توضح الفارق.',
-        image: '/blog/energy-saving.jpg',
+        image: '/thermal-acoustic-foam-insulation-on-roof.webp',
         category: 'توفير الطاقة',
         author: 'م. خالد العتيبي',
         date: '2024-01-02',
@@ -65,7 +66,7 @@ const blogPosts = [
         slug: 'tank-insulation-guide',
         title: 'دليل عزل خزانات المياه: أنواعه وأهميته',
         excerpt: 'كل ما تحتاج معرفته عن عزل خزانات المياه. أنواع العزل المناسبة للخزانات وأهمية استخدام مواد آمنة صحياً.',
-        image: '/blog/tank-insulation.jpg',
+        image: '/rooftop-water-tank-before-foam-insulation.webp',
         category: 'عزل الخزانات',
         author: 'فريق عزل اسطح الرياض',
         date: '2023-12-28',
@@ -77,7 +78,7 @@ const blogPosts = [
         slug: 'insulation-warranty-importance',
         title: 'لماذا الضمان مهم عند اختيار شركة عزل؟',
         excerpt: 'تعرف على أهمية الضمان في خدمات العزل وما يجب أن يتضمنه. كيف تحمي نفسك وتختار شركة عزل موثوقة.',
-        image: '/blog/warranty-importance.jpg',
+        image: '/spray-foam-insulation-installation-best-practices-contractor-selection-and-property-owners-faqs-1.webp',
         category: 'نصائح',
         author: 'فريق عزل اسطح الرياض',
         date: '2023-12-20',
@@ -98,7 +99,7 @@ export default function BlogPage() {
             <main className="pt-24">
                 {/* Hero Section */}
                 <section className="relative py-16 bg-[#0d64ab] text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="container mx-auto px-6 relative">
                         <div className="text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -142,17 +143,18 @@ export default function BlogPage() {
                                     className="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all"
                                 >
                                     <div className="relative h-56 bg-[#0d64ab]/10">
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-20 h-20 bg-[#0d64ab]/20 rounded-full flex items-center justify-center">
-                                                <span className="text-3xl">📰</span>
-                                            </div>
-                                        </div>
-                                        <div className="absolute top-4 right-4">
+                                        <Image
+                                            src={post.image}
+                                            alt={post.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div className="absolute top-4 right-4 z-10">
                                             <span className="bg-[#0d64ab] text-white px-3 py-1 rounded-full text-xs font-semibold">
                                                 {post.category}
                                             </span>
                                         </div>
-                                        <div className="absolute top-4 left-4">
+                                        <div className="absolute top-4 left-4 z-10">
                                             <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                                                 مميز
                                             </span>
@@ -198,12 +200,13 @@ export default function BlogPage() {
                                     className="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all"
                                 >
                                     <div className="relative h-48 bg-[#0d64ab]/10">
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-16 h-16 bg-[#0d64ab]/20 rounded-full flex items-center justify-center">
-                                                <span className="text-2xl">📝</span>
-                                            </div>
-                                        </div>
-                                        <div className="absolute top-4 right-4">
+                                        <Image
+                                            src={post.image}
+                                            alt={post.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div className="absolute top-4 right-4 z-10">
                                             <span className="bg-[#0d64ab] text-white px-3 py-1 rounded-full text-xs font-semibold">
                                                 {post.category}
                                             </span>
@@ -239,10 +242,10 @@ export default function BlogPage() {
                             فريقنا متاح للإجابة على جميع استفساراتكم وتقديم الاستشارة المجانية
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0500000000" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
                                 اتصل للاستشارة
                             </a>
-                            <a href="https://wa.me/966500000000" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
+                            <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
                                 واتساب
                             </a>
                         </div>

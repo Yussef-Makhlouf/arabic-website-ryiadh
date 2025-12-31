@@ -20,7 +20,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
+      <div className="absolute inset-0   opacity-5" />
 
       {/* Animated Shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl animate-float" />
@@ -52,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white/70 text-sm">اتصل بنا</p>
-                  <a href="tel:0500000000" className="text-lg font-semibold">0500000000</a>
+                  <a href="tel:0507961706" className="text-lg font-semibold">0507961706</a>
                 </div>
               </div>
 

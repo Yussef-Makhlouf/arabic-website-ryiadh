@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -32,7 +33,7 @@ export default function AboutPage() {
             <main className="pt-20 bg-gray-50">
                 {/* Hero Section */}
                 <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#0d64ab] to-[#1a7bc4] text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
                     <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-2xl translate-x-1/3 translate-y-1/3" />
 
@@ -92,6 +93,14 @@ export default function AboutPage() {
                                     <p>
                                         لكننا لم نتغير في شيء واحد: <strong className="text-[#0d64ab]">التزامنا بالجودة والصدق مع العملاء</strong>. هذا هو سر نجاحنا واستمرارنا.
                                     </p>
+                                </div>
+                                <div className="mt-8 relative h-96 rounded-2xl overflow-hidden shadow-lg">
+                                    <Image
+                                        src="/workerin-protective-suit-spraying-wall-foam.webp"
+                                        alt="فريقنا أثناء العمل"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                             </div>
 
@@ -462,11 +471,11 @@ export default function AboutPage() {
                             تواصل معنا الآن للحصول على معاينة مجانية وعرض سعر تفصيلي. فريقنا جاهز للإجابة على جميع استفساراتك.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0500000000" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0507961706" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 <PhoneIcon className="w-5 h-5" />
-                                اتصل الآن: 0500000000
+                                اتصل الآن: 0507961706
                             </a>
-                            <a href="https://wa.me/966500000000" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
+                            <a href="https://wa.me/966507961706" className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
                                 واتساب
                             </a>
                         </div>

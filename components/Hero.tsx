@@ -77,14 +77,14 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="tel:0500000000"
+                href="tel:0507961706"
                 className="group bg-[#0d64ab] hover:bg-[#0a5a9a] text-white px-8 py-4 rounded-[16px] transition-all duration-300 font-semibold flex items-center justify-center space-x-2 space-x-reverse shadow-lg hover:shadow-xl"
               >
                 <PhoneIcon className="w-5 h-5 mx-2" />
                 <span>اتصل الآن</span>
               </Link>
               <Link
-                href="https://wa.me/966500000000"
+                href="https://wa.me/966507961706"
                 className="group bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-[16px] transition-all duration-300 font-semibold flex items-center justify-center space-x-2 space-x-reverse shadow-lg hover:shadow-xl"
               >
                 <svg className="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 24 24">

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Heart, ShieldCheck } from 'lucide-react';
 
 const TankInsulation = () => {
@@ -22,6 +23,18 @@ const TankInsulation = () => {
                             <p className="text-gray-700">
                                 يتم عزل الخزانات بمواد إيبوكسي (Food Grade) معتمدة من <strong>هيئة الغذاء والدواء السعودية</strong>، والتي تمنع تفاعل المياه مع الخرسانة أو تكون الطحالب والبكتيريا، مما يضمن نقاء مياه الشرب.
                             </p>
+                        </div>
+
+                        <div className="relative h-64 rounded-xl overflow-hidden shadow-md mt-6">
+                            <Image
+                                src="/rooftop-water-tank-before-foam-insulation.webp"
+                                alt="عزل خزانات المياه"
+                                fill
+                                className="object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                                <p className="text-white font-bold text-lg">نضمن لكم مياه نقية وصحية</p>
+                            </div>
                         </div>
                     </div>
 

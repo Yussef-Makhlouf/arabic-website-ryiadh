@@ -219,13 +219,13 @@ export default function ServicesDetail() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:0500000000"
+                href="tel:0507961706"
                 className="bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 اتصل بنا الآن
               </a>
               <a
-                href="https://wa.me/966500000000"
+                href="https://wa.me/966507961706"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 واتساب

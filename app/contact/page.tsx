@@ -84,7 +84,7 @@ export default function ContactPage() {
             <main className="pt-20 bg-gray-50">
                 {/* Hero Section */}
                 <section className="relative py-16 md:py-20 bg-gradient-to-br from-[#0d64ab] to-[#1a7bc4] text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
                     <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -111,17 +111,17 @@ export default function ContactPage() {
                                 {
                                     icon: PhoneIcon,
                                     title: 'اتصل بنا',
-                                    value: '966500000000',
+                                    value: '966507961706',
                                     subtext: 'متاحون 24/7',
-                                    href: 'tel:0500000000',
+                                    href: 'tel:0507961706',
                                     color: 'blue'
                                 },
                                 {
                                     icon: ChatBubbleLeftRightIcon,
                                     title: 'واتساب',
-                                    value: '966500000000',
+                                    value: '966507961706',
                                     subtext: 'رد سريع',
-                                    href: 'https://wa.me/966500000000',
+                                    href: 'https://wa.me/966507961706',
                                     color: 'green'
                                 },
                                 {
@@ -317,13 +317,13 @@ export default function ContactPage() {
                                         للحصول على رد فوري، تواصل معنا عبر الهاتف أو الواتساب. فريقنا جاهز لخدمتك على مدار الساعة.
                                     </p>
                                     <div className="space-y-4">
-                                        <a href="tel:966500000000" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors">
+                                        <a href="tel:966507961706" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors">
                                             <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                                                 <PhoneIcon className="w-6 h-6" />
                                             </div>
                                             <div>
                                                 <div className="font-bold">اتصل الآن</div>
-                                                <div className="text-white/70" dir="ltr">966500000000</div>
+                                                <div className="text-white/70" dir="ltr">966507961706</div>
                                             </div>
                                         </a>
                                         <a href="https://wa.me/966569131252" className="flex items-center gap-4 bg-green-500/20 backdrop-blur-sm rounded-xl p-4 hover:bg-green-500/30 transition-colors">
@@ -429,9 +429,9 @@ export default function ContactPage() {
                         <p className="text-white/90 mb-8 text-lg">
                             اتصل الآن واحصل على معاينة مجانية وعرض سعر فوري
                         </p>
-                        <a href="tel:966500000000" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                        <a href="tel:966507961706" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                             <PhoneIcon className="w-5 h-5" />
-                            اتصل الآن: 966500000000
+                            اتصل الآن: 966507961706
                         </a>
                     </div>
                 </section>

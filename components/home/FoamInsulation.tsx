@@ -1,23 +1,56 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FoamInsulation = () => {
+    const galleryImages = [
+        { src: '/attic-with-completed-spray-foam-insulation.webp', alt: 'عزل فوم للسقف العلوي' },
+        { src: '/professional-spraying-foam-in-basement.webp', alt: 'فني يقوم برش الفوم' },
+        { src: '/technician-applying-spray-foam-in-attic.webp', alt: 'تطبيق الفوم في السقف' },
+        { src: '/closed-cell-spray-foam-on-house-garage-walls.webp', alt: 'عزل فوم جدران' },
+    ];
+
     return (
         <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4 max-w-5xl">
+            <div className="container mx-auto px-4 max-w-6xl">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 border-r-4 border-blue-600 pr-4">
                     2. المحور التقني الأول: عزل الفوم (البولي يوريثان) - التحليل الكيميائي والفيزيائي
                 </h2>
 
-                <div className="bg-white rounded-2xl shadow-sm p-8 mb-10">
-                    <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-                        يُعد <strong>عزل الفوم بولي يوريثان</strong> (Polyurethane Foam) ثورة في عالم العوازل، حيث يقدم حلاً ثنائياً (حراري ومائي) في طبقة واحدة. هذا النوع من <strong>عزل الأسطح</strong> هو الأكثر كفاءة لمناخ المنطقة، ويتم تطبيقه عبر تفاعل كيميائي دقيق بين مادتي الأيزوسيانات والبوليول.
-                    </p>
+                <div className="grid lg:grid-cols-2 gap-10 mb-10">
+                    {/* Content Column */}
+                    <div className="bg-white rounded-2xl shadow-sm p-8">
+                        <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                            يُعد <strong>عزل الفوم بولي يوريثان</strong> (Polyurethane Foam) ثورة في عالم العوازل، حيث يقدم حلاً ثنائياً (حراري ومائي) في طبقة واحدة. هذا النوع من <strong>عزل الأسطح</strong> هو الأكثر كفاءة لمناخ المنطقة، ويتم تطبيقه عبر تفاعل كيميائي دقيق بين مادتي الأيزوسيانات والبوليول.
+                        </p>
 
-                    <h3 className="text-2xl font-bold text-blue-800 mb-4">2.1. التركيب الكيميائي والخصائص: لماذا يتفوق الفوم؟</h3>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                        يكمن سر كفاءة <strong>عزل الفوم</strong> في بنيته الخلوية المغلقة (Closed-Cell)، والتي تمنع بشكل فعال مرور الهواء والماء. عند تطبيق الفوم، يتمدد ليملأ أدق الشقوق والفراغات، مكوناً طبقة متجانسة لا تحتوي على فواصل أو نقاط ضعف، على عكس الألواح العازلة التقليدية.
-                    </p>
+                        <h3 className="text-2xl font-bold text-blue-800 mb-4">2.1. التركيب الكيميائي والخصائص: لماذا يتفوق الفوم؟</h3>
+                        <p className="text-gray-700 mb-6 leading-relaxed">
+                            يكمن سر كفاءة <strong>عزل الفوم</strong> في بنيته الخلوية المغلقة (Closed-Cell)، والتي تمنع بشكل فعال مرور الهواء والماء. عند تطبيق الفوم، يتمدد ليملأ أدق الشقوق والفراغات، مكوناً طبقة متجانسة لا تحتوي على فواصل أو نقاط ضعف، على عكس الألواح العازلة التقليدية.
+                        </p>
+                    </div>
 
+                    {/* Image Gallery Column */}
+                    <div className="grid grid-cols-2 gap-4">
+                        {galleryImages.map((image, index) => (
+                            <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-lg group">
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute bottom-0 left-0 right-0 p-3 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    {image.alt}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Technical Table */}
+                <div className="bg-white rounded-2xl shadow-sm p-8">
                     <div className="overflow-x-auto rounded-lg border border-gray-200 mb-8">
                         <table className="w-full text-right bg-white">
                             <thead className="bg-blue-600 text-white">
@@ -73,3 +106,4 @@ const FoamInsulation = () => {
 };
 
 export default FoamInsulation;
+

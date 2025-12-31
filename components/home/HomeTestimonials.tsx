@@ -80,7 +80,7 @@ export default function HomeTestimonials() {
     return (
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#0d64ab] to-[#1a7bc4] relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+            <div className="absolute inset-0   opacity-10" />
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-2xl" />
 

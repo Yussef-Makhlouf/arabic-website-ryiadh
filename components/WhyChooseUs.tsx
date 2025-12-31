@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
+      <div className="absolute inset-0   opacity-5" />
 
       {/* Animated Shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl animate-float" />

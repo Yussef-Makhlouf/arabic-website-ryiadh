@@ -8,7 +8,7 @@ export default function Services() {
       icon: CubeIcon,
       title: 'عزل فوم للأسطح بالرياض',
       description: 'عزل فوم بولي يوريثان عالي الكثافة للأسطح والمباني. يوفر عزل حراري ومائي في آن واحد مع ضمان يصل إلى 10 سنوات.',
-      image: '/foam-insulation.jpg',
+      image: '/attic-with-completed-spray-foam-insulation.webp',
       color: 'bg-[#0d64ab]',
       badge: 'الأكثر طلباً',
       rating: 4.9,
@@ -19,7 +19,7 @@ export default function Services() {
       icon: ShieldCheckIcon,
       title: 'عزل مائي للأسطح بالرياض',
       description: 'عزل مائي احترافي للأسطح باستخدام مواد عالية الجودة. حماية شاملة من تسربات المياه والرطوبة مع ضمان شامل.',
-      image: '/waterproof-insulation.jpg',
+      image: '/spray-foam-roofing-01.webp',
       color: 'bg-[#05ccca]',
       badge: 'خدمة مميزة',
       rating: 4.8,
@@ -31,7 +31,7 @@ export default function Services() {
       icon: EyeIcon,
       title: 'كشف تسربات المياه بالرياض',
       description: 'كشف تسربات المياه بأحدث الأجهزة الإلكترونية دون تكسير. نحدد مكان التسرب بدقة متناهية ونقدم الحلول المناسبة.',
-      image: '/leak-detection.jpg',
+      image: '/water-leak.avif',
       color: 'bg-[#05ccca]',
       badge: 'تقنية متقدمة',
       rating: 4.7,
@@ -42,7 +42,7 @@ export default function Services() {
       icon: WrenchScrewdriverIcon,
       title: 'عزل خزانات المياه بالرياض',
       description: 'عزل خزانات المياه الأرضية والعلوية بمواد آمنة صحياً ومعتمدة. نضمن لكم مياه نظيفة وخالية من التلوث.',
-      image: '/tank-insulation.jpg',
+      image: '/rooftop-water-tank-before-foam-insulation.webp',
       color: 'bg-[#0d64ab]',
       badge: 'معتمد صحياً',
       rating: 4.8,
@@ -97,10 +97,16 @@ export default function Services() {
                 </div>
               </div>
 
-              <div className="relative h-48 bg-[#0d64ab]/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className={`w-24 h-24 ${service.color} rounded-2xl flex items-center justify-center shadow-xl`}>
-                    <service.icon className="h-12 w-12 text-white" />
+              <div className="relative h-48 bg-[#0d64ab]/10 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                  <div className="absolute bottom-4 right-4 text-white">
+                    <service.icon className="h-8 w-8" />
                   </div>
                 </div>
               </div>
@@ -130,7 +136,7 @@ export default function Services() {
 
                 {/* CTA Button */}
                 <Link
-                  href='https://wa.me/966500000000'
+                  href='https://wa.me/966507961706'
                   className="group/btn inline-flex items-center space-x-2 space-x-reverse text-[#0d64ab] hover:text-[#0a5a9a] font-semibold text-sm transition-colors hover:scale-105"
                 >
                   <span>اطلب الخدمة واتساب</span>
@@ -148,7 +154,7 @@ export default function Services() {
         <div className="text-center mt-16">
           <div className="bg-[#0d64ab] rounded-3xl p-12 text-white relative overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+            <div className="absolute inset-0   opacity-10" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
 
@@ -161,14 +167,14 @@ export default function Services() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="tel:0500000000"
+                  href="tel:0507961706"
                   className="group bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 space-x-reverse"
                 >
                   <span>اتصل بنا الآن</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href="https://wa.me/966500000000"
+                  href="https://wa.me/966507961706"
                   className="group bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 space-x-reverse"
                 >
                   <span>احصل على عرض سعر</span>

@@ -51,10 +51,14 @@ const services = {
             { question: 'كم تكلفة عزل الفوم للسطح؟', answer: 'تبدأ التكلفة من 25 ريال للمتر المربع وتختلف حسب حالة السطح والمساحة. نقدم معاينة وعرض سعر مجاني.' },
         ],
         gallery: [
-            { src: '/foam-1.jpg', alt: 'عزل فوم سطح فيلا', title: 'عزل سطح فيلا بالرياض' },
-            { src: '/foam-2.jpg', alt: 'رش الفوم بولي يوريثان', title: 'عملية رش الفوم' },
-            { src: '/foam-3.jpg', alt: 'عزل فوم مبنى تجاري', title: 'مبنى تجاري' },
-            { src: '/foam-4.jpg', alt: 'طبقة الحماية UV', title: 'طبقة الحماية' },
+            { src: '/attic-with-completed-spray-foam-insulation.webp', alt: 'عزل فوم للسقف العلوي', title: 'عزل سقف علوي بالفوم' },
+            { src: '/professional-spraying-foam-in-basement.webp', alt: 'فني يقوم برش الفوم', title: 'عملية رش الفوم الاحترافي' },
+            { src: '/technician-applying-spray-foam-in-attic.webp', alt: 'تطبيق الفوم في السقف', title: 'تطبيق العزل في السقف' },
+            { src: '/closed-cell-spray-foam-on-house-garage-walls.webp', alt: 'عزل فوم جدران', title: 'عزل جدران الجراج بالفوم' },
+            { src: '/best-practices-spray-foam-installation-on-roof.webp', alt: 'تركيب فوم على السطح', title: 'أفضل ممارسات العزل' },
+            { src: '/worker-installing-foam-insulation-in-crawl-space.webp', alt: 'عامل يركب عزل الفوم', title: 'تركيب العزل المتخصص' },
+            { src: '/thick-layer-of-spray-foam-on-wall-studs.webp', alt: 'طبقة فوم سميكة', title: 'طبقة عزل سميكة' },
+            { src: '/spray-foam-application-on-exterior-wall.webp', alt: 'رش فوم على جدار خارجي', title: 'عزل الجدران الخارجية' },
         ],
         testimonials: [
             { name: 'أحمد الشمري', location: 'الرياض - حي النرجس', rating: 5, text: 'خدمة ممتازة وفريق محترف. لاحظت فرق كبير في درجة حرارة المنزل وانخفضت فاتورة الكهرباء بشكل ملحوظ.', service: 'عزل فوم', date: '2024-01-10' },
@@ -101,8 +105,10 @@ const services = {
             { question: 'هل يمكن تطبيق العزل المائي فوق عزل قديم؟', answer: 'يعتمد على حالة العزل القديم. في بعض الحالات يمكن، وفي حالات أخرى يجب إزالته أولاً.' },
         ],
         gallery: [
-            { src: '/waterproof-1.jpg', alt: 'عزل مائي للسطح', title: 'عزل سطح بالرياض' },
-            { src: '/waterproof-2.jpg', alt: 'تطبيق البيتومين', title: 'تطبيق العزل' },
+            { src: '/spray-foam-roofing-01.webp', alt: 'عزل مائي للسقف', title: 'عزل السطح بالفوم المائي' },
+            { src: '/thermcoat_termal_acoustic_insulation_pu_spray_foam_3.webp', alt: 'العزل الحراري والمائي', title: 'عزل حراري ومائي متكامل' },
+            { src: '/rooftop-water-tank-before-foam-insulation.webp', alt: 'خزان مياه على السطح', title: 'عزل خزانات السطح' },
+            { src: '/thermal-acoustic-foam-insulation-on-roof.webp', alt: 'عزل حراري صوتي', title: 'عزل متعدد الوظائف' },
         ],
         testimonials: [
             { name: 'فهد السالم', location: 'الرياض - حي الياسمين', rating: 5, text: 'عملوا عزل مائي للسطح بعد مشكلة تسربات. الحمد لله لم تعد المشكلة تتكرر.', service: 'عزل مائي', date: '2024-01-08' },
@@ -148,8 +154,8 @@ const services = {
             { question: 'هل تقدمون خدمة الإصلاح أيضاً؟', answer: 'نعم، نقدم خدمة الكشف والإصلاح معاً، أو يمكنك الاكتفاء بخدمة الكشف فقط.' },
         ],
         gallery: [
-            { src: '/leak-1.jpg', alt: 'جهاز كشف التسربات', title: 'أجهزة الكشف' },
-            { src: '/leak-2.jpg', alt: 'عملية الكشف', title: 'أثناء العمل' },
+            { src: '/water-leak.avif', alt: 'تسرب مياه', title: 'مثال على تسرب المياه' },
+            { src: '/exposed-spray-foam-insulation-in-roof-structure.webp', alt: 'فحص هيكل السقف', title: 'فحص وتحديد المشاكل' },
         ],
         testimonials: [
             { name: 'عبدالله القحطاني', location: 'الرياض - حي العليا', rating: 5, text: 'حددوا مكان التسرب بدقة بدون أي تكسير. وفروا علي الكثير!', service: 'كشف تسربات', date: '2024-01-12' },
@@ -195,8 +201,9 @@ const services = {
             { question: 'هل تقدمون خدمة التنظيف أيضاً؟', answer: 'نعم، نقوم بتنظيف وتعقيم الخزان قبل العزل كجزء من الخدمة.' },
         ],
         gallery: [
-            { src: '/tank-1.jpg', alt: 'عزل خزان مياه', title: 'عزل خزان أرضي' },
-            { src: '/tank-2.jpg', alt: 'تنظيف خزان', title: 'تنظيف الخزان' },
+            { src: '/rooftop-water-tank-before-foam-insulation.webp', alt: 'خزان مياه قبل العزل', title: 'خزان قبل العزل' },
+            { src: '/close-up-of-polyurethane-spray-foam-expansion.webp', alt: 'تفاصيل العزل', title: 'تفاصيل مادة العزل' },
+            { src: '/spray-foam-scaling-on-wall-surface.webp', alt: 'تطبيق العزل', title: 'عملية تطبيق العزل' },
         ],
         testimonials: [
             { name: 'سعد الدوسري', location: 'الرياض - حي الرمال', rating: 5, text: 'عزلوا الخزان بمواد ممتازة. المياه الآن نظيفة وبدون أي رائحة.', service: 'عزل خزانات', date: '2024-01-15' },
@@ -249,7 +256,7 @@ export default async function ServicePage({ params }: Props) {
                 {/* Hero Section */}
                 <section className={`relative py-16 md:py-24 bg-gradient-to-br ${service.color} text-white overflow-hidden`}>
                     {/* Background Elements */}
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
                     <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-2xl translate-x-1/3 translate-y-1/3" />
 
@@ -285,11 +292,11 @@ export default async function ServicePage({ params }: Props) {
 
                                 {/* CTA Buttons */}
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                    <a href="tel:0500000000" className="inline-flex items-center justify-center gap-2 bg-white text-[#0d64ab] px-6 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                                    <a href="tel:0507961706" className="inline-flex items-center justify-center gap-2 bg-white text-[#0d64ab] px-6 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                                         <PhoneIcon className="w-5 h-5" />
                                         <span>اتصل الآن</span>
                                     </a>
-                                    <a href="https://wa.me/966500000000" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                                    <a href="https://wa.me/966507961706" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                                         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.001.572 2.135.889 3.298.889 3.18 0 5.767-2.587 5.767-5.771.001-3.185-2.585-5.767-5.766-5.767z" /></svg>
                                         <span>واتساب</span>
                                     </a>
@@ -428,11 +435,11 @@ export default async function ServicePage({ params }: Props) {
                                     </div>
 
                                     <div className="mt-6 space-y-3">
-                                        <a href="tel:0500000000" className="flex items-center justify-center gap-2 w-full bg-[#0d64ab] hover:bg-[#094a83] text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
+                                        <a href="tel:0507961706" className="flex items-center justify-center gap-2 w-full bg-[#0d64ab] hover:bg-[#094a83] text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
                                             <PhoneIcon className="w-5 h-5" />
                                             اتصل الآن
                                         </a>
-                                        <a href="https://wa.me/966500000000" className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
+                                        <a href="https://wa.me/966507961706" className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
                                             واتساب
                                         </a>
                                     </div>
@@ -477,10 +484,10 @@ export default async function ServicePage({ params }: Props) {
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">جاهز لحماية مبناك؟</h2>
                         <p className="text-white/90 mb-8 text-lg">احصل على معاينة مجانية وعرض سعر فوري اليوم</p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0500000000" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 اتصل الآن
                             </a>
-                            <a href="https://wa.me/966500000000" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
+                            <a href="https://wa.me/966507961706" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
                                 طلب عرض سعر
                             </a>
                         </div>
@@ -499,7 +506,7 @@ export default async function ServicePage({ params }: Props) {
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "شركة عزل اسطح الرياض",
-                                "telephone": "0500000000",
+                                "telephone": "0507961706",
                                 "address": { "@type": "PostalAddress", "addressLocality": "الرياض", "addressCountry": "SA" }
                             },
                             "areaServed": { "@type": "City", "name": "الرياض" },

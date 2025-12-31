@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { CalendarIcon, ClockIcon, UserIcon, ArrowLeftIcon, TagIcon, BookOpenIcon, PhotoIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -18,7 +19,7 @@ const blogPosts = {
         authorRole: 'خبراء العزل',
         date: '2024-01-15',
         readTime: '8 دقائق',
-        image: '/foam-insulation.jpg',
+        image: '/worker-installing-foam-insulation-in-crawl-space.webp',
         content: `## مقدمة
 
 يعتبر عزل الأسطح من أهم الخطوات للحفاظ على المباني في الرياض، خاصة مع ارتفاع درجات الحرارة في الصيف التي قد تصل إلى أكثر من 45 درجة مئوية. في هذا المقال، سنستعرض أفضل أنواع عزل الأسطح المتاحة في السوق السعودي.
@@ -93,7 +94,7 @@ const blogPosts = {
         authorRole: 'مهندس عزل',
         date: '2024-01-10',
         readTime: '10 دقائق',
-        image: '/waterproof-insulation.jpg',
+        image: '/workerin-protective-suit-spraying-wall-foam.webp',
         content: `## مقدمة
 
 كثيراً ما يتساءل أصحاب المباني عن الفرق بين عزل الفوم والعزل المائي وأيهما أفضل لسطحهم. في هذا المقال، نقدم مقارنة تفصيلية تساعدك في اتخاذ القرار الصحيح.
@@ -198,7 +199,7 @@ const blogPosts = {
         authorRole: 'خبير توفير الطاقة',
         date: '2024-01-02',
         readTime: '7 دقائق',
-        image: '/energy-saving.jpg',
+        image: '/technician-spraying-foam-in-protective-gear.webp',
         content: `## مقدمة
 
 فاتورة الكهرباء في الصيف بالرياض قد تكون مرتفعة جداً بسبب تشغيل المكيفات لفترات طويلة. العزل الحراري الجيد يمكن أن يخفض هذه الفاتورة بشكل ملحوظ.
@@ -249,7 +250,7 @@ const blogPosts = {
         authorRole: 'فريق التحرير',
         date: '2023-12-28',
         readTime: '5 دقائق',
-        image: '/tank-insulation.jpg',
+        image: '/spray-foam-scaling-on-wall-surface.webp',
         content: `## أهمية عزل خزانات المياه
 
 خزان المياه غير المعزول يتعرض لعدة مشاكل:
@@ -303,7 +304,7 @@ const blogPosts = {
         authorRole: 'فريق التحرير',
         date: '2023-12-20',
         readTime: '4 دقائق',
-        image: '/warranty.jpg',
+        image: '/exposed-spray-foam-insulation-in-roof-structure.webp',
         content: `## لماذا الضمان مهم؟
 
 الضمان هو التزام من الشركة بجودة العمل. شركة تقدم ضمان طويل تثق في جودة عملها.
@@ -422,7 +423,7 @@ export default async function BlogPostPage({ params }: Props) {
             <main className="pt-20 bg-gray-50">
                 {/* Hero Header */}
                 <section className="relative bg-gradient-to-br from-[#0d64ab] to-[#1a7bc4] text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
 
                     <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 relative z-10">
@@ -468,9 +469,15 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="grid lg:grid-cols-12 gap-8">
                         {/* Main Content */}
                         <article className="lg:col-span-8">
-                            {/* Featured Image Placeholder */}
-                            <div className="bg-gradient-to-br from-[#0d64ab]/10 to-[#05ccca]/10 rounded-2xl aspect-video flex items-center justify-center mb-8 border border-[#0d64ab]/10">
-                                <PhotoIcon className="w-20 h-20 text-[#0d64ab]/30" />
+                            {/* Featured Image */}
+                            <div className="relative aspect-video rounded-2xl overflow-hidden mb-8 border border-[#0d64ab]/10 shadow-md">
+                                <Image
+                                    src={post.image}
+                                    alt={post.title}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
 
                             {/* Article Body */}
@@ -531,7 +538,7 @@ export default async function BlogPostPage({ params }: Props) {
                             <div className="bg-gradient-to-br from-[#0d64ab] to-[#05ccca] rounded-2xl p-6 text-white">
                                 <h3 className="text-xl font-bold mb-3">هل تحتاج خدمة عزل؟</h3>
                                 <p className="text-white/90 text-sm mb-4">تواصل معنا للحصول على استشارة مجانية وعرض سعر</p>
-                                <a href="tel:0500000000" className="block w-full bg-white text-[#0d64ab] text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
+                                <a href="tel:0507961706" className="block w-full bg-white text-[#0d64ab] text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                                     اتصل الآن
                                 </a>
                             </div>
@@ -545,8 +552,13 @@ export default async function BlogPostPage({ params }: Props) {
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {relatedPostsData.map(related => (
                                     <Link key={related.slug} href={`/blog/${related.slug}`} className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
-                                        <div className="aspect-video bg-gradient-to-br from-[#0d64ab]/10 to-[#05ccca]/10 flex items-center justify-center">
-                                            <PhotoIcon className="w-12 h-12 text-[#0d64ab]/30 group-hover:scale-110 transition-transform" />
+                                        <div className="relative aspect-video bg-gray-100">
+                                            <Image
+                                                src={related.image}
+                                                alt={related.title}
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
                                         </div>
                                         <div className="p-5">
                                             <span className="text-xs bg-[#0d64ab]/10 text-[#0d64ab] px-2 py-1 rounded-full">{related.category}</span>
@@ -574,10 +586,10 @@ export default async function BlogPostPage({ params }: Props) {
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">هل لديك أسئلة عن العزل؟</h2>
                         <p className="text-white/90 mb-8">تواصل معنا للحصول على استشارة مجانية من خبرائنا</p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0500000000" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 اتصل الآن
                             </a>
-                            <a href="https://wa.me/966500000000" className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
+                            <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-lg">
                                 واتساب
                             </a>
                         </div>

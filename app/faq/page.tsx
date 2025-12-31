@@ -142,7 +142,7 @@ export default function FAQPage() {
             <main className="pt-24">
                 {/* Hero Section */}
                 <section className="relative py-16 bg-[#0d64ab] text-white overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-10" />
+                    <div className="absolute inset-0   opacity-10" />
                     <div className="container mx-auto px-6 relative">
                         <div className="text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -197,14 +197,14 @@ export default function FAQPage() {
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
                                 <a
-                                    href="tel:0500000000"
+                                    href="tel:0507961706"
                                     className="bg-[#0d64ab] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#0a5a9a] transition-all shadow-lg flex items-center gap-2"
                                 >
                                     <PhoneIcon className="w-5 h-5" />
                                     اتصل بنا الآن
                                 </a>
                                 <a
-                                    href="https://wa.me/966500000000"
+                                    href="https://wa.me/966507961706"
                                     className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg"
                                 >
                                     راسلنا عبر واتساب

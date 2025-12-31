@@ -31,7 +31,7 @@ export default function Stats() {
   return (
     <section className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
+      <div className="absolute inset-0   opacity-5" />
 
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
@@ -67,7 +67,7 @@ export default function Stats() {
               خبرة واسعة، مواد عالية الجودة، ضمان شامل، وفريق فني متخصص لخدمتكم
             </p>
             <a
-              href="tel:0500000000"
+              href="tel:0507961706"
               className="inline-block bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
               اتصل بنا الآن

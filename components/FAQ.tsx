@@ -48,7 +48,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/pattern-dots.svg')] opacity-5" />
+      <div className="absolute inset-0   opacity-5" />
 
       {/* Animated Shapes */}
       <div className="absolute left-0 top-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl animate-float" />
@@ -109,13 +109,13 @@ export default function FAQ() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:0500000000"
+                href="tel:0507961706"
                 className="bg-white text-[#0d64ab] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 اتصل بنا الآن
               </a>
               <a
-                href="https://wa.me/966500000000"
+                href="https://wa.me/966507961706"
                 className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 راسلنا عبر واتساب
