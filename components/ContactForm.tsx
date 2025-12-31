@@ -74,8 +74,8 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-white/70 text-sm">اتصل بنا</p>
-                    <a href="tel:0574666444" className="text-lg font-semibold hover:text-[#05ccca] transition-colors">
-                      0574666444
+                    <a href="tel:0507961706" className="text-lg font-semibold hover:text-[#05ccca] transition-colors">
+                      0507961706
                     </a>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function ContactForm() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/966574666444"
+              href="https://wa.me/966507961706"
               className="flex items-center justify-center space-x-3 space-x-reverse bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <ChatBubbleLeftRightIcon className="w-6 h-6" />

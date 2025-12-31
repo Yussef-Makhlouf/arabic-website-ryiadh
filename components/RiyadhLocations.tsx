@@ -210,14 +210,14 @@ export default function RiyadhLocations() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:+966574666444"
+              href="tel:+966507961706"
               className="bg-white text-[#0d64ab] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
             >
               <span>📞</span>
-              اتصل الآن: 0574666444
+              اتصل الآن: 0507961706
             </a>
             <a
-              href="https://wa.me/966574666444"
+              href="https://wa.me/966507961706"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors flex items-center gap-2"

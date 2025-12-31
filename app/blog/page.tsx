@@ -7,8 +7,8 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 
 export const metadata: Metadata = {
-    title: 'مدونة عزل الأسطح بالرياض | نصائح وأسعار العزل 2024 | 0574666444',
-    description: 'مقالات ونصائح متخصصة عن عزل الأسطح والمباني بالرياض. أسعار العزل، أنواعه وفوائده وكيفية اختيار الأنسب. استشارة مجانية 0574666444',
+    title: 'مدونة عزل الأسطح بالرياض | نصائح وأسعار العزل 2024 | 0507961706',
+    description: 'مقالات ونصائح متخصصة عن عزل الأسطح والمباني بالرياض. أسعار العزل، أنواعه وفوائده وكيفية اختيار الأنسب. استشارة مجانية 0507961706',
     keywords: ['مدونة عزل', 'نصائح عزل الأسطح', 'أسعار عزل الرياض', 'عزل فوم', 'عزل مائي', 'كشف تسربات'],
 }
 
@@ -175,10 +175,10 @@ export default function BlogPage() {
                             فريقنا متاح للإجابة على جميع استفساراتكم وتقديم الاستشارة المجانية
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0574666444" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
                                 اتصل للاستشارة
                             </a>
-                            <a href="https://wa.me/966574666444" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
+                            <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
                                 واتساب
                             </a>
                         </div>

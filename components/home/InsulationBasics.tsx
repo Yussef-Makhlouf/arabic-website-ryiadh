@@ -121,7 +121,7 @@ export default function InsulationBasics() {
                             <p className="text-white/80">تواصل معنا للحصول على استشارة مجانية من خبراء العزل لدينا</p>
                         </div>
                         <div className="flex gap-3">
-                            <a href="tel:0574666444" className="bg-white text-[#0d64ab] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                                 اتصل الآن
                             </a>
                         </div>

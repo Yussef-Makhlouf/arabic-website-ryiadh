@@ -51,8 +51,8 @@ const services = [
 ]
 
 export const metadata = {
-    title: 'خدمات عزل الأسطح بالرياض | عزل فوم - عزل مائي - كشف تسربات | 0574666444',
-    description: 'أفضل خدمات عزل الأسطح والمباني في الرياض والخرج. عزل فوم حراري، عزل مائي، كشف تسربات المياه، وعزل خزانات. ضمان 15 سنة وأسعار منافسة. اتصل الآن 0574666444',
+    title: 'خدمات عزل الأسطح بالرياض | عزل فوم - عزل مائي - كشف تسربات | 0507961706',
+    description: 'أفضل خدمات عزل الأسطح والمباني في الرياض والخرج. عزل فوم حراري، عزل مائي، كشف تسربات المياه، وعزل خزانات. ضمان 15 سنة وأسعار منافسة. اتصل الآن 0507961706',
     keywords: ['خدمات عزل الأسطح', 'عزل فوم الرياض', 'عزل مائي الرياض', 'كشف تسربات الرياض', 'شركة عزل معتمدة'],
 }
 
@@ -145,10 +145,10 @@ export default function ServicesPage() {
                             تواصل معنا الآن للحصول على عرض سعر مخصص لاحتياجاتكم مع ضمان شامل
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0574666444" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
                                 اتصل الآن
                             </a>
-                            <a href="https://wa.me/966574666444" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
+                            <a href="https://wa.me/966507961706" className="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all shadow-lg">
                                 واتساب
                             </a>
                         </div>

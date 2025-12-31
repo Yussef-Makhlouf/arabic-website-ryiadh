@@ -144,8 +144,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">الهاتف</p>
-                  <a href="tel:0574666444" className="text-white hover:text-[#0d64ab] transition-colors duration-300">
-                    0574666444
+                  <a href="tel:0507961706" className="text-white hover:text-[#0d64ab] transition-colors duration-300">
+                    0507961706
                   </a>
                 </div>
               </div>

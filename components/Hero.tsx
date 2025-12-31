@@ -75,14 +75,14 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
-                href="tel:0574666444"
+                href="tel:0507961706"
                 className="flex items-center justify-center gap-2 bg-[#0d64ab] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#0a4d8c] transition-all duration-300 shadow-lg shadow-[#0d64ab]/30 hover:-translate-y-1"
               >
                 <PhoneIcon className="w-5 h-5" />
                 <span>اتصل الآن للمعاينة</span>
               </Link>
               <Link
-                href="https://wa.me/966574666444"
+                href="https://wa.me/966507961706"
                 className="flex items-center justify-center gap-2 bg-white text-[#0d64ab] border-2 border-[#0d64ab]/10 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1"
               >
                 <ShieldCheckIcon className="w-5 h-5" />

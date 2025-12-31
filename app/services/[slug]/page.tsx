@@ -224,11 +224,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${service.title} | أفضل شركة عزل بالرياض | 0574666444`,
-        description: `${service.metaDescription} اتصل الآن 0574666444 للحصول على عرض سعر مجاني.`,
+        title: `${service.title} | أفضل شركة عزل بالرياض | 0507961706`,
+        description: `${service.metaDescription} اتصل الآن 0507961706 للحصول على عرض سعر مجاني.`,
         keywords: [service.title, service.shortTitle, 'عزل الرياض', 'شركة عزل', 'عزل أسطح بالرياض', 'ضمان 15 سنة'],
         openGraph: {
-            title: `${service.title} | 0574666444`,
+            title: `${service.title} | 0507961706`,
             description: service.metaDescription,
             type: 'website',
         },
@@ -292,11 +292,11 @@ export default async function ServicePage({ params }: Props) {
 
                                 {/* CTA Buttons */}
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                    <a href="tel:0574666444" className="inline-flex items-center justify-center gap-2 bg-white text-[#0d64ab] px-6 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                                    <a href="tel:0507961706" className="inline-flex items-center justify-center gap-2 bg-white text-[#0d64ab] px-6 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                                         <PhoneIcon className="w-5 h-5" />
                                         <span>اتصل الآن</span>
                                     </a>
-                                    <a href="https://wa.me/966574666444" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                                    <a href="https://wa.me/966507961706" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                                         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.001.572 2.135.889 3.298.889 3.18 0 5.767-2.587 5.767-5.771.001-3.185-2.585-5.767-5.766-5.767z" /></svg>
                                         <span>واتساب</span>
                                     </a>
@@ -435,11 +435,11 @@ export default async function ServicePage({ params }: Props) {
                                     </div>
 
                                     <div className="mt-6 space-y-3">
-                                        <a href="tel:0574666444" className="flex items-center justify-center gap-2 w-full bg-[#0d64ab] hover:bg-[#094a83] text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
+                                        <a href="tel:0507961706" className="flex items-center justify-center gap-2 w-full bg-[#0d64ab] hover:bg-[#094a83] text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
                                             <PhoneIcon className="w-5 h-5" />
                                             اتصل الآن
                                         </a>
-                                        <a href="https://wa.me/966574666444" className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
+                                        <a href="https://wa.me/966507961706" className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
                                             واتساب
                                         </a>
                                     </div>
@@ -484,10 +484,10 @@ export default async function ServicePage({ params }: Props) {
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">جاهز لحماية مبناك؟</h2>
                         <p className="text-white/90 mb-8 text-lg">احصل على معاينة مجانية وعرض سعر فوري اليوم</p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <a href="tel:0574666444" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            <a href="tel:0507961706" className="bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                                 اتصل الآن
                             </a>
-                            <a href="https://wa.me/966574666444" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
+                            <a href="https://wa.me/966507961706" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/30 transition-colors">
                                 طلب عرض سعر
                             </a>
                         </div>
@@ -506,7 +506,7 @@ export default async function ServicePage({ params }: Props) {
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "شركة عزل اسطح الرياض",
-                                "telephone": "0574666444",
+                                "telephone": "0507961706",
                                 "address": { "@type": "PostalAddress", "addressLocality": "الرياض", "addressCountry": "SA" }
                             },
                             "areaServed": { "@type": "City", "name": "الرياض" },

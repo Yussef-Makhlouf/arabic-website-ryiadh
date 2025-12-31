@@ -49,7 +49,7 @@ export default function AuthorBio({ name, bio, avatar, role = 'فريق التح
                     {/* CTA */}
                     <div className="mt-4 flex items-center gap-3">
                         <Link
-                            href="tel:0574666444"
+                            href="tel:0507961706"
                             className="inline-flex items-center gap-2 text-[#0d64ab] hover:text-[#0a5a9a] font-medium text-sm transition-colors"
                         >
                             <span>تواصل معنا</span>

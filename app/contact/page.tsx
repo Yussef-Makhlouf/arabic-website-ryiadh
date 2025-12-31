@@ -111,17 +111,17 @@ export default function ContactPage() {
                                 {
                                     icon: PhoneIcon,
                                     title: 'اتصل بنا',
-                                    value: '966574666444',
+                                    value: '966507961706',
                                     subtext: 'متاحون 24/7',
-                                    href: 'tel:0574666444',
+                                    href: 'tel:0507961706',
                                     color: 'blue'
                                 },
                                 {
                                     icon: ChatBubbleLeftRightIcon,
                                     title: 'واتساب',
-                                    value: '966574666444',
+                                    value: '966507961706',
                                     subtext: 'رد سريع',
-                                    href: 'https://wa.me/966574666444',
+                                    href: 'https://wa.me/966507961706',
                                     color: 'green'
                                 },
                                 {
@@ -317,13 +317,13 @@ export default function ContactPage() {
                                         للحصول على رد فوري، تواصل معنا عبر الهاتف أو الواتساب. فريقنا جاهز لخدمتك على مدار الساعة.
                                     </p>
                                     <div className="space-y-4">
-                                        <a href="tel:966574666444" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors">
+                                        <a href="tel:966507961706" className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors">
                                             <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                                                 <PhoneIcon className="w-6 h-6" />
                                             </div>
                                             <div>
                                                 <div className="font-bold">اتصل الآن</div>
-                                                <div className="text-white/70" dir="ltr">966574666444</div>
+                                                <div className="text-white/70" dir="ltr">966507961706</div>
                                             </div>
                                         </a>
                                         <a href="https://wa.me/966569131252" className="flex items-center gap-4 bg-green-500/20 backdrop-blur-sm rounded-xl p-4 hover:bg-green-500/30 transition-colors">
@@ -429,9 +429,9 @@ export default function ContactPage() {
                         <p className="text-white/90 mb-8 text-lg">
                             اتصل الآن واحصل على معاينة مجانية وعرض سعر فوري
                         </p>
-                        <a href="tel:966574666444" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                        <a href="tel:966507961706" className="inline-flex items-center gap-2 bg-white text-[#0d64ab] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">
                             <PhoneIcon className="w-5 h-5" />
-                            اتصل الآن: 966574666444
+                            اتصل الآن: 966507961706
                         </a>
                     </div>
                 </section>

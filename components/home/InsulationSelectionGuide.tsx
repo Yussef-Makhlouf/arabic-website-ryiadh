@@ -251,7 +251,7 @@ export default function InsulationSelectionGuide() {
                                 <p className="text-white/80 text-sm mb-4">
                                     فريقنا المتخصص يقدم معاينة مجانية وتقييم شامل لمبناك مع عرض سعر مفصل.
                                 </p>
-                                <a href="tel:0574666444" className="inline-block bg-white text-blue-600 px-5 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
+                                <a href="tel:0507961706" className="inline-block bg-white text-blue-600 px-5 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                                     احجز معاينة مجانية
                                 </a>
                             </div>

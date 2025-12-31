@@ -15,8 +15,8 @@ const theYearFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات | ضمان 15 سنة | 0574666444',
-    template: '%s | شركة عزل اسطح الرياض | 0574666444'
+    default: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات | ضمان 15 سنة | 0507961706',
+    template: '%s | شركة عزل اسطح الرياض | 0507961706'
   },
   description: 'أفضل شركة عزل اسطح بالرياض والخرج. نقدم خدمات عزل فوم بولي يوريثان، عزل مائي، وكشف تسربات المياه بأحدث التقنيات. معتمدون من الهيئة السعودية للمهندسين. خبرة 15 عاماً وضمان شامل يصل إلى 15 سنة. اتصل الآن للمعاينة المجانية.',
   keywords: ['شركة عزل اسطح بالرياض', 'عزل فوم بالرياض', 'عزل مائي بالرياض', 'شركة عزل خزانات بالرياض', 'كشف تسربات المياه', 'عزل اسطح بالخرج', 'عزل فوم بولي يوريثان', 'عزل شينكو', 'أفضل شركة عزل', 'عزل حراري', 'عزل اسطح شمال الرياض', 'سعر متر العزل', 'عزل مائي وحراري', 'شركة عزل معتمدة'],
@@ -295,8 +295,8 @@ export default function RootLayout({
               "url": "http://lamsa-clean.com",
               "logo": "http://lamsa-clean.com/lamsa.png",
               "image": "http://lamsa-clean.com/insulation-services.png",
-              "telephone": "+966574666444",
-              "faxNumber": "+966574666444",
+              "telephone": "+966507961706",
+              "faxNumber": "+966507961706",
               "email": "info@lamsa-clean.com",
               "address": {
                 "@type": "PostalAddress",
@@ -567,7 +567,7 @@ export default function RootLayout({
             description: "نقدم خدمات عزل أسطح شاملة ومتخصصة في الرياض والخرج",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+966574666444",
+              telephone: "+966507961706",
               contactType: "customer service",
               availableLanguage: ["Arabic", "English"],
               areaServed: "SA",
@@ -635,7 +635,7 @@ export default function RootLayout({
               "@type": "ReserveAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "tel:+966574666444",
+                "urlTemplate": "tel:+966507961706",
                 "actionPlatform": [
                   "http://schema.org/DesktopWebPlatform",
                   "http://schema.org/MobileWebPlatform"
