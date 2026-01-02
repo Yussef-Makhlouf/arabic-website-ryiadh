@@ -26,28 +26,27 @@ export default function Services() {
       reviews: 203,
       features: ['حماية من التسربات', 'مقاوم للأملاح', 'ضمان شامل']
     },
-
     {
-      icon: EyeIcon,
-      title: 'كشف تسربات المياه بالرياض',
-      description: 'كشف تسربات المياه بأحدث الأجهزة الإلكترونية دون تكسير. نحدد مكان التسرب بدقة متناهية ونقدم الحلول المناسبة.',
-      image: '/water-leak.avif',
+      icon: BeakerIcon,
+      title: 'عزل حراري للأسطح المبلطة',
+      description: 'حلول عزل حراري متخصصة للأسطح المبلطة والقديمة. تخفيض فاتورة الكهرباء حتى 40% دون الحاجة لتكسير البلاط.',
+      image: '/thermcoat_termal_acoustic_insulation_pu_spray_foam_3.webp',
       color: 'bg-[#05ccca]',
-      badge: 'تقنية متقدمة',
-      rating: 4.7,
-      reviews: 234,
-      features: ['بدون تكسير', 'أجهزة إلكترونية', 'دقة عالية']
+      badge: 'موفر للطاقة',
+      rating: 4.9,
+      reviews: 180,
+      features: ['توفير الكهرباء', 'فوق البلاط', 'حماية المبنى']
     },
     {
       icon: WrenchScrewdriverIcon,
-      title: 'عزل خزانات المياه بالرياض',
-      description: 'عزل خزانات المياه الأرضية والعلوية بمواد آمنة صحياً ومعتمدة. نضمن لكم مياه نظيفة وخالية من التلوث.',
-      image: '/rooftop-water-tank-before-foam-insulation.webp',
+      title: 'عزل شينكو ومستودعات',
+      description: 'عزل فوم متخصص للهناجر والمستودعات والأسطح المعدنية. أرخص وأفضل حل لمنع الحرارة وتسربات مياه الأمطار.',
+      image: '/best-practices-spray-foam-installation-on-roof.webp',
       color: 'bg-[#0d64ab]',
-      badge: 'معتمد صحياً',
-      rating: 4.8,
-      reviews: 167,
-      features: ['مواد آمنة صحياً', 'خزانات أرضية وعلوية', 'معتمد من الصحة']
+      badge: 'الأرخص تكلفة',
+      rating: 4.7,
+      reviews: 150,
+      features: ['عزل صوتي وحراري', 'منع الصدأ', 'سعر اقتصادي']
     },
   ]
 
@@ -152,30 +151,30 @@ export default function Services() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-[#0d64ab] rounded-3xl p-12 text-white relative overflow-hidden">
+          <div className="bg-[#0d64ab] rounded-3xl p-6 md:p-12 text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0   opacity-10" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
 
             <div className="relative z-10">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                 احصل على عرض سعر مجاني الآن
               </h3>
-              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto">
                 تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتكم. فريقنا متاح على مدار الساعة لخدمتكم.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="tel:0507961706"
-                  className="group w-full sm:w-auto bg-white text-[#0d64ab] px-8 py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
+                  className="group w-full sm:w-auto bg-white text-[#0d64ab] px-6 py-3 md:px-8 md:py-4 rounded-[14px] font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse text-sm md:text-base"
                 >
                   <span>اتصل بنا الآن</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="https://wa.me/966507961706"
-                  className="group w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse"
+                  className="group w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-6 py-3 md:px-8 md:py-4 rounded-[14px] font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 space-x-reverse text-sm md:text-base"
                 >
                   <span>احصل على عرض سعر</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -49,13 +49,13 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
-                نقدم خدمات <strong>عزل الأسطح والمباني</strong> بأعلى معايير الجودة العالمية. متخصصون في <strong>عزل الفوم البولي يوريثان</strong>، <strong>العزل المائي والحراري</strong>، و<strong>كشف تسربات المياه</strong> بدون تكسير. حماية تدوم لسنوات مع ضمان حقيقي معتمد.
+                نقدم خدمات <strong>عزل الأسطح والمباني</strong> بأعلى معايير الجودة العالمية. متخصصون في <strong>عزل الفوم البولي يوريثان</strong>، <strong>العزل المائي والحراري</strong>، و<strong>عزل الأسطح المبلطة والشينكو</strong>. حماية تدوم لسنوات مع ضمان حقيقي معتمد.
               </p>
             </div>
 
             {/* Specialized Services Tags */}
             <div className="flex flex-wrap gap-3">
-              {['عزل فوم', 'عزل مائي', 'عزل خزانات', 'كشف تسربات', 'عزل شينكو', 'عزل اسطح'].map((tag, i) => (
+              {['عزل فوم', 'عزل مائي', 'عزل حراري', 'عزل مبلط', 'عزل شينكو', 'عزل اسطح'].map((tag, i) => (
                 <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 text-sm font-medium rounded-lg border border-gray-200">
                   #{tag}
                 </span>
@@ -119,8 +119,8 @@ export default function Hero() {
                   <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 text-[#05ccca]">
                     <FingerPrintIcon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">كشف تسربات</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">تحديد مكان التسرب بدقة عالية بدون تكسير.</p>
+                  <h3 className="font-bold text-gray-900 mb-2">عزل الأسطح</h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">عزل حراري ومائي للأسطح المبلطة والخرسانية.</p>
                 </div>
               </div>
               <div className="space-y-6">

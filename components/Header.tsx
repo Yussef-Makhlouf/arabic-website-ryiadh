@@ -43,8 +43,8 @@ export default function Header() {
   const services = [
     { name: 'عزل فوم للأسطح', href: '/services/foam-insulation' },
     { name: 'عزل مائي للأسطح', href: '/services/waterproof-insulation' },
-    { name: 'كشف تسربات المياه', href: '/services/leak-detection' },
-    { name: 'عزل خزانات المياه', href: '/services/tank-insulation' },
+    { name: ' عزل الأسطح المبلطة بالرياض ', href: '/services/tiled-roof-insulation' },
+    { name: 'عزل شينكو ومستودعات', href: '/services/shincko-insulation' },
   ];
 
   const navLinks = [
@@ -72,9 +72,9 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className={`font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0d64ab] to-[#0a4d8c] ${scrolled ? 'text-lg' : 'text-lg md:text-2xl'}`}>
-                شركة أيقونة العزل    
+                شركة أيقونة العزل
               </span>
-              <span className="text-[10px] md:text-xs text-gray-500 hidden sm:block">عزل وكشف تسربات بالرياض</span>
+              <span className="text-[10px] md:text-xs text-gray-500 hidden sm:block">عزل اسطح وفوم بالرياض</span>
             </div>
           </Link>
 
@@ -111,9 +111,9 @@ export default function Header() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-2">
-            <Link href="tel:0569131252" className={`flex items-center gap-2 bg-[#0d64ab] text-white rounded-full font-bold shadow-lg ${scrolled ? 'px-3 py-2' : 'px-3 py-2 md:px-5 md:py-2.5'}`}>
+            <Link href="tel:0507961706" className={`flex items-center gap-2 bg-[#0d64ab] text-white rounded-full font-bold shadow-lg ${scrolled ? 'px-3 py-2' : 'px-3 py-2 md:px-5 md:py-2.5'}`}>
               <PhoneIcon className="w-4 h-4 animate-pulse" />
-              <span className="hidden md:inline">0569131252</span>
+              <span className="hidden md:inline">0507961706</span>
               <span className="md:hidden text-xs">اتصال</span>
             </Link>
 
@@ -187,7 +187,7 @@ export default function Header() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-800 text-sm">القائمة الرئيسية</p>
-                    <p className="text-[10px] text-gray-500">لمسة إبداع للعزل</p>
+                    <p className="text-[10px] text-gray-500"> أيقونة العزل بالرياض</p>
                   </div>
                 </div>
                 <button
@@ -215,8 +215,8 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                     className={`block p-4 rounded-xl font-semibold text-base transition-all ${pathname === link.href
-                        ? 'bg-[#0d64ab] text-white shadow-md'
-                        : 'text-gray-700 bg-gray-50 hover:bg-gray-100'
+                      ? 'bg-[#0d64ab] text-white shadow-md'
+                      : 'text-gray-700 bg-gray-50 hover:bg-gray-100'
                       }`}
                   >
                     {link.name}
@@ -228,8 +228,8 @@ export default function Header() {
                   <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                     className={`w-full p-4 flex items-center justify-between font-semibold text-base transition-all ${isServicesOpen || pathname.startsWith('/services')
-                        ? 'bg-[#0d64ab] text-white'
-                        : 'text-gray-700 bg-gray-50'
+                      ? 'bg-[#0d64ab] text-white'
+                      : 'text-gray-700 bg-gray-50'
                       }`}
                   >
                     <span>الخدمات</span>
@@ -251,8 +251,8 @@ export default function Header() {
                           href={service.href}
                           onClick={() => setIsMenuOpen(false)}
                           className={`block p-3 rounded-lg text-sm transition-colors ${pathname === service.href
-                              ? 'text-[#0d64ab] bg-[#0d64ab]/10 font-medium'
-                              : 'text-gray-600 hover:bg-gray-50'
+                            ? 'text-[#0d64ab] bg-[#0d64ab]/10 font-medium'
+                            : 'text-gray-600 hover:bg-gray-50'
                             }`}
                         >
                           {service.name}
@@ -269,8 +269,8 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                     className={`block p-4 rounded-xl font-semibold text-base transition-all ${pathname === link.href || (link.href === '/blog' && pathname.startsWith('/blog'))
-                        ? 'bg-[#0d64ab] text-white shadow-md'
-                        : 'text-gray-700 bg-gray-50 hover:bg-gray-100'
+                      ? 'bg-[#0d64ab] text-white shadow-md'
+                      : 'text-gray-700 bg-gray-50 hover:bg-gray-100'
                       }`}
                   >
                     {link.name}
@@ -290,11 +290,11 @@ export default function Header() {
               <div className="space-y-3">
                 <div className="bg-white rounded-xl p-3 text-center border border-gray-100">
                   <p className="text-[10px] text-gray-400 mb-1">تواصل معنا</p>
-                  <p className="text-lg font-bold text-gray-800" dir="ltr">0569131252</p>
+                  <p className="text-lg font-bold text-gray-800" dir="ltr">0507961706</p>
                 </div>
 
                 <Link
-                  href="tel:0569131252"
+                  href="tel:0507961706"
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-[#0d64ab] text-white py-3.5 rounded-xl font-bold shadow-lg active:scale-[0.98]"
                 >
@@ -303,7 +303,7 @@ export default function Header() {
                 </Link>
 
                 <Link
-                  href="https://wa.me/966569131252"
+                  href="https://wa.me/966507961706"
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3.5 rounded-xl font-bold shadow-lg active:scale-[0.98]"
                 >

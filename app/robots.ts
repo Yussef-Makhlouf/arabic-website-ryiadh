@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/', '/admin/'],
       },
     ],
-    sitemap: 'http://lamsa-clean.com/sitemap.xml',
-    host: 'http://lamsa-clean.com',
+    sitemap: 'https://ic-elazl.sa/sitemap.xml',
+    host: 'https://ic-elazl.sa',
   }
 }

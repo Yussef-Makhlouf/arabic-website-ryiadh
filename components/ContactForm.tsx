@@ -156,7 +156,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent transition-all"
-                    placeholder="05xxxxxxxx"
+                    placeholder="0507961706"
                   />
                 </div>
 
@@ -172,9 +172,9 @@ export default function ContactForm() {
                     <option value="">اختر الخدمة</option>
                     <option value="عزل فوم للأسطح">عزل فوم للأسطح</option>
                     <option value="عزل مائي للأسطح">عزل مائي للأسطح</option>
+                    <option value="عزل الأسطح المبلطة">عزل الأسطح المبلطة</option>
+                    <option value="عزل شينكو وهناجر">عزل شينكو وهناجر</option>
                     <option value="عازل أسمنتي">عازل أسمنتي</option>
-                    <option value="كشف تسربات المياه">كشف تسربات المياه</option>
-                    <option value="عزل خزانات المياه">عزل خزانات المياه</option>
                     <option value="أخرى">أخرى</option>
                   </select>
                 </div>

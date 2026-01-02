@@ -212,7 +212,7 @@ export default function ContactPage() {
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
-                                                    placeholder="05xxxxxxxx"
+                                                    placeholder="0507961706"
                                                     dir="ltr"
                                                     className={`w-full pr-10 pl-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent outline-none transition-all text-left ${errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-200'}`}
                                                 />
@@ -256,8 +256,6 @@ export default function ContactPage() {
                                                     <option value="">اختر الخدمة</option>
                                                     <option value="foam">عزل فوم للأسطح</option>
                                                     <option value="waterproof">عزل مائي</option>
-                                                    <option value="leak">كشف تسربات المياه</option>
-                                                    <option value="tank">عزل خزانات المياه</option>
                                                     <option value="other">خدمة أخرى</option>
                                                 </select>
                                             </div>
@@ -326,7 +324,7 @@ export default function ContactPage() {
                                                 <div className="text-white/70" dir="ltr">966507961706</div>
                                             </div>
                                         </a>
-                                        <a href="https://wa.me/966569131252" className="flex items-center gap-4 bg-green-500/20 backdrop-blur-sm rounded-xl p-4 hover:bg-green-500/30 transition-colors">
+                                        <a href="https://wa.me/966507961706" className="flex items-center gap-4 bg-green-500/20 backdrop-blur-sm rounded-xl p-4 hover:bg-green-500/30 transition-colors">
                                             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center">
                                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                                                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 2.111.937 3.297.937 3.18 0 5.767-2.587 5.767-5.767 0-3.18-2.587-5.766-5.767-5.766z" />

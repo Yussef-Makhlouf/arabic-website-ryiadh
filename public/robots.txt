@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.riyadh-cleaning.com/sitemap.xml
+Sitemap: https://www.ic-elazl.sa/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
@@ -51,4 +51,4 @@ User-agent: BLEXBot
 Disallow: /
 
 # Host
-Host: https://www.riyadh-cleaning.com
+Host: https://www.ic-elazl.sa

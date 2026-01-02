@@ -1,22 +1,21 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'http://lamsa-clean.com'
+  const baseUrl = 'https://ic-elazl.sa'
 
   const services = [
     'foam-insulation',
     'waterproof-insulation',
-    'cement-insulation',
-    'leak-detection',
-    'tank-insulation',
+    'tiled-roof-insulation',
+    'shincko-insulation',
   ]
 
   const blogPosts = [
     'best-roof-insulation-types',
     'foam-vs-waterproof-insulation',
-    'protect-home-from-leaks',
+    'tiled-roof-insulation-benefits',
     'insulation-reduces-electricity-bill',
-    'tank-insulation-guide',
+    'shincko-warehouse-insulation',
     'insulation-warranty-importance',
   ]
 

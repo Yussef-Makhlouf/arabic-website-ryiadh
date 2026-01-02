@@ -53,9 +53,8 @@ export default function Footer() {
   const services = [
     { name: 'عزل فوم للأسطح', href: '#services' },
     { name: 'عزل مائي للأسطح', href: '#services' },
-
-    { name: 'كشف تسربات المياه', href: '#services' },
-    { name: 'عزل خزانات المياه', href: '#services' }
+    { name: 'عزل حراري للأسطح', href: '#services' },
+    { name: 'عزل شينكو ومستودعات', href: '#services' },
   ]
 
   return (
@@ -67,6 +66,40 @@ export default function Footer() {
       <div className="absolute left-0 top-0 w-96 h-96 bg-[#0d64ab]/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 py-16 relative">
+        {/* Comprehensive Coverage Section */}
+        <div className="mb-12 border-b border-gray-800 pb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-8 w-1.5 bg-[#0d64ab] rounded-full shadow-[0_0_15px_rgba(13,100,171,0.5)]"></div>
+            <h3 className="text-2xl font-bold text-white">تغطية شاملة</h3>
+          </div>
+
+          <p className="text-gray-400 mb-8 max-w-4xl leading-relaxed text-lg">
+            نقدم خدمات <span className="text-white font-medium">عزل اسطح بالرياض</span> و<span className="text-white font-medium">عزل اسطح بالخرج</span> وجميع محافظات ومدن منطقة الرياض بما فيها شمال الرياض من خلال أفضل <span className="text-white font-medium">شركات عزل خزانات شمال الرياض</span>.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-8 mb-8">
+            {[
+              'الرياض', 'الخرج', 'شمال الرياض', 'الدرعية',
+              'المجمعة', 'الدوادمي', 'القويعية', 'وادي الدواسر',
+              'الزلفي', 'الأفلاج', 'شقراء', 'حريملاء'
+            ].map((city) => (
+              <div key={city} className="flex items-center gap-3 group cursor-pointer">
+                <span className="text-[#0d64ab] text-sm transform group-hover:-translate-x-1 transition-transform duration-300">❮</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors duration-300 font-medium">{city}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-500 border-t border-gray-800 pt-6">
+            {[
+              'المزاحمية', 'رماح', 'ثادق', 'حوطة بني تميم',
+              'عفيف', 'السليل', 'الغاط', 'الحريق', 'ضرماء'
+            ].map((area) => (
+              <span key={area} className="hover:text-gray-300 transition-colors duration-300 cursor-default">{area}</span>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -194,7 +227,7 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               تصميم و تطوير{' '}
               <a
-                href="https://wa.me/966507961706"
+                href="https://wa.me/201145607071"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white font-medium hover:text-[#0d64ab] transition-colors duration-300"

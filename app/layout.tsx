@@ -15,11 +15,11 @@ const theYearFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات | ضمان 15 سنة | 0507961706',
+    default: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي -  | ضمان 15 سنة | 0507961706',
     template: '%s | شركة عزل اسطح الرياض | 0507961706'
   },
-  description: 'أفضل شركة عزل اسطح بالرياض والخرج. نقدم خدمات عزل فوم بولي يوريثان، عزل مائي، وكشف تسربات المياه بأحدث التقنيات. معتمدون من الهيئة السعودية للمهندسين. خبرة 15 عاماً وضمان شامل يصل إلى 15 سنة. اتصل الآن للمعاينة المجانية.',
-  keywords: ['شركة عزل اسطح بالرياض', 'عزل فوم بالرياض', 'عزل مائي بالرياض', 'شركة عزل خزانات بالرياض', 'كشف تسربات المياه', 'عزل اسطح بالخرج', 'عزل فوم بولي يوريثان', 'عزل شينكو', 'أفضل شركة عزل', 'عزل حراري', 'عزل اسطح شمال الرياض', 'سعر متر العزل', 'عزل مائي وحراري', 'شركة عزل معتمدة'],
+  description: 'أفضل شركة عزل اسطح بالرياض والخرج. نقدم خدمات عزل فوم بولي يوريثان، عزل مائي، وعزل الأسطح المبلطة والشينكو بأحدث التقنيات. معتمدون من الهيئة السعودية للمهندسين. خبرة 15 عاماً وضمان شامل يصل إلى 15 سنة. اتصل الآن للمعاينة المجانية.',
+  keywords: ['شركة عزل اسطح بالرياض', 'عزل فوم بالرياض', 'عزل مائي بالرياض', 'عزل اسطح مبلطة', 'عزل شينكو', 'عزل اسطح بالخرج', 'عزل فوم بولي يوريثان', 'عزل هناجر', 'أفضل شركة عزل', 'عزل حراري', 'عزل اسطح شمال الرياض', 'سعر متر العزل', 'عزل مائي وحراري', 'شركة عزل معتمدة'],
   authors: [{ name: 'شركة عزل اسطح الرياض' }],
   creator: 'شركة عزل اسطح الرياض',
   publisher: 'شركة عزل اسطح الرياض',
@@ -28,21 +28,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('http://lamsa-clean.com'),
+  metadataBase: new URL('https://ic-elazl.sa'),
   alternates: {
-    canonical: 'http://lamsa-clean.com',
+    canonical: 'https://ic-elazl.sa',
 
   },
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    url: 'http://lamsa-clean.com',
+    url: 'https://ic-elazl.sa',
     siteName: 'شركة عزل اسطح الرياض',
-    title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - كشف تسربات',
-    description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. عازل مائي، عازل أسمنتي، عزل فوم، كشف تسربات. خبرة 15 عامًا وضمان شامل.',
+    title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - ',
+    description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. عازل مائي، عازل أسمنتي، عزل فوم، عزل شينكو. خبرة 15 عامًا وضمان شامل.',
     images: [
       {
-        url: 'http://lamsa-clean.com/og-image.jpg',
+        url: 'https://ic-elazl.sa/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'شركة عزل اسطح بالرياض - عزل فوم وعزل مائي',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي',
     description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني',
-    images: ['http://lamsa-clean.com/logo.jpg'],
+    images: ['https://ic-elazl.sa/logo.jpg'],
     creator: '@RiyadhInsulation',
     site: '@RiyadhInsulation',
   },
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   applicationName: 'عزل اسطح الرياض',
   generator: 'Next.js',
   abstract: 'شركة متخصصة في خدمات عزل الأسطح والمباني في الرياض والخرج مع فريق مهني مدرب ومعدات حديثة',
-  archives: ['http://lamsa-clean.com/blog'],
-  assets: ['http://lamsa-clean.com/images'],
-  bookmarks: ['http://lamsa-clean.com/services'],
+  archives: ['https://ic-elazl.sa/blog'],
+  assets: ['https://ic-elazl.sa/'],
+  bookmarks: ['https://ic-elazl.sa/services'],
   other: {
     'geo.region': 'SA-01',
     'geo.placename': 'الرياض',
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     'DC.date': '2024',
     'DC.type': 'خدمة',
     'DC.format': 'موقع إلكتروني',
-    'DC.identifier': 'http://lamsa-clean.com',
+    'DC.identifier': 'https://ic-elazl.sa',
     'DC.language': 'ar',
     'DC.coverage': 'الرياض، الخرج، المملكة العربية السعودية',
     'DC.rights': 'جميع الحقوق محفوظة لشركة عزل اسطح الرياض',
@@ -124,16 +124,10 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <head>
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-58DM78X4');`}
-        </Script>
+
         {/* End Google Tag Manager */}
 
-        <link rel="canonical" href="http://lamsa-clean.com" />
+        <link rel="canonical" href="https://ic-elazl.sa" />
         <meta name="geo.region" content="SA-01" />
         <meta name="geo.placename" content="الرياض" />
         <meta name="geo.position" content="24.7136;46.6753" />
@@ -170,8 +164,8 @@ export default function RootLayout({
         <meta name="web_author" content="شركة عزل اسطح الرياض" />
         <meta name="reply-to" content="info@lamsa-clean.com" />
         <meta name="owner" content="شركة عزل اسطح الرياض" />
-        <meta name="url" content="http://lamsa-clean.com" />
-        <meta name="identifier-URL" content="http://lamsa-clean.com" />
+        <meta name="url" content="https://ic-elazl.sa" />
+        <meta name="identifier-URL" content="https://ic-elazl.sa" />
         <meta name="directory" content="submission" />
         <meta name="pagename" content="شركة عزل اسطح الرياض" />
         <meta name="category" content="خدمات عزل الأسطح" />
@@ -192,9 +186,9 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Alternative Language Pages */}
-        <link rel="alternate" hrefLang="ar" href="http://lamsa-clean.com" />
-        <link rel="alternate" hrefLang="ar-SA" href="http://lamsa-clean.com" />
-        <link rel="alternate" hrefLang="x-default" href="http://lamsa-clean.com" />
+        <link rel="alternate" hrefLang="ar" href="https://ic-elazl.sa" />
+        <link rel="alternate" hrefLang="ar-SA" href="https://ic-elazl.sa" />
+        <link rel="alternate" hrefLang="x-default" href="https://ic-elazl.sa" />
 
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -213,74 +207,9 @@ export default function RootLayout({
         {/* Preload Critical Resources */}
         <link rel="preload" href="/fonts/TheYearofHandicrafts-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
 
-        {/* Google tag (gtag.js) - Google Ads */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17470272866"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17470272866');
-          `}
-        </Script>
 
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
-              page_path: window.location.pathname,
-              custom_map: {
-                'dimension1': 'service_type',
-                'dimension2': 'user_location'
-              }
-            });
-            
-            // Enhanced e-commerce setup
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}', {
-              custom_map: {
-                'custom_parameter_1': 'insulation_service'
-              },
-              send_page_view: false
-            });
-          `}
-        </Script>
 
-        {/* Google Tag Manager (optional) */}
-        <Script id="gtm-script" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'}');
-          `}
-        </Script>
 
-        {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || 'XXXXXXXXXXXXXXX'}');
-            fbq('track', 'PageView');
-          `}
-        </Script>
 
         {/* Schema.org Structured Data - Enhanced LocalBusiness */}
         <script
@@ -291,10 +220,10 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "شركة عزل اسطح الرياض",
               "alternateName": "عزل اسطح الرياض",
-              "description": "شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. نقدم عازل مائي للأسطح، عزل فوم للأسطح، وكشف تسربات المياه.",
-              "url": "http://lamsa-clean.com",
-              "logo": "http://lamsa-clean.com/lamsa.png",
-              "image": "http://lamsa-clean.com/insulation-services.png",
+              "description": "شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. نقدم عازل مائي للأسطح، عزل فوم للأسطح، وعزل الأسطح المبلطة والشينكو.",
+              "url": "https://ic-elazl.sa",
+              "logo": "https://ic-elazl.sa/logo.jpg",
+              "image": "https://ic-elazl.sa/insulation-services.png",
               "telephone": "+966507961706",
               "faxNumber": "+966507961706",
               "email": "info@lamsa-clean.com",
@@ -371,16 +300,16 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "كشف تسربات المياه بالرياض",
-                      "description": "خدمات كشف تسربات المياه بأحدث الأجهزة"
+                      "name": "عزل الأسطح المبلطة بالرياض",
+                      "description": "خدمات عزل الأسطح المبلطة بدون تكسير"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "عزل خزانات المياه بالرياض",
-                      "description": "عزل خزانات المياه الأرضية والعلوية"
+                      "name": "عزل شينكو وهناجر بالرياض",
+                      "description": "عزل فوم للهناجر والأسطح المعدنية"
                     }
                   }
                 ]
@@ -399,8 +328,8 @@ export default function RootLayout({
                 "عزل الأسطح",
                 "عزل فوم",
                 "عزل مائي",
-                "كشف تسربات المياه",
-                "عزل الخزانات",
+                "عزل الأسطح المبلطة",
+                "عزل الشينكو",
 
               ],
               "memberOf": {
@@ -432,17 +361,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${theYearFont.variable} font-sans`}>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-58DM78X4"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+      <body className={`${theYearFont.variable} font-sans overflow-x-hidden`}>
+
         {/* Additional Structured Data for Website */}
         <script
           type="application/ld+json"
@@ -452,14 +372,14 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "شركة عزل اسطح الرياض",
               "alternateName": "عزل اسطح الرياض",
-              "url": "http://lamsa-clean.com",
+              "url": "https://ic-elazl.sa",
               "description": "موقع شركة عزل اسطح الرياض - أفضل خدمات عزل الأسطح في الرياض والخرج",
               "inLanguage": "ar",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "http://lamsa-clean.com/search?q={search_term_string}"
+                  "urlTemplate": "https://ic-elazl.sa/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               },
@@ -468,7 +388,7 @@ export default function RootLayout({
                 "name": "شركة عزل اسطح الرياض",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "http://lamsa-clean.com/logo.png"
+                  "url": "https://ic-elazl.sa/logo.png"
                 }
               }
             })
@@ -515,8 +435,8 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "كشف تسربات المياه في الرياض",
-                "description": "خدمات كشف تسربات المياه بأحدث الأجهزة الإلكترونية",
+                "name": "عزل شينكو ومستودعات في الرياض",
+                "description": "خدمات عزل فوم متخصصة للهناجر والمستودعات",
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "شركة عزل اسطح الرياض"
@@ -538,19 +458,19 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "الرئيسية",
-                  "item": "http://lamsa-clean.com"
+                  "item": "https://ic-elazl.sa"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "خدمات العزل",
-                  "item": "http://lamsa-clean.com/#services"
+                  "item": "https://ic-elazl.sa/#services"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "اتصل بنا",
-                  "item": "http://lamsa-clean.com/#contact"
+                  "item": "https://ic-elazl.sa/#contact"
                 }
               ]
             })
@@ -562,8 +482,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "شركة عزل اسطح الرياض",
-            url: "http://lamsa-clean.com",
-            logo: "http://lamsa-clean.com/logo.png",
+            url: "https://ic-elazl.sa",
+            logo: "https://ic-elazl.sa/logo.png",
             description: "نقدم خدمات عزل أسطح شاملة ومتخصصة في الرياض والخرج",
             contactPoint: {
               "@type": "ContactPoint",
@@ -614,21 +534,6 @@ export default function RootLayout({
                     name: "عزل مائي للأسطح بالرياض"
                   }
                 },
-
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "كشف تسربات المياه بالرياض"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "عزل خزانات المياه بالرياض"
-                  }
-                }
               ]
             },
             "potentialAction": {

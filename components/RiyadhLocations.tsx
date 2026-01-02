@@ -21,7 +21,7 @@ const RIYADH_LOCATIONS: Location[] = [
   { id: '2', name: 'حي النخيل', nameEn: 'Al Nakheel', type: 'district', zone: 'north', popular: true, description: 'مباني سكنية حديثة', commonProblems: 'تسربات مياه الأمطار', recommendedSolution: 'عزل مائي + فوم' },
   { id: '3', name: 'حي الياسمين', nameEn: 'Al Yasmin', type: 'district', zone: 'north', popular: true, description: 'منطقة سكنية راقية', commonProblems: 'ارتفاع فواتير الكهرباء', recommendedSolution: 'عزل حراري فوم' },
   { id: '4', name: 'حي الروضة', nameEn: 'Al Rawda', type: 'district', zone: 'north', popular: true, description: 'فلل ومجمعات سكنية', commonProblems: 'رطوبة في الأسقف', recommendedSolution: 'عزل مائي أسمنتي' },
-  { id: '5', name: 'حي الملقا', nameEn: 'Al Malqa', type: 'district', zone: 'north', popular: true, description: 'منطقة تجارية وسكنية', commonProblems: 'تسربات خزانات المياه', recommendedSolution: 'عزل خزانات إيبوكسي' },
+  { id: '5', name: 'حي الملقا', nameEn: 'Al Malqa', type: 'district', zone: 'north', popular: true, description: 'منطقة تجارية وسكنية', commonProblems: 'حرارة المستودعات', recommendedSolution: 'عزل شينكو' },
 
   // Southern Districts
   { id: '6', name: 'حي الحمراء', nameEn: 'Al Hamra', type: 'district', zone: 'south', popular: true, description: 'مباني سكنية متنوعة', commonProblems: 'تآكل العزل القديم', recommendedSolution: 'تجديد عزل الفوم' },
@@ -34,7 +34,7 @@ const RIYADH_LOCATIONS: Location[] = [
   { id: '12', name: 'حي الخليج', nameEn: 'Al Khaleej', type: 'district', zone: 'east', popular: true, description: 'مجمعات سكنية', commonProblems: 'مشاكل رطوبة', recommendedSolution: 'عزل مائي + حراري' },
 
   // Western Districts
-  { id: '14', name: 'حي الشفا', nameEn: 'Al Shifa', type: 'district', zone: 'west', popular: true, description: 'منطقة طبية وسكنية', commonProblems: 'تسربات مياه', recommendedSolution: 'كشف تسربات + عزل' },
+  { id: '14', name: 'حي الشفا', nameEn: 'Al Shifa', type: 'district', zone: 'west', popular: true, description: 'منطقة طبية وسكنية', commonProblems: 'تسربات مياه', recommendedSolution: 'عزل مائي للأسطح' },
   { id: '15', name: 'حي عرقة', nameEn: 'Irqah', type: 'district', zone: 'west', popular: true, description: 'فلل وقصور', commonProblems: 'أسطح كبيرة تحتاج عزل', recommendedSolution: 'عزل فوم + مائي' },
   { id: '16', name: 'حي الخزامى', nameEn: 'Al Khuzama', type: 'district', zone: 'west', popular: true, description: 'منطقة سكنية متطورة', commonProblems: 'حرارة الأسطح', recommendedSolution: 'عزل حراري متقدم' },
 
@@ -46,13 +46,13 @@ const RIYADH_LOCATIONS: Location[] = [
   // Al-Kharj
   { id: '30', name: 'وسط الخرج', nameEn: 'Kharj Center', type: 'district', zone: 'kharj', popular: true, description: 'مركز مدينة الخرج', commonProblems: 'حرارة شديدة صيفاً', recommendedSolution: 'عزل فوم عالي الكثافة' },
   { id: '31', name: 'حي الخالدية', nameEn: 'Al Khalidiyah - Kharj', type: 'district', zone: 'kharj', popular: true, description: 'حي سكني بالخرج', commonProblems: 'تسربات المياه', recommendedSolution: 'عزل مائي شامل' },
-  { id: '32', name: 'حي اليرموك', nameEn: 'Al Yarmouk - Kharj', type: 'district', zone: 'kharj', popular: true, description: 'منطقة سكنية', commonProblems: 'عزل خزانات', recommendedSolution: 'عزل خزانات صحي' },
+  { id: '32', name: 'حي اليرموك', nameEn: 'Al Yarmouk - Kharj', type: 'district', zone: 'kharj', popular: true, description: 'منطقة سكنية', commonProblems: 'حرارة الهناجر', recommendedSolution: 'عزل شينكو فوم' },
 ]
 
 const INSULATION_SERVICES = [
   { id: '1', name: 'عزل فوم للأسطح', icon: ShieldCheckIcon, description: 'عزل حراري ومائي شامل' },
   { id: '2', name: 'عزل مائي للأسطح', icon: ShieldCheckIcon, description: 'حماية من التسربات والرطوبة' },
-  { id: '3', name: 'كشف تسربات المياه', icon: HomeIcon, description: 'كشف إلكتروني دقيق' },
+  { id: '3', name: 'عزل شينكو', icon: BuildingOfficeIcon, description: 'عزل الهناجر والمستودعات' },
 ]
 
 export default function RiyadhLocations() {
@@ -244,7 +244,7 @@ export default function RiyadhLocations() {
             </p>
             <p className="mb-4">
               كما نقدم خدماتنا في مدينة <strong>الخرج</strong> وجميع أحيائها بما في ذلك وسط الخرج وحي الخالدية وحي اليرموك.
-              نتخصص في عزل الفوم بولي يوريثان، العزل المائي، العازل الأسمنتي، كشف تسربات المياه، وعزل خزانات المياه.
+              نتخصص في عزل الفوم بولي يوريثان، العزل المائي، العازل الأسمنتي، وعزل الأسطح المبلطة والشينكو.
             </p>
             <p>
               فريقنا المدرب يستخدم أحدث المواد والتقنيات لضمان عزل فعال وطويل الأمد لأسطحكم، مع ضمان شامل يصل إلى 10 سنوات واعتماد من الهيئة السعودية للمهندسين.

@@ -1,7 +1,7 @@
 {
   "name": "شركة عزل اسطح الرياض",
   "short_name": "عزل الرياض",
-  "description": "شركة عزل اسطح بالرياض والخرج - عزل فوم، عزل مائي، كشف تسربات",
+  "description": "شركة عزل اسطح بالرياض والخرج - عزل فوم، عزل مائي، عزل صوتي",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -9,12 +9,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/lamsa.png",
+      "src": "/logo.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/lamsa.png",
+      "src": "/logo.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }

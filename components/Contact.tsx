@@ -109,7 +109,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0d64ab] focus:border-transparent"
-                  placeholder="05xxxxxxxx"
+                  placeholder="0507961706"
                 />
               </div>
 
@@ -123,9 +123,9 @@ export default function Contact() {
                   <option value="">اختر الخدمة</option>
                   <option>عزل فوم للأسطح</option>
                   <option>عزل مائي للأسطح</option>
+                  <option>عزل الأسطح المبلطة</option>
+                  <option>عزل شينكو وهناجر</option>
                   <option>عازل أسمنتي</option>
-                  <option>كشف تسربات المياه</option>
-                  <option>عزل خزانات المياه</option>
                 </select>
               </div>
 

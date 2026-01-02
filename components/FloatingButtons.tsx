@@ -45,7 +45,7 @@ export default function FloatingButtons() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+      className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 transition-all duration-500 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
     >
       <div className="flex flex-col space-y-3">
@@ -61,7 +61,7 @@ export default function FloatingButtons() {
               <a
                 href={button.href}
                 className={`
-                  w-14 h-14 rounded-full shadow-lg transition-all duration-300 ease-out
+                  w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg transition-all duration-300 ease-out
                   transform hover:scale-110 hover:shadow-2xl
                   flex items-center justify-center
                   relative overflow-hidden

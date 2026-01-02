@@ -86,11 +86,11 @@ Create these image files in the `public` directory:
 - `og-image.jpg` - Open Graph image (1200x630)
 - `twitter-image.jpg` - Twitter card image
 - `logo.png` - Company logo
-- `lamsa.png` - Brand image
+- `logo.jpg` - Brand image
 
 ### Google Search Console Setup
 1. Add and verify your website in Google Search Console
-2. Submit the sitemap: `http://lamsa-clean.com/sitemap.xml`
+2. Submit the sitemap: `https://ic-elazl.sa/sitemap.xml`
 3. Monitor for crawl errors and indexing issues
 
 ### Analytics Setup
