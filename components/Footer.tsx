@@ -43,18 +43,16 @@ export default function Footer() {
 
   const quickLinks = [
     { name: 'الرئيسية', href: '/' },
-    { name: 'من نحن', href: '#about' },
-    { name: 'خدماتنا', href: '#services' },
-    { name: 'المدن والأحياء', href: '#locations' },
-    { name: 'الأسئلة الشائعة', href: '#faq' },
-    { name: 'اتصل بنا', href: '#contact' }
+    { name: 'من نحن', href: '/about' },
+    { name: 'خدماتنا', href: '/services' },
+    { name: 'الأسئلة الشائعة', href: '/faq' },
+    { name: 'اتصل بنا', href: '/contact' }
   ]
 
   const services = [
-    { name: 'عزل فوم للأسطح', href: '#services' },
-    { name: 'عزل مائي للأسطح', href: '#services' },
-    { name: 'عزل حراري للأسطح', href: '#services' },
-    { name: 'عزل شينكو ومستودعات', href: '#services' },
+    { name: 'عزل فوم للأسطح', href: '/services/foam-insulation' },
+    { name: 'عزل مائي للأسطح', href: '/services/waterproof-insulation' },
+    { name: 'عزل شينكو ومستودعات', href: '/services/shincko-insulation' },
   ]
 
   return (

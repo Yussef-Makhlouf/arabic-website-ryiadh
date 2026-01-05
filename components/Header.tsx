@@ -134,51 +134,25 @@ export default function Header() {
           className="fixed lg:hidden"
           style={{
             position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
+            inset: 0,
             zIndex: 99999,
-            width: '100vw',
-            height: '100vh',
+            height: '100dvh', // Use dynamic viewport height for mobile browsers
           }}
         >
           {/* Overlay */}
           <div
-            className="bg-black/50 backdrop-blur-sm"
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-            }}
+            className="bg-black/50 backdrop-blur-sm h-full w-full absolute inset-0"
             onClick={() => setIsMenuOpen(false)}
           />
 
           {/* Menu Panel */}
           <div
-            className="bg-white shadow-2xl"
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              bottom: 0,
-              width: '85%',
-              maxWidth: '320px',
-              height: '100vh',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
+            className="bg-white shadow-2xl h-full absolute right-0 top-0 bottom-0 w-[85%] max-w-[320px] flex flex-col"
           >
 
             {/* Header - Fixed */}
             <div
-              className="border-b border-gray-100 bg-gradient-to-l from-[#0d64ab]/5 to-white"
-              style={{
-                padding: '16px',
-                flexShrink: 0,
-              }}
+              className="border-b border-gray-100 bg-gradient-to-l from-[#0d64ab]/5 to-white shrink-0 p-4"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -201,11 +175,7 @@ export default function Header() {
 
             {/* Navigation Links - Scrollable */}
             <div
-              style={{
-                flex: 1,
-                overflowY: 'auto',
-                padding: '16px',
-              }}
+              className="flex-1 overflow-y-auto p-4 overscroll-contain"
             >
               <div className="space-y-2">
                 {/* Regular Links - First 2 */}
@@ -281,11 +251,7 @@ export default function Header() {
 
             {/* Footer CTAs - Fixed */}
             <div
-              className="border-t border-gray-100 bg-gray-50"
-              style={{
-                padding: '16px',
-                flexShrink: 0,
-              }}
+              className="border-t border-gray-100 bg-gray-50 shrink-0 p-4"
             >
               <div className="space-y-3">
                 <div className="bg-white rounded-xl p-3 text-center border border-gray-100">

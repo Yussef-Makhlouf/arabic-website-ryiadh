@@ -28,21 +28,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ic-elazl.sa'),
+  metadataBase: new URL('http://elaazl.sa'),
   alternates: {
-    canonical: 'https://ic-elazl.sa',
+    canonical: 'http://elaazl.sa',
 
   },
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    url: 'https://ic-elazl.sa',
+    url: 'http://elaazl.sa',
     siteName: 'شركة عزل اسطح الرياض',
     title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي - ',
     description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. عازل مائي، عازل أسمنتي، عزل فوم، عزل شينكو. خبرة 15 عامًا وضمان شامل.',
     images: [
       {
-        url: 'https://ic-elazl.sa/og-image.jpg',
+        url: 'http://elaazl.sa/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'شركة عزل اسطح بالرياض - عزل فوم وعزل مائي',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'شركة عزل اسطح بالرياض والخرج | عزل فوم - عزل مائي',
     description: 'شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني',
-    images: ['https://ic-elazl.sa/logo.jpg'],
+    images: ['http://elaazl.sa/logo.jpg'],
     creator: '@RiyadhInsulation',
     site: '@RiyadhInsulation',
   },
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   applicationName: 'عزل اسطح الرياض',
   generator: 'Next.js',
   abstract: 'شركة متخصصة في خدمات عزل الأسطح والمباني في الرياض والخرج مع فريق مهني مدرب ومعدات حديثة',
-  archives: ['https://ic-elazl.sa/blog'],
-  assets: ['https://ic-elazl.sa/'],
-  bookmarks: ['https://ic-elazl.sa/services'],
+  archives: ['http://elaazl.sa/blog'],
+  assets: ['http://elaazl.sa/'],
+  bookmarks: ['http://elaazl.sa/services'],
   other: {
     'geo.region': 'SA-01',
     'geo.placename': 'الرياض',
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     'DC.date': '2024',
     'DC.type': 'خدمة',
     'DC.format': 'موقع إلكتروني',
-    'DC.identifier': 'https://ic-elazl.sa',
+    'DC.identifier': 'http://elaazl.sa',
     'DC.language': 'ar',
     'DC.coverage': 'الرياض، الخرج، المملكة العربية السعودية',
     'DC.rights': 'جميع الحقوق محفوظة لشركة عزل اسطح الرياض',
@@ -127,7 +127,7 @@ export default function RootLayout({
 
         {/* End Google Tag Manager */}
 
-        <link rel="canonical" href="https://ic-elazl.sa" />
+        <link rel="canonical" href="http://elaazl.sa" />
         <meta name="geo.region" content="SA-01" />
         <meta name="geo.placename" content="الرياض" />
         <meta name="geo.position" content="24.7136;46.6753" />
@@ -164,8 +164,8 @@ export default function RootLayout({
         <meta name="web_author" content="شركة عزل اسطح الرياض" />
         <meta name="reply-to" content="info@lamsa-clean.com" />
         <meta name="owner" content="شركة عزل اسطح الرياض" />
-        <meta name="url" content="https://ic-elazl.sa" />
-        <meta name="identifier-URL" content="https://ic-elazl.sa" />
+        <meta name="url" content="http://elaazl.sa" />
+        <meta name="identifier-URL" content="http://elaazl.sa" />
         <meta name="directory" content="submission" />
         <meta name="pagename" content="شركة عزل اسطح الرياض" />
         <meta name="category" content="خدمات عزل الأسطح" />
@@ -186,9 +186,9 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Alternative Language Pages */}
-        <link rel="alternate" hrefLang="ar" href="https://ic-elazl.sa" />
-        <link rel="alternate" hrefLang="ar-SA" href="https://ic-elazl.sa" />
-        <link rel="alternate" hrefLang="x-default" href="https://ic-elazl.sa" />
+        <link rel="alternate" hrefLang="ar" href="http://elaazl.sa" />
+        <link rel="alternate" hrefLang="ar-SA" href="http://elaazl.sa" />
+        <link rel="alternate" hrefLang="x-default" href="http://elaazl.sa" />
 
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -221,9 +221,9 @@ export default function RootLayout({
               "name": "شركة عزل اسطح الرياض",
               "alternateName": "عزل اسطح الرياض",
               "description": "شركة عزل اسطح بالرياض وعزل اسطح بالخرج متخصصة في تقديم أفضل عوازل للمباني. نقدم عازل مائي للأسطح، عزل فوم للأسطح، وعزل الأسطح المبلطة والشينكو.",
-              "url": "https://ic-elazl.sa",
-              "logo": "https://ic-elazl.sa/logo.jpg",
-              "image": "https://ic-elazl.sa/insulation-services.png",
+              "url": "http://elaazl.sa",
+              "logo": "http://elaazl.sa/logo.jpg",
+              "image": "http://elaazl.sa/insulation-services.png",
               "telephone": "+966507961706",
               "faxNumber": "+966507961706",
               "email": "info@lamsa-clean.com",
@@ -372,14 +372,14 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "شركة عزل اسطح الرياض",
               "alternateName": "عزل اسطح الرياض",
-              "url": "https://ic-elazl.sa",
+              "url": "http://elaazl.sa",
               "description": "موقع شركة عزل اسطح الرياض - أفضل خدمات عزل الأسطح في الرياض والخرج",
               "inLanguage": "ar",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://ic-elazl.sa/search?q={search_term_string}"
+                  "urlTemplate": "http://elaazl.sa/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               },
@@ -388,7 +388,7 @@ export default function RootLayout({
                 "name": "شركة عزل اسطح الرياض",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://ic-elazl.sa/logo.png"
+                  "url": "http://elaazl.sa/logo.png"
                 }
               }
             })
@@ -458,19 +458,19 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "الرئيسية",
-                  "item": "https://ic-elazl.sa"
+                  "item": "http://elaazl.sa"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "خدمات العزل",
-                  "item": "https://ic-elazl.sa/#services"
+                  "item": "http://elaazl.sa/#services"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "اتصل بنا",
-                  "item": "https://ic-elazl.sa/#contact"
+                  "item": "http://elaazl.sa/#contact"
                 }
               ]
             })
@@ -482,8 +482,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "شركة عزل اسطح الرياض",
-            url: "https://ic-elazl.sa",
-            logo: "https://ic-elazl.sa/logo.png",
+            url: "http://elaazl.sa",
+            logo: "http://elaazl.sa/logo.png",
             description: "نقدم خدمات عزل أسطح شاملة ومتخصصة في الرياض والخرج",
             contactPoint: {
               "@type": "ContactPoint",

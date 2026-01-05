@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/', '/admin/'],
       },
     ],
-    sitemap: 'https://ic-elazl.sa/sitemap.xml',
-    host: 'https://ic-elazl.sa',
+    sitemap: 'http://elaazl.sa/sitemap.xml',
+    host: 'http://elaazl.sa',
   }
 }

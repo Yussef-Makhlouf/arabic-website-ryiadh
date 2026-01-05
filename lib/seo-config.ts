@@ -6,7 +6,7 @@
 // Core SEO Configuration
 export const SEO_CONFIG = {
   siteName: 'شركة أيقونة العزل بالرياض',
-  siteUrl: 'https://ic-elazl.sa',
+  siteUrl: 'http://elaazl.sa',
   defaultTitle: 'خدمات النظافة والتعقيم في الرياض | شركة لمسة للنظافة',
   defaultDescription: 'نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم في الرياض باستخدام أحدث التقنيات ومواد صديقة للبيئة.',
   author: 'شركة لمسة للنظافة',
