@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${post.title} | شركة عزل الرياض | 0507961706`,
+        title: `${post.title} | شركة أيقونة العزل | شركة عزل الرياض | 0507961706`,
         description: `${post.excerpt} للاستشارة المجانية اتصل 0507961706`,
         keywords: [...post.tags, 'عزل الرياض', 'شركة عزل'],
         openGraph: {
@@ -267,18 +267,42 @@ export default async function BlogPostPage({ params }: Props) {
                     </div>
                 </section>
 
-                {/* Schema Markup */}
+                {/* Enhanced BlogPosting Schema */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "Article",
+                            "@type": "BlogPosting",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": `http://elaazl.sa/blog/${slug}`
+                            },
                             "headline": post.title,
                             "description": post.excerpt,
-                            "author": { "@type": "Person", "name": post.author },
+                            "image": {
+                                "@type": "ImageObject",
+                                "url": `http://elaazl.sa${post.image}`,
+                                "width": 1200,
+                                "height": 630
+                            },
+                            "author": {
+                                "@type": "Person",
+                                "name": post.author,
+                                "jobTitle": post.authorRole
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "شركة عزل اسطح الرياض",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "http://elaazl.sa/logo.jpg"
+                                }
+                            },
                             "datePublished": post.date,
-                            "publisher": { "@type": "Organization", "name": "شركة عزل اسطح الرياض" }
+                            "dateModified": post.date,
+                            "keywords": post.tags.join(", "),
+                            "articleSection": post.category
                         })
                     }}
                 />

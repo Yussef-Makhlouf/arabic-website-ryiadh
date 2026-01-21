@@ -57,7 +57,7 @@ const services = [
 ]
 
 export const metadata = {
-    title: 'خدمات عزل الأسطح بالرياض | عزل فوم - عزل مائي - عزل شينكو | 0507961706',
+    title: 'خدمات عزل الأسطح بالرياض | شركة أيقونة العزل | عزل فوم - عزل مائي - عزل شينكو | 0507961706',
     description: 'أفضل خدمات عزل الأسطح والمباني في الرياض والخرج. عزل فوم حراري، عزل مائي، عزل الأسطح المبلطة، وعزل شينكو وهناجر. ضمان 15 سنة وأسعار منافسة. اتصل الآن 0507961706',
     keywords: ['خدمات عزل الأسطح', 'عزل فوم الرياض', 'عزل مائي الرياض', 'عزل شينكو الرياض', 'شركة عزل معتمدة'],
 }
@@ -571,6 +571,32 @@ export default function ServicesPage() {
                 </section>
             </main>
             <Footer />
+
+            {/* Schema.org ItemList for Services */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        "itemListElement": services.map((service, index) => ({
+                            "@type": "ListItem",
+                            "position": index + 1,
+                            "item": {
+                                "@type": "Service",
+                                "name": service.title,
+                                "description": service.description,
+                                "url": `http://elaazl.sa/services/${service.slug}`,
+                                "image": `http://elaazl.sa${service.image}`,
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "شركة عزل اسطح الرياض"
+                                }
+                            }
+                        }))
+                    })
+                }}
+            />
         </>
     )
 }

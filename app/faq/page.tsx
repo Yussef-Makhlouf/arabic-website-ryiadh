@@ -5,7 +5,7 @@ import FloatingButtons from '@/components/FloatingButtons'
 import { QuestionMarkCircleIcon, ChevronDownIcon, ChevronUpIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-    title: 'الأسئلة الشائعة عن عزل الأسطح | شركة عزل اسطح الرياض',
+    title: 'الأسئلة الشائعة عن عزل الأسطح | شركة أيقونة العزل | شركة عزل اسطح الرياض',
     description: 'إجابات شاملة على جميع الأسئلة الشائعة حول عزل الأسطح وأنواعه وأسعاره وضماناته. كل ما تريد معرفته عن عزل الفوم والعزل المائي وعزل الشينكو.',
     keywords: ['أسئلة عزل الأسطح', 'FAQ عزل', 'استفسارات العزل', 'أسعار العزل'],
 }

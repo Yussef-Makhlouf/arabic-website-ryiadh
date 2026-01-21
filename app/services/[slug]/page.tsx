@@ -224,7 +224,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${service.title} | أفضل شركة عزل بالرياض | 0507961706`,
+        title: `${service.title} | شركة أيقونة العزل | أفضل شركة عزل بالرياض | 0507961706`,
         description: `${service.metaDescription} اتصل الآن 0507961706 للحصول على عرض سعر مجاني.`,
         keywords: [service.title, service.shortTitle, 'عزل الرياض', 'شركة عزل', 'عزل أسطح بالرياض', 'ضمان 15 سنة'],
         openGraph: {
@@ -494,7 +494,7 @@ export default async function ServicePage({ params }: Props) {
                     </div>
                 </section>
 
-                {/* Schema Markup */}
+                {/* Enhanced Service Schema */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -502,15 +502,69 @@ export default async function ServicePage({ params }: Props) {
                             "@context": "https://schema.org",
                             "@type": "Service",
                             "name": service.title,
+                            "alternateName": service.shortTitle,
                             "description": service.description,
                             "provider": {
                                 "@type": "LocalBusiness",
                                 "name": "شركة عزل اسطح الرياض",
                                 "telephone": "0507961706",
-                                "address": { "@type": "PostalAddress", "addressLocality": "الرياض", "addressCountry": "SA" }
+                                "image": "http://elaazl.sa/logo.jpg",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "الرياض",
+                                    "addressCountry": "SA",
+                                    "streetAddress": "حي النرجس"
+                                },
+                                "priceRange": "$$"
                             },
-                            "areaServed": { "@type": "City", "name": "الرياض" },
-                            "aggregateRating": { "@type": "AggregateRating", "ratingValue": service.rating, "reviewCount": service.reviews }
+                            "serviceType": "Insulation",
+                            "areaServed": [
+                                { "@type": "City", "name": "الرياض" },
+                                { "@type": "City", "name": "الخرج" },
+                                { "@type": "City", "name": "المملكة العربية السعودية" }
+                            ],
+                            "hasOfferCatalog": {
+                                "@type": "OfferCatalog",
+                                "name": "باقات الخدمة",
+                                "itemListElement": [
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": service.title
+                                        },
+                                        "priceCurrency": "SAR",
+                                        "priceSpecification": {
+                                            "@type": "PriceSpecification",
+                                            "minPrice": "20",
+                                            "priceCurrency": "SAR",
+                                            "unitCode": "MTK"
+                                        }
+                                    }
+                                ]
+                            },
+                            "termsOfService": "ضمان حتى 15 سنة",
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": service.rating,
+                                "reviewCount": service.reviews,
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "review": service.testimonials?.map(t => ({
+                                "@type": "Review",
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": t.rating,
+                                    "bestRating": "5"
+                                },
+                                "author": {
+                                    "@type": "Person",
+                                    "name": t.name
+                                },
+                                "reviewBody": t.text,
+                                "datePublished": t.date
+                            }))
                         })
                     }}
                 />

@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
 
 export const metadata: Metadata = {
-    title: 'مدونة عزل الأسطح بالرياض | نصائح وأسعار العزل 2024 | 0507961706',
+    title: 'مدونة عزل الأسطح بالرياض | شركة أيقونة العزل | نصائح وأسعار العزل 2024 | 0507961706',
     description: 'مقالات ونصائح متخصصة عن عزل الأسطح والمباني بالرياض. أسعار العزل، أنواعه وفوائده وكيفية اختيار الأنسب. استشارة مجانية 0507961706',
     keywords: ['مدونة عزل', 'نصائح عزل الأسطح', 'أسعار عزل الرياض', 'عزل فوم', 'عزل مائي', 'كشف تسربات'],
 }
@@ -187,6 +187,28 @@ export default function BlogPage() {
             </main>
             <Footer />
             <FloatingButtons />
+
+            {/* Schema.org Blog Collection */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "مدونة عزل الأسطح والمباني",
+                        "description": "مقالات ونصائح متخصصة عن عزل الأسطح والمباني بالرياض",
+                        "mainEntity": {
+                            "@type": "ItemList",
+                            "itemListElement": blogPosts.map((post, index) => ({
+                                "@type": "ListItem",
+                                "position": index + 1,
+                                "url": `http://elaazl.sa/blog/${post.slug}`,
+                                "name": post.title
+                            }))
+                        }
+                    })
+                }}
+            />
         </>
     )
 }
